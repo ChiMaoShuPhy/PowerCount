@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    100601,       3204]
-NotebookOptionsPosition[     96440,       3060]
-NotebookOutlinePosition[     96824,       3077]
-CellTagsIndexPosition[     96781,       3074]
+NotebookDataLength[    104166,       3194]
+NotebookOptionsPosition[     98976,       3016]
+NotebookOutlinePosition[     99362,       3033]
+CellTagsIndexPosition[     99319,       3030]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -22,9 +22,12 @@ Cell[BoxData[
  RowBox[{"Quit", "[", "]"}]], "Input",
  CellChangeTimes->{{3.717589817151394*^9, 3.717589818262773*^9}}],
 
-Cell["Loading the package.", "Item",
+Cell[CellGroupData[{
+
+Cell["Load the package", "Section",
+ CellGroupingRules->{"SectionGrouping", Inherited},
  CellChangeTimes->{{3.7177530137061377`*^9, 3.7177530246439447`*^9}, 
-   3.717753092586193*^9}],
+   3.717753092586193*^9, {3.7177545455426083`*^9, 3.717754547726967*^9}}],
 
 Cell[BoxData[
  RowBox[{"<<", "MyPackage`"}]], "Input",
@@ -38,18 +41,12 @@ Cell[BoxData[
  CellChangeTimes->{{3.717322116969396*^9, 3.7173221386852417`*^9}}],
 
 Cell[BoxData[
- RowBox[{"ScriptGen", "[", 
-  RowBox[{
-   RowBox[{"{", "m", "}"}], ",", 
-   RowBox[{"{", "b", "}"}]}], "]"}]], "Input",
- CellChangeTimes->{{3.7171425617897253`*^9, 3.717142567948436*^9}}],
-
-Cell[BoxData[
  RowBox[{
   RowBox[{"\[Lambda]", "=", 
    SqrtBox[
-    RowBox[{"\[CapitalLambda]QCD", "/", "mb"}]]}], ";"}]], "Input",
- CellChangeTimes->{{3.717322108437936*^9, 3.717322146213208*^9}}],
+    RowBox[{"\[CapitalLambda]QCD", "/", "Q"}]]}], ";"}]], "Input",
+ CellChangeTimes->{{3.717322108437936*^9, 3.717322146213208*^9}, 
+   3.717777550934215*^9}],
 
 Cell[BoxData[
  RowBox[{"LCscriptGen", "[", 
@@ -60,9 +57,13 @@ Cell[BoxData[
 
 Cell[BoxData[
  RowBox[{"<<", "PowerCount`"}]], "Input",
- CellChangeTimes->{{3.717528915625568*^9, 3.717528923007759*^9}}],
+ CellChangeTimes->{{3.717528915625568*^9, 3.717528923007759*^9}}]
+}, Open  ]],
 
-Cell["Set the symbols included in / excluded from power counting.", "Item",
+Cell[CellGroupData[{
+
+Cell["Set the symbols included in / excluded from power counting.", "Section",
+ CellGroupingRules->{"SectionGrouping", Inherited},
  CellChangeTimes->{{3.717753027849011*^9, 3.717753047715633*^9}, 
    3.717753090898028*^9}],
 
@@ -70,26 +71,19 @@ Cell[BoxData[
  RowBox[{
   RowBox[{"IsCnt", "[", 
    RowBox[{
-   "\[CapitalLambda]QCD", ",", "mb", ",", "lm", ",", "lp", ",", "lt", ",", 
+   "\[CapitalLambda]QCD", ",", "Q", ",", "lm", ",", "lp", ",", "lt", ",", 
     "qm", ",", "qp", ",", "qt", ",", "km", ",", "kp", ",", "kt"}], "]"}], 
   ";"}]], "Input",
  CellChangeTimes->{{3.7176775030345793`*^9, 3.717677518714367*^9}, {
-  3.7176775512665453`*^9, 3.717677578122693*^9}, {3.7176776974245377`*^9, 
-  3.717677698246956*^9}}],
+   3.7176775512665453`*^9, 3.717677578122693*^9}, {3.7176776974245377`*^9, 
+   3.717677698246956*^9}, 3.7177771405529757`*^9}]
+}, Open  ]],
 
-Cell["Set the scales for symbols and the hierarchy of scales. ", "Item",
+Cell[CellGroupData[{
+
+Cell["Set the scales for symbols and the hierarchy of scales. ", "Section",
+ CellGroupingRules->{"SectionGrouping", Inherited},
  CellChangeTimes->{{3.717753052782382*^9, 3.7177530891069193`*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{
-   RowBox[{"{", 
-    RowBox[{"qt", ",", "pt", ",", "qp"}], "}"}], "=", 
-   RowBox[{"{", 
-    RowBox[{"0", ",", "0", ",", "0"}], "}"}]}], ";"}]], "Input",
- CellChangeTimes->{{3.71767809680875*^9, 3.717678109588719*^9}, {
-  3.717678203104422*^9, 3.71767821681658*^9}, {3.717678391395146*^9, 
-  3.717678393827981*^9}, {3.717678462798107*^9, 3.717678475305277*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -98,27 +92,30 @@ Cell[BoxData[
     RowBox[{"{", 
      RowBox[{
       RowBox[{"{", 
-       RowBox[{"kp", ",", "km", ",", "kt", ",", "\[CapitalLambda]QCD"}], 
-       "}"}], ",", 
+       RowBox[{"pp", ",", "lm"}], "}"}], ",", 
       RowBox[{"{", 
-       RowBox[{"qm", ",", "pp", ",", "pm", ",", "mb"}], "}"}]}], "}"}], ",", 
+       RowBox[{"pm", ",", "lp"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"pt", ",", "lt"}], "}"}]}], "}"}], ",", 
     RowBox[{"{", 
-     RowBox[{"\[CapitalLambda]QCD", ",", "mb"}], "}"}]}], "]"}], 
-  ";"}]], "Input"],
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["\[Lambda]", "2"], "*", "Q"}], ",", "Q", ",", 
+      RowBox[{"\[Lambda]", "*", "Q"}]}], "}"}]}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.717777253535945*^9, 3.717777349152441*^9}}],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"SetHrchy", "[", 
-  RowBox[{"mb", ">", "1", ">", "\[CapitalLambda]QCD", ">", "0"}], 
+  RowBox[{"Q", ">", "1", ">", "\[CapitalLambda]QCD", ">", "0"}], 
   "]"}]], "Input",
  CellChangeTimes->{{3.717677869170348*^9, 3.717677879018907*^9}, {
-  3.7177424843248*^9, 3.717742484983068*^9}}],
+   3.7177424843248*^9, 3.717742484983068*^9}, 3.7177771852732773`*^9}],
 
 Cell[BoxData[
  FormBox[
-  RowBox[{
-   SubscriptBox["m", "b"], ">", "1", ">", 
+  RowBox[{"Q", ">", "1", ">", 
    SubscriptBox["\[CapitalLambda]", "QCD"], ">", "0"}], 
   TraditionalForm]], "Output",
  CellChangeTimes->{
@@ -130,20 +127,67 @@ Cell[BoxData[
    3.717698155099313*^9, 3.717698370481826*^9, 3.717699838532745*^9, 
    3.717700293796582*^9, 3.717700575780422*^9, 3.717741409799263*^9, 
    3.71774157825968*^9, 3.717741652612677*^9, 3.717742485555526*^9, {
-   3.7177536110430717`*^9, 3.717753629377693*^9}}]
+   3.7177536110430717`*^9, 3.717753629377693*^9}, 3.7177771869120073`*^9, 
+   3.717777370161268*^9, 3.7177774066182213`*^9, 3.7177775662884483`*^9, 
+   3.7177792975227823`*^9, 3.7177794934963284`*^9}]
+}, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
+Cell[TextData[{
+ "Example: the scalar 3-point function by strategy of regions\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"I", "=", 
+    RowBox[{"\[Integral]", 
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["\[DifferentialD]", "d"], "k"}], 
+      FractionBox["1", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           SuperscriptBox["k", "2"], "+", 
+           RowBox[{"i", " ", "\[Epsilon]"}]}], ")"}], "[", 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"k", "+", "l"}], ")"}], "2"], "+", 
+          RowBox[{"i", " ", "\[Epsilon]"}]}], "]"}], "[", 
+        RowBox[{
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"k", "+", "p"}], ")"}], "2"], "+", 
+         RowBox[{"i", " ", "\[Epsilon]"}]}], "]"}]]}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n",
+ StyleBox["Reference: ",
+  FontSize->20],
+ StyleBox["Introduction to Soft-Collinear Effective Theory",
+  FontSize->20,
+  FontSlant->"Italic"],
+ StyleBox[" (Sec. 2.2) ,      arXiv:1410.1892 [hep-ph] ",
+  FontSize->20]
+}], "Section",
+ CellGroupingRules->{"SectionGrouping", Inherited},
+ CellChangeTimes->{{3.717753096859653*^9, 3.717753153263788*^9}, {
+  3.717776975860778*^9, 3.717777072859563*^9}, {3.717779582763657*^9, 
+  3.717779630523323*^9}, {3.7177796758502483`*^9, 3.717779683273246*^9}, {
+  3.717779715780052*^9, 3.7177797689863443`*^9}, {3.71778055497313*^9, 
+  3.717780560364676*^9}}],
+
+Cell[CellGroupData[{
+
 Cell[BoxData[
- RowBox[{"Dn1", "=", 
+ RowBox[{"Dnmntr1", "=", 
   RowBox[{
    RowBox[{"(", 
     RowBox[{
      SuperscriptBox[
       RowBox[{"(", 
-       RowBox[{"q", "+", "k", "-", "l"}], ")"}], "2"], "//", "Expand"}], 
-    ")"}], "//.", 
+       RowBox[{"k", "+", "l"}], ")"}], "2"], "//", "Expand"}], ")"}], "//.", 
    RowBox[{"{", 
     RowBox[{
      RowBox[{
@@ -157,38 +201,23 @@ Cell[BoxData[
        RowBox[{"2", "lp", "*", "lm"}], "-", 
        SuperscriptBox["lt", "2"]}]}], ",", 
      RowBox[{
-      SuperscriptBox["q", "2"], "\[Rule]", 
-      RowBox[{
-       RowBox[{"2", "qp", "*", "qm"}], "-", 
-       SuperscriptBox["qt", "2"]}]}], ",", 
-     RowBox[{
       RowBox[{"k", "*", "l"}], "\[Rule]", 
       RowBox[{
        RowBox[{"kp", "*", "lm"}], "+", 
        RowBox[{"km", "*", "lp"}], "-", 
-       RowBox[{"kt", "*", "lt"}]}]}], ",", 
-     RowBox[{
-      RowBox[{"q", "*", "l"}], "\[Rule]", 
-      RowBox[{
-       RowBox[{"qp", "*", "lm"}], "+", 
-       RowBox[{"qm", "*", "lp"}], "-", 
-       RowBox[{"qt", "*", "lt"}]}]}], ",", 
-     RowBox[{
-      RowBox[{"q", "*", "k"}], "\[Rule]", 
-      RowBox[{
-       RowBox[{"qm", "*", "kp"}], "+", 
-       RowBox[{"qp", "*", "km"}]}]}]}], "}"}]}]}]], "Input",
+       RowBox[{"kt", "*", "lt"}]}]}]}], "}"}]}]}]], "Input",
  CellChangeTimes->{{3.717678706631345*^9, 3.7176787074372263`*^9}, {
-  3.717679132378333*^9, 3.7176791485800867`*^9}, {3.7176791911496267`*^9, 
-  3.717679192101172*^9}, {3.71767998683687*^9, 3.7176801341431923`*^9}, {
-  3.7176802110619383`*^9, 3.717680220472231*^9}}],
+   3.717679132378333*^9, 3.7176791485800867`*^9}, {3.7176791911496267`*^9, 
+   3.717679192101172*^9}, {3.71767998683687*^9, 3.7176801341431923`*^9}, {
+   3.7176802110619383`*^9, 3.717680220472231*^9}, {3.7177772098562717`*^9, 
+   3.717777212073916*^9}, {3.717777441436925*^9, 3.717777451343161*^9}, {
+   3.717779873907383*^9, 3.7177798749178963`*^9}, 3.717779908238921*^9, {
+   3.717780422684922*^9, 3.71778045347987*^9}, {3.717780526612235*^9, 
+   3.717780526803232*^9}}],
 
 Cell[BoxData[
  FormBox[
   RowBox[{
-   RowBox[{"2", " ", 
-    SuperscriptBox["k", "+"], " ", 
-    SuperscriptBox["q", "-"]}], "-", 
    RowBox[{"2", " ", 
     RowBox[{"(", 
      RowBox[{
@@ -204,10 +233,7 @@ Cell[BoxData[
    RowBox[{"2", " ", 
     SuperscriptBox["k", "-"], " ", 
     SuperscriptBox["k", "+"]}], "-", 
-   SubsuperscriptBox["k", "\[Perpendicular]", "2"], "-", 
-   RowBox[{"2", " ", 
-    SuperscriptBox["l", "+"], " ", 
-    SuperscriptBox["q", "-"]}], "+", 
+   SubsuperscriptBox["k", "\[Perpendicular]", "2"], "+", 
    RowBox[{"2", " ", 
     SuperscriptBox["l", "-"], " ", 
     SuperscriptBox["l", "+"]}], "-", 
@@ -216,969 +242,118 @@ Cell[BoxData[
  CellChangeTimes->{{3.717700330900728*^9, 3.717700344429706*^9}, 
    3.7177005870250883`*^9, 3.7177414202914333`*^9, 3.717741578580019*^9, 
    3.717741652914617*^9, 3.7177424963629017`*^9, 3.717753413289179*^9, 
-   3.717753632260633*^9}]
+   3.717753632260633*^9, 3.717777451903204*^9, 3.717777569461267*^9, 
+   3.717779301410042*^9, 3.717779498173644*^9, 3.717779883000204*^9, 
+   3.717779913865634*^9, 3.717780425828167*^9, 3.717780457531735*^9, 
+   3.717780532680728*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"Dn2", "=", 
+ RowBox[{"Dnmntr2", "=", 
   RowBox[{
-   RowBox[{
-    RowBox[{"(", 
+   RowBox[{"(", 
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"k", "+", "p"}], ")"}], "2"], "//", "Expand"}], ")"}], "//.", 
+   RowBox[{"{", 
+    RowBox[{
      RowBox[{
+      SuperscriptBox["k", "2"], "\[Rule]", 
       RowBox[{
-       SuperscriptBox[
-        RowBox[{"(", 
-         RowBox[{"p", "-", "k", "+", "l"}], ")"}], "2"], "-", 
-       SuperscriptBox["mb", "2"]}], "//", "Expand"}], ")"}], "//.", 
-    RowBox[{"{", 
+       RowBox[{"2", "kp", "*", "km"}], "-", 
+       SuperscriptBox["kt", "2"]}]}], ",", 
      RowBox[{
+      SuperscriptBox["p", "2"], "\[Rule]", 
       RowBox[{
-       SuperscriptBox["k", "2"], "\[Rule]", 
-       RowBox[{
-        RowBox[{"2", "kp", "*", "km"}], "-", 
-        SuperscriptBox["kt", "2"]}]}], ",", 
+       RowBox[{"2", "pp", "*", "pm"}], "-", 
+       SuperscriptBox["pt", "2"]}]}], ",", 
+     RowBox[{
+      RowBox[{"p", "*", "k"}], "\[Rule]", 
       RowBox[{
-       SuperscriptBox["l", "2"], "\[Rule]", 
-       RowBox[{
-        RowBox[{"2", "lp", "*", "lm"}], "-", 
-        SuperscriptBox["lt", "2"]}]}], ",", 
-      RowBox[{
-       SuperscriptBox["q", "2"], "\[Rule]", 
-       RowBox[{
-        RowBox[{"2", "qp", "*", "qm"}], "-", 
-        SuperscriptBox["qt", "2"]}]}], ",", 
-      RowBox[{
-       RowBox[{"k", "*", "l"}], "\[Rule]", 
-       RowBox[{
-        RowBox[{"kp", "*", "lm"}], "+", 
-        RowBox[{"km", "*", "lp"}], "-", 
-        RowBox[{"kt", "*", "lt"}]}]}], ",", 
-      RowBox[{
-       RowBox[{"q", "*", "l"}], "\[Rule]", 
-       RowBox[{
-        RowBox[{"qp", "*", "lm"}], "+", 
-        RowBox[{"qm", "*", "lp"}], "-", 
-        RowBox[{"qt", "*", "lt"}]}]}], ",", 
-      RowBox[{
-       RowBox[{"q", "*", "k"}], "\[Rule]", 
-       RowBox[{
-        RowBox[{"qm", "*", "kp"}], "+", 
-        RowBox[{"qp", "*", "km"}]}]}], ",", 
-      RowBox[{
-       RowBox[{"l", "*", "p"}], "\[Rule]", 
-       RowBox[{
-        RowBox[{"lp", "*", "pm"}], "+", 
-        RowBox[{"lm", "*", "pp"}], "-", 
-        RowBox[{"lt", "*", "pt"}]}]}], ",", 
-      RowBox[{
-       RowBox[{"k", "*", "p"}], "\[Rule]", "0"}]}], "}"}]}], "//.", 
-   RowBox[{
-    SuperscriptBox["p", "2"], "\[Rule]", 
-    SuperscriptBox["mb", "2"]}]}]}]], "Input",
+       RowBox[{"kp", "*", "pm"}], "+", 
+       RowBox[{"km", "*", "pp"}], "-", 
+       RowBox[{"kt", "*", "pt"}]}]}]}], "}"}]}]}]], "Input",
  CellChangeTimes->{{3.717697804688075*^9, 3.717697965508601*^9}, 
-   3.7176988999788923`*^9}],
+   3.7176988999788923`*^9, {3.7177774608248577`*^9, 3.717777490131537*^9}, {
+   3.7177798807703543`*^9, 3.717779908251099*^9}, {3.717780431638034*^9, 
+   3.7177804556046*^9}, {3.717780528465452*^9, 3.717780528842643*^9}}],
 
 Cell[BoxData[
  FormBox[
   RowBox[{
-   RowBox[{"-", 
-    RowBox[{"2", " ", 
-     RowBox[{"(", 
+   RowBox[{"2", " ", 
+    RowBox[{"(", 
+     RowBox[{
       RowBox[{
-       RowBox[{
-        SuperscriptBox["k", "-"], " ", 
-        SuperscriptBox["l", "+"]}], "+", 
-       RowBox[{
-        SuperscriptBox["k", "+"], " ", 
-        SuperscriptBox["l", "-"]}], "-", 
-       RowBox[{
-        SubscriptBox["k", "\[Perpendicular]"], " ", 
-        SubscriptBox["l", "\[Perpendicular]"]}]}], ")"}]}]}], "+", 
+       SuperscriptBox["k", "-"], " ", 
+       SuperscriptBox["p", "+"]}], "+", 
+      RowBox[{
+       SuperscriptBox["k", "+"], " ", 
+       SuperscriptBox["p", "-"]}], "-", 
+      RowBox[{
+       SubscriptBox["k", "\[Perpendicular]"], " ", 
+       SubscriptBox["p", "\[Perpendicular]"]}]}], ")"}]}], "+", 
    RowBox[{"2", " ", 
     SuperscriptBox["k", "-"], " ", 
     SuperscriptBox["k", "+"]}], "-", 
    SubsuperscriptBox["k", "\[Perpendicular]", "2"], "+", 
    RowBox[{"2", " ", 
-    RowBox[{"(", 
-     RowBox[{
-      RowBox[{
-       SuperscriptBox["l", "-"], " ", 
-       SuperscriptBox["p", "+"]}], "+", 
-      RowBox[{
-       SuperscriptBox["l", "+"], " ", 
-       SuperscriptBox["p", "-"]}]}], ")"}]}], "+", 
-   RowBox[{"2", " ", 
-    SuperscriptBox["l", "-"], " ", 
-    SuperscriptBox["l", "+"]}], "-", 
-   SubsuperscriptBox["l", "\[Perpendicular]", "2"]}], 
+    SuperscriptBox["p", "-"], " ", 
+    SuperscriptBox["p", "+"]}], "-", 
+   SubsuperscriptBox["p", "\[Perpendicular]", "2"]}], 
   TraditionalForm]], "Output",
  CellChangeTimes->{{3.717697887701079*^9, 3.717697932180331*^9}, 
    3.717697966152389*^9, 3.717698169204796*^9, 3.717698398093359*^9, 
    3.7176989016958513`*^9, 3.717699855607563*^9, 3.717700347440199*^9, 
    3.717700588089447*^9, 3.717741421356121*^9, 3.717741578645062*^9, 
    3.717741653047298*^9, 3.7177424965188713`*^9, 3.717753414801996*^9, 
-   3.717753633220806*^9}]
+   3.717753633220806*^9, 3.717777490635229*^9, 3.71777757044527*^9, 
+   3.717778142534712*^9, 3.717779301588599*^9, 3.717779498335945*^9, 
+   3.717779883957472*^9, 3.717779914813487*^9, {3.717780434779233*^9, 
+   3.717780458472973*^9}, {3.717780529571546*^9, 3.7177805328094187`*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
-Cell["Example: the scalar 3-point function by method of region", "Item",
- CellChangeTimes->{{3.717753096859653*^9, 3.717753153263788*^9}}],
-
 Cell[TextData[{
- "Soft Region, ",
+ "(1) Soft region, ",
  Cell[BoxData[
   FormBox[
    RowBox[{
-    SuperscriptBox["l", "\[Mu]"], "~", 
-    RowBox[{"O", "(", 
-     RowBox[{
-      SuperscriptBox["\[Lambda]", "2"], "*", 
-      SubscriptBox["m", "b"]}], ")"}]}], TraditionalForm]],
+    SuperscriptBox["k", "\[Mu]"], "~", 
+    RowBox[{"O", "(", "\[Lambda]Q", ")"}]}], TraditionalForm]],
   FormatType->"TraditionalForm"]
-}], "Item",
- CellChangeTimes->{{3.717753291597678*^9, 3.71775331729845*^9}}]
-}, Open  ]],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"SetScl", "[", 
-   RowBox[{
-    RowBox[{"{", 
-     RowBox[{"{", 
-      RowBox[{"lp", ",", "lm", ",", "lt"}], "}"}], "}"}], ",", 
-    RowBox[{"{", 
-     RowBox[{
-      SuperscriptBox["\[Lambda]", "2"], "*", "mb"}], "}"}]}], "]"}], 
-  ";"}]], "Input",
- CellChangeTimes->{{3.717678613432846*^9, 3.717678640585828*^9}, 
-   3.717687868351288*^9, {3.717753342689474*^9, 3.717753345408692*^9}}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"SrtPwr", "[", "Dn1", "]"}]], "Input",
- CellChangeTimes->{{3.717753709174572*^9, 3.717753711775777*^9}}],
-
-Cell[BoxData[
- FormBox[
-  RowBox[{
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     RowBox[{
-      SubscriptBox["m", "b"], " ", 
-      SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     RowBox[{
-      SubscriptBox["m", "b"], " ", 
-      SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
-    SpanMaxSize->DirectedInfinity[1]]}], TraditionalForm]], "Output",
- CellChangeTimes->{{3.7177537100763493`*^9, 3.717753712199581*^9}}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"SrtByPwr", "[", 
-  RowBox[{"Dn1", ",", "Simplify"}], "]"}]], "Input",
- CellChangeTimes->{{3.717753643607361*^9, 3.717753654440734*^9}}],
-
-Cell[BoxData[
- FormBox[
-  RowBox[{
-   RowBox[{"2", " ", 
-    SuperscriptBox["q", "-"], " ", 
-    RowBox[{"(", 
-     RowBox[{
-      SuperscriptBox["k", "+"], "-", 
-      SuperscriptBox["l", "+"]}], ")"}]}], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   RowBox[{"(", 
-    RowBox[{
-     RowBox[{"-", 
-      RowBox[{"2", " ", 
-       SuperscriptBox["k", "+"], " ", 
-       SuperscriptBox["l", "-"]}]}], "+", 
-     RowBox[{"2", " ", 
-      SuperscriptBox["k", "-"], " ", 
-      RowBox[{"(", 
-       RowBox[{
-        SuperscriptBox["k", "+"], "-", 
-        SuperscriptBox["l", "+"]}], ")"}]}], "+", 
-     RowBox[{"2", " ", 
-      SubscriptBox["k", "\[Perpendicular]"], " ", 
-      SubscriptBox["l", "\[Perpendicular]"]}], "-", 
-     SubsuperscriptBox["k", "\[Perpendicular]", "2"], "+", 
-     RowBox[{"2", " ", 
-      SuperscriptBox["l", "-"], " ", 
-      SuperscriptBox["l", "+"]}], "-", 
-     SubsuperscriptBox["l", "\[Perpendicular]", "2"]}], ")"}]}], 
-  TraditionalForm]], "Output",
- CellChangeTimes->{{3.717753651028557*^9, 3.717753654899414*^9}}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"ShowPwr", "[", "Dn1", "]"}]], "Input",
- CellChangeTimes->{{3.7177534323177643`*^9, 3.7177534374030113`*^9}}],
-
-Cell[BoxData[
- FormBox[
-  RowBox[{
-   SubscriptBox[
-    FrameBox[
-     RowBox[{
-      RowBox[{"2", " ", 
-       SuperscriptBox["k", "+"], " ", 
-       SuperscriptBox["q", "-"]}], "-", 
-      RowBox[{"2", " ", 
-       SuperscriptBox["l", "+"], " ", 
-       SuperscriptBox["q", "-"]}]}],
-     Background->RGBColor[0.88, 1, 0.88],
-     FrameStyle->{
-       Thickness[Large], 
-       GrayLevel[0.5], 
-       Dashing[{0, Small, Small, Small}]},
-     RoundingRadius->5,
-     StripOnInput->False], 
-    StyleBox[
-     RowBox[{
-      StyleBox["O",
-       LineColor->RGBColor[0, 0, 1],
-       FrontFaceColor->RGBColor[0, 0, 1],
-       BackFaceColor->RGBColor[0, 0, 1],
-       GraphicsColor->RGBColor[0, 0, 1],
-       FontFamily->"Lucida Handwriting",
-       FontSize->14,
-       FontWeight->Bold,
-       FontColor->RGBColor[0, 0, 1]], " ", "(", 
-      RowBox[{
-       SubscriptBox["m", "b"], " ", 
-       SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
-     SpanMaxSize->DirectedInfinity[1]]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   SubscriptBox[
-    FrameBox[
-     RowBox[{
-      RowBox[{"-", 
-       RowBox[{"2", " ", 
-        SuperscriptBox["k", "-"], " ", 
-        SuperscriptBox["l", "+"]}]}], "-", 
-      RowBox[{"2", " ", 
-       SuperscriptBox["k", "+"], " ", 
-       SuperscriptBox["l", "-"]}], "+", 
-      RowBox[{"2", " ", 
-       SuperscriptBox["k", "-"], " ", 
-       SuperscriptBox["k", "+"]}], "+", 
-      RowBox[{"2", " ", 
-       SubscriptBox["k", "\[Perpendicular]"], " ", 
-       SubscriptBox["l", "\[Perpendicular]"]}], "-", 
-      SubsuperscriptBox["k", "\[Perpendicular]", "2"], "+", 
-      RowBox[{"2", " ", 
-       SuperscriptBox["l", "-"], " ", 
-       SuperscriptBox["l", "+"]}], "-", 
-      SubsuperscriptBox["l", "\[Perpendicular]", "2"]}],
-     Background->RGBColor[0.88, 1, 0.88],
-     FrameStyle->{
-       Thickness[Large], 
-       GrayLevel[0.5], 
-       Dashing[{0, Small, Small, Small}]},
-     RoundingRadius->5,
-     StripOnInput->False], 
-    StyleBox[
-     RowBox[{
-      StyleBox["O",
-       LineColor->RGBColor[0, 0, 1],
-       FrontFaceColor->RGBColor[0, 0, 1],
-       BackFaceColor->RGBColor[0, 0, 1],
-       GraphicsColor->RGBColor[0, 0, 1],
-       FontFamily->"Lucida Handwriting",
-       FontSize->14,
-       FontWeight->Bold,
-       FontColor->RGBColor[0, 0, 1]], " ", "(", 
-      SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
-     SpanMaxSize->DirectedInfinity[1]]]}], TraditionalForm]], "Output",
- CellChangeTimes->{{3.717753437936558*^9, 3.717753458693378*^9}, 
-   3.717753635487123*^9}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"PwrLst", "[", 
-  RowBox[{"Dn1", ",", 
-   RowBox[{
-    RowBox[{"Collect", "[", 
-     RowBox[{"#", ",", 
-      RowBox[{"{", 
-       RowBox[{"lp", ",", "lm"}], "}"}], ",", "Simplify"}], "]"}], "&"}]}], 
-  "]"}]], "Input",
- CellChangeTimes->{{3.717697940274354*^9, 3.717697940389606*^9}, {
-   3.717697977700828*^9, 3.717697989651073*^9}, {3.717698917189238*^9, 
-   3.717698944992836*^9}, 3.717741633010416*^9, {3.7177537375823517`*^9, 
-   3.7177537377172728`*^9}}],
-
-Cell[BoxData[
- FormBox[
-  TagBox[GridBox[{
-     {"1", 
-      StyleBox[
-       RowBox[{
-        StyleBox["O",
-         LineColor->RGBColor[0, 0, 1],
-         FrontFaceColor->RGBColor[0, 0, 1],
-         BackFaceColor->RGBColor[0, 0, 1],
-         GraphicsColor->RGBColor[0, 0, 1],
-         FontFamily->"Lucida Handwriting",
-         FontSize->14,
-         FontWeight->Bold,
-         FontColor->RGBColor[0, 0, 1]], " ", "(", 
-        RowBox[{
-         SubscriptBox["m", "b"], " ", 
-         SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
-       SpanMaxSize->DirectedInfinity[1]], 
-      RowBox[{
-       RowBox[{"2", " ", 
-        SuperscriptBox["k", "+"], " ", 
-        SuperscriptBox["q", "-"]}], "-", 
-       RowBox[{"2", " ", 
-        SuperscriptBox["l", "+"], " ", 
-        SuperscriptBox["q", "-"]}]}]},
-     {"2", 
-      StyleBox[
-       RowBox[{
-        StyleBox["O",
-         LineColor->RGBColor[0, 0, 1],
-         FrontFaceColor->RGBColor[0, 0, 1],
-         BackFaceColor->RGBColor[0, 0, 1],
-         GraphicsColor->RGBColor[0, 0, 1],
-         FontFamily->"Lucida Handwriting",
-         FontSize->14,
-         FontWeight->Bold,
-         FontColor->RGBColor[0, 0, 1]], " ", "(", 
-        SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
-       SpanMaxSize->DirectedInfinity[1]], 
-      RowBox[{
-       RowBox[{
-        SuperscriptBox["l", "+"], " ", 
-        RowBox[{"(", 
-         RowBox[{
-          RowBox[{"2", " ", 
-           SuperscriptBox["l", "-"]}], "-", 
-          RowBox[{"2", " ", 
-           SuperscriptBox["k", "-"]}]}], ")"}]}], "-", 
-       RowBox[{"2", " ", 
-        SuperscriptBox["k", "+"], " ", 
-        SuperscriptBox["l", "-"]}], "+", 
-       RowBox[{"2", " ", 
-        SuperscriptBox["k", "-"], " ", 
-        SuperscriptBox["k", "+"]}], "-", 
-       SuperscriptBox[
-        RowBox[{"(", 
-         RowBox[{
-          SubscriptBox["k", "\[Perpendicular]"], "-", 
-          SubscriptBox["l", "\[Perpendicular]"]}], ")"}], "2"]}]}
-    },
-    AutoDelete->False,
-    FrameStyle->Directive[
-      GrayLevel[0.85], 
-      Thickness[Large]],
-    GridBoxAlignment->{"Columns" -> {{Left}}},
-    GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
-    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
-   "Grid"], TraditionalForm]], "Output",
- CellChangeTimes->{{3.717697940823936*^9, 3.717697990405717*^9}, {
-   3.717698910648428*^9, 3.7176989458144617`*^9}, 3.717741579154642*^9, 
-   3.717741653527067*^9, 3.7177537381074953`*^9}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"SrtPwr", "[", "Dn2", "]"}]], "Input",
- CellChangeTimes->{{3.717753709174572*^9, 3.717753711775777*^9}, {
-  3.717753746870019*^9, 3.717753747046011*^9}}],
-
-Cell[BoxData[
- FormBox[
-  RowBox[{
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     RowBox[{
-      SubscriptBox["m", "b"], " ", 
-      SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     RowBox[{
-      SubscriptBox["m", "b"], " ", 
-      SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
-    SpanMaxSize->DirectedInfinity[1]]}], TraditionalForm]], "Output",
- CellChangeTimes->{{3.7177537100763493`*^9, 3.717753712199581*^9}, 
-   3.717753747458185*^9}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"SrtByPwr", "[", 
-  RowBox[{"Dn2", ",", "Simplify"}], "]"}]], "Input",
- CellChangeTimes->{{3.717753643607361*^9, 3.717753654440734*^9}, {
-  3.717753749007251*^9, 3.7177537491738586`*^9}}],
-
-Cell[BoxData[
- FormBox[
-  RowBox[{
-   RowBox[{"2", " ", 
-    RowBox[{"(", 
-     RowBox[{
-      RowBox[{
-       SuperscriptBox["l", "-"], " ", 
-       SuperscriptBox["p", "+"]}], "+", 
-      RowBox[{
-       SuperscriptBox["l", "+"], " ", 
-       SuperscriptBox["p", "-"]}]}], ")"}]}], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   RowBox[{"(", 
-    RowBox[{
-     RowBox[{"-", 
-      RowBox[{"2", " ", 
-       SuperscriptBox["k", "+"], " ", 
-       SuperscriptBox["l", "-"]}]}], "+", 
-     RowBox[{"2", " ", 
-      SuperscriptBox["k", "-"], " ", 
-      RowBox[{"(", 
-       RowBox[{
-        SuperscriptBox["k", "+"], "-", 
-        SuperscriptBox["l", "+"]}], ")"}]}], "+", 
-     RowBox[{"2", " ", 
-      SubscriptBox["k", "\[Perpendicular]"], " ", 
-      SubscriptBox["l", "\[Perpendicular]"]}], "-", 
-     SubsuperscriptBox["k", "\[Perpendicular]", "2"], "+", 
-     RowBox[{"2", " ", 
-      SuperscriptBox["l", "-"], " ", 
-      SuperscriptBox["l", "+"]}], "-", 
-     SubsuperscriptBox["l", "\[Perpendicular]", "2"]}], ")"}]}], 
-  TraditionalForm]], "Output",
- CellChangeTimes->{{3.717753651028557*^9, 3.717753654899414*^9}, 
-   3.717753749544009*^9}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"ShowPwr", "[", "Dn2", "]"}]], "Input",
- CellChangeTimes->{{3.7177534323177643`*^9, 3.7177534374030113`*^9}, {
-  3.717753751214546*^9, 3.717753751341692*^9}}],
-
-Cell[BoxData[
- FormBox[
-  RowBox[{
-   SubscriptBox[
-    FrameBox[
-     RowBox[{
-      RowBox[{"2", " ", 
-       SuperscriptBox["l", "-"], " ", 
-       SuperscriptBox["p", "+"]}], "+", 
-      RowBox[{"2", " ", 
-       SuperscriptBox["l", "+"], " ", 
-       SuperscriptBox["p", "-"]}]}],
-     Background->RGBColor[0.88, 1, 0.88],
-     FrameStyle->{
-       Thickness[Large], 
-       GrayLevel[0.5], 
-       Dashing[{0, Small, Small, Small}]},
-     RoundingRadius->5,
-     StripOnInput->False], 
-    StyleBox[
-     RowBox[{
-      StyleBox["O",
-       LineColor->RGBColor[0, 0, 1],
-       FrontFaceColor->RGBColor[0, 0, 1],
-       BackFaceColor->RGBColor[0, 0, 1],
-       GraphicsColor->RGBColor[0, 0, 1],
-       FontFamily->"Lucida Handwriting",
-       FontSize->14,
-       FontWeight->Bold,
-       FontColor->RGBColor[0, 0, 1]], " ", "(", 
-      RowBox[{
-       SubscriptBox["m", "b"], " ", 
-       SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
-     SpanMaxSize->DirectedInfinity[1]]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   SubscriptBox[
-    FrameBox[
-     RowBox[{
-      RowBox[{"-", 
-       RowBox[{"2", " ", 
-        SuperscriptBox["k", "-"], " ", 
-        SuperscriptBox["l", "+"]}]}], "-", 
-      RowBox[{"2", " ", 
-       SuperscriptBox["k", "+"], " ", 
-       SuperscriptBox["l", "-"]}], "+", 
-      RowBox[{"2", " ", 
-       SuperscriptBox["k", "-"], " ", 
-       SuperscriptBox["k", "+"]}], "+", 
-      RowBox[{"2", " ", 
-       SubscriptBox["k", "\[Perpendicular]"], " ", 
-       SubscriptBox["l", "\[Perpendicular]"]}], "-", 
-      SubsuperscriptBox["k", "\[Perpendicular]", "2"], "+", 
-      RowBox[{"2", " ", 
-       SuperscriptBox["l", "-"], " ", 
-       SuperscriptBox["l", "+"]}], "-", 
-      SubsuperscriptBox["l", "\[Perpendicular]", "2"]}],
-     Background->RGBColor[0.88, 1, 0.88],
-     FrameStyle->{
-       Thickness[Large], 
-       GrayLevel[0.5], 
-       Dashing[{0, Small, Small, Small}]},
-     RoundingRadius->5,
-     StripOnInput->False], 
-    StyleBox[
-     RowBox[{
-      StyleBox["O",
-       LineColor->RGBColor[0, 0, 1],
-       FrontFaceColor->RGBColor[0, 0, 1],
-       BackFaceColor->RGBColor[0, 0, 1],
-       GraphicsColor->RGBColor[0, 0, 1],
-       FontFamily->"Lucida Handwriting",
-       FontSize->14,
-       FontWeight->Bold,
-       FontColor->RGBColor[0, 0, 1]], " ", "(", 
-      SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
-     SpanMaxSize->DirectedInfinity[1]]]}], TraditionalForm]], "Output",
- CellChangeTimes->{{3.717753437936558*^9, 3.717753458693378*^9}, 
-   3.717753635487123*^9, 3.7177537517053432`*^9}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"PwrLst", "[", 
-  RowBox[{"Dn2", ",", 
-   RowBox[{
-    RowBox[{"Collect", "[", 
-     RowBox[{"#", ",", 
-      RowBox[{"{", 
-       RowBox[{"lp", ",", "lm"}], "}"}], ",", "Simplify"}], "]"}], "&"}]}], 
-  "]"}]], "Input",
- CellChangeTimes->{{3.717697940274354*^9, 3.717697940389606*^9}, {
-   3.717697977700828*^9, 3.717697989651073*^9}, {3.717698917189238*^9, 
-   3.717698944992836*^9}, 3.717741633010416*^9, {3.7177537375823517`*^9, 
-   3.717753754997179*^9}}],
-
-Cell[BoxData[
- FormBox[
-  TagBox[GridBox[{
-     {"1", 
-      StyleBox[
-       RowBox[{
-        StyleBox["O",
-         LineColor->RGBColor[0, 0, 1],
-         FrontFaceColor->RGBColor[0, 0, 1],
-         BackFaceColor->RGBColor[0, 0, 1],
-         GraphicsColor->RGBColor[0, 0, 1],
-         FontFamily->"Lucida Handwriting",
-         FontSize->14,
-         FontWeight->Bold,
-         FontColor->RGBColor[0, 0, 1]], " ", "(", 
-        RowBox[{
-         SubscriptBox["m", "b"], " ", 
-         SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
-       SpanMaxSize->DirectedInfinity[1]], 
-      RowBox[{
-       RowBox[{"2", " ", 
-        SuperscriptBox["l", "-"], " ", 
-        SuperscriptBox["p", "+"]}], "+", 
-       RowBox[{"2", " ", 
-        SuperscriptBox["l", "+"], " ", 
-        SuperscriptBox["p", "-"]}]}]},
-     {"2", 
-      StyleBox[
-       RowBox[{
-        StyleBox["O",
-         LineColor->RGBColor[0, 0, 1],
-         FrontFaceColor->RGBColor[0, 0, 1],
-         BackFaceColor->RGBColor[0, 0, 1],
-         GraphicsColor->RGBColor[0, 0, 1],
-         FontFamily->"Lucida Handwriting",
-         FontSize->14,
-         FontWeight->Bold,
-         FontColor->RGBColor[0, 0, 1]], " ", "(", 
-        SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
-       SpanMaxSize->DirectedInfinity[1]], 
-      RowBox[{
-       RowBox[{
-        SuperscriptBox["l", "+"], " ", 
-        RowBox[{"(", 
-         RowBox[{
-          RowBox[{"2", " ", 
-           SuperscriptBox["l", "-"]}], "-", 
-          RowBox[{"2", " ", 
-           SuperscriptBox["k", "-"]}]}], ")"}]}], "-", 
-       RowBox[{"2", " ", 
-        SuperscriptBox["k", "+"], " ", 
-        SuperscriptBox["l", "-"]}], "+", 
-       RowBox[{"2", " ", 
-        SuperscriptBox["k", "-"], " ", 
-        SuperscriptBox["k", "+"]}], "-", 
-       SuperscriptBox[
-        RowBox[{"(", 
-         RowBox[{
-          SubscriptBox["k", "\[Perpendicular]"], "-", 
-          SubscriptBox["l", "\[Perpendicular]"]}], ")"}], "2"]}]}
-    },
-    AutoDelete->False,
-    FrameStyle->Directive[
-      GrayLevel[0.85], 
-      Thickness[Large]],
-    GridBoxAlignment->{"Columns" -> {{Left}}},
-    GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
-    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
-   "Grid"], TraditionalForm]], "Output",
- CellChangeTimes->{{3.717697940823936*^9, 3.717697990405717*^9}, {
-   3.717698910648428*^9, 3.7176989458144617`*^9}, 3.717741579154642*^9, 
-   3.717741653527067*^9, {3.7177537381074953`*^9, 3.717753755441988*^9}}]
-}, Open  ]],
-
-Cell[TextData[{
- "Collinear Region, ",
- Cell[BoxData[
-  FormBox[
-   RowBox[{
-    SuperscriptBox["l", "\[Mu]"], "~", 
-    RowBox[{"O", "(", 
-     RowBox[{
-      SuperscriptBox["\[Lambda]", "2"], "*", 
-      SubscriptBox["m", "b"]}], ")"}]}], TraditionalForm]],
-  FormatType->"TraditionalForm"]
-}], "Item",
+}], "Subsection",
+ CellGroupingRules->{"SectionGrouping", Inherited},
  CellChangeTimes->{{3.717753291597678*^9, 3.71775331729845*^9}, {
-  3.717753784748733*^9, 3.717753786005888*^9}}],
+  3.7177541688687353`*^9, 3.717754168868835*^9}, {3.717754557616415*^9, 
+  3.717754586365697*^9}, {3.7177775059265842`*^9, 3.717777509082794*^9}, {
+  3.717778200384244*^9, 3.7177782022514257`*^9}, {3.717779954526823*^9, 
+  3.7177799658246937`*^9}}],
 
 Cell[BoxData[
  RowBox[{
   RowBox[{"SetScl", "[", 
    RowBox[{
     RowBox[{"{", 
-     RowBox[{
-      RowBox[{"{", "lp", "}"}], ",", 
-      RowBox[{"{", "lm", "}"}], ",", 
-      RowBox[{"{", "lt", "}"}]}], "}"}], ",", 
-    RowBox[{
      RowBox[{"{", 
-      RowBox[{
-       SuperscriptBox["\[Lambda]", "2"], ",", "1", ",", "\[Lambda]"}], "}"}], 
-     "*", "mb"}]}], "]"}], ";"}]], "Input",
+      RowBox[{"kp", ",", "km", ",", "kt"}], "}"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"\[Lambda]", "*", "Q"}], "}"}]}], "]"}], ";"}]], "Input",
  CellChangeTimes->{{3.717678613432846*^9, 3.717678640585828*^9}, 
    3.717687868351288*^9, {3.717753342689474*^9, 3.717753345408692*^9}, {
-   3.717753796040119*^9, 3.717753796844535*^9}, {3.717753868161065*^9, 
-   3.7177538798528347`*^9}}],
+   3.717777511583514*^9, 3.7177775235428553`*^9}, {3.717778206900145*^9, 
+   3.717778207097966*^9}}],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"SrtPwr", "[", "Dn1", "]"}]], "Input",
- CellChangeTimes->{{3.717753709174572*^9, 3.717753711775777*^9}}],
+ RowBox[{"SrtPwr", "[", "Dnmntr1", "]"}]], "Input",
+ CellChangeTimes->{{3.717753709174572*^9, 3.717753711775777*^9}, 
+   3.71777990826234*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -1194,8 +369,27 @@ Cell[BoxData[
       FontSize->14,
       FontWeight->Bold,
       FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     RowBox[{
-      SubscriptBox["m", "b"], " ", 
+     SqrtBox[
+      RowBox[{
+       SuperscriptBox["Q", "3"], " ", 
+       SubscriptBox["\[CapitalLambda]", "QCD"]}]], ")"}],
+    SpanMaxSize->DirectedInfinity[1]], 
+   TagBox["+",
+    "InactiveToken",
+    BaseStyle->"InactiveTraditional",
+    SyntaxForm->"+"], 
+   StyleBox[
+    RowBox[{
+     StyleBox["O",
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Lucida Handwriting",
+      FontSize->14,
+      FontWeight->Bold,
+      FontColor->RGBColor[0, 0, 1]], " ", "(", 
+     RowBox[{"Q", " ", 
       SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
     SpanMaxSize->DirectedInfinity[1]], 
    TagBox["+",
@@ -1213,8 +407,7 @@ Cell[BoxData[
       FontSize->14,
       FontWeight->Bold,
       FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     RowBox[{
-      SubscriptBox["m", "b"], " ", 
+     RowBox[{"Q", " ", 
       SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
     SpanMaxSize->DirectedInfinity[1]], 
    TagBox["+",
@@ -1232,8 +425,7 @@ Cell[BoxData[
       FontSize->14,
       FontWeight->Bold,
       FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     RowBox[{
-      SubscriptBox["m", "b"], " ", 
+     RowBox[{"Q", " ", 
       SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
     SpanMaxSize->DirectedInfinity[1]], 
    TagBox["+",
@@ -1251,8 +443,7 @@ Cell[BoxData[
       FontSize->14,
       FontWeight->Bold,
       FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     RowBox[{
-      SubscriptBox["m", "b"], " ", 
+     RowBox[{"Q", " ", 
       SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
     SpanMaxSize->DirectedInfinity[1]], 
    TagBox["+",
@@ -1270,8 +461,7 @@ Cell[BoxData[
       FontSize->14,
       FontWeight->Bold,
       FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     RowBox[{
-      SubscriptBox["m", "b"], " ", 
+     RowBox[{"Q", " ", 
       SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
     SpanMaxSize->DirectedInfinity[1]], 
    TagBox["+",
@@ -1290,87 +480,43 @@ Cell[BoxData[
       FontWeight->Bold,
       FontColor->RGBColor[0, 0, 1]], " ", "(", 
      SqrtBox[
-      RowBox[{
-       SubscriptBox["m", "b"], " ", 
+      RowBox[{"Q", " ", 
        SubsuperscriptBox["\[CapitalLambda]", "QCD", "3"]}]], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
     SpanMaxSize->DirectedInfinity[1]]}], TraditionalForm]], "Output",
- CellChangeTimes->{{3.7177537100763493`*^9, 3.717753712199581*^9}, 
-   3.71775379922862*^9}]
+ CellChangeTimes->{{3.7177537100763493`*^9, 3.717753712199581*^9}, {
+   3.71777752007119*^9, 3.7177775255029583`*^9}, 3.717777574464402*^9, 
+   3.7177781629636803`*^9, 3.717778209461084*^9, 3.7177793054470797`*^9, 
+   3.717779504273325*^9, 3.7177799209504623`*^9, {3.7177804395981503`*^9, 
+   3.717780461389484*^9}, 3.7177805376010647`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"SrtByPwr", "[", 
-  RowBox[{"Dn1", ",", "Simplify"}], "]"}]], "Input",
- CellChangeTimes->{{3.717753643607361*^9, 3.717753654440734*^9}}],
+  RowBox[{"Dnmntr1", ",", "Simplify"}], "]"}]], "Input",
+ CellChangeTimes->{{3.717753643607361*^9, 3.717753654440734*^9}, {
+  3.717779887234407*^9, 3.717779907942528*^9}}],
 
 Cell[BoxData[
  FormBox[
   RowBox[{
+   RowBox[{"2", " ", 
+    SuperscriptBox["k", "-"], " ", 
+    SuperscriptBox["l", "+"]}], 
+   TagBox["+",
+    "InactiveToken",
+    BaseStyle->"InactiveTraditional",
+    SyntaxForm->"+"], 
    RowBox[{"(", 
     RowBox[{
-     RowBox[{"-", 
-      RowBox[{"2", " ", 
-       SuperscriptBox["k", "+"], " ", 
-       SuperscriptBox["l", "-"]}]}], "+", 
      RowBox[{"2", " ", 
-      SuperscriptBox["k", "+"], " ", 
-      SuperscriptBox["q", "-"]}], "-", 
+      SuperscriptBox["k", "-"], " ", 
+      SuperscriptBox["k", "+"]}], "-", 
      RowBox[{"2", " ", 
-      SuperscriptBox["l", "+"], " ", 
-      SuperscriptBox["q", "-"]}], "+", 
+      SubscriptBox["k", "\[Perpendicular]"], " ", 
+      SubscriptBox["l", "\[Perpendicular]"]}], "-", 
+     SubsuperscriptBox["k", "\[Perpendicular]", "2"], "+", 
      RowBox[{"2", " ", 
       SuperscriptBox["l", "-"], " ", 
       SuperscriptBox["l", "+"]}], "-", 
@@ -1380,83 +526,29 @@ Cell[BoxData[
     BaseStyle->"InactiveTraditional",
     SyntaxForm->"+"], 
    RowBox[{"2", " ", 
-    SubscriptBox["k", "\[Perpendicular]"], " ", 
-    SubscriptBox["l", "\[Perpendicular]"]}], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   RowBox[{"(", 
-    RowBox[{
-     RowBox[{"2", " ", 
-      SuperscriptBox["k", "-"], " ", 
-      RowBox[{"(", 
-       RowBox[{
-        SuperscriptBox["k", "+"], "-", 
-        SuperscriptBox["l", "+"]}], ")"}]}], "-", 
-     SubsuperscriptBox["k", "\[Perpendicular]", "2"]}], ")"}]}], 
-  TraditionalForm]], "Output",
+    SuperscriptBox["k", "+"], " ", 
+    SuperscriptBox["l", "-"]}]}], TraditionalForm]], "Output",
  CellChangeTimes->{{3.717753651028557*^9, 3.717753654899414*^9}, 
-   3.7177538018692293`*^9}]
+   3.717777585525422*^9, 3.717778163034631*^9, 3.717778210590601*^9, 
+   3.717779306971603*^9, 3.717779504358436*^9, 3.71777992101468*^9, {
+   3.717780441961396*^9, 3.7177804640434647`*^9}, 3.7177805376703653`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"ShowPwr", "[", "Dn1", "]"}]], "Input",
- CellChangeTimes->{{3.7177534323177643`*^9, 3.7177534374030113`*^9}}],
+ RowBox[{"ShowPwr", "[", "Dnmntr1", "]"}]], "Input",
+ CellChangeTimes->{{3.7177534323177643`*^9, 3.7177534374030113`*^9}, 
+   3.717779907953876*^9}],
 
 Cell[BoxData[
  FormBox[
   RowBox[{
    SubscriptBox[
     FrameBox[
-     RowBox[{
-      RowBox[{"-", 
-       RowBox[{"2", " ", 
-        SuperscriptBox["k", "+"], " ", 
-        SuperscriptBox["l", "-"]}]}], "+", 
-      RowBox[{"2", " ", 
-       SuperscriptBox["k", "+"], " ", 
-       SuperscriptBox["q", "-"]}], "-", 
-      RowBox[{"2", " ", 
-       SuperscriptBox["l", "+"], " ", 
-       SuperscriptBox["q", "-"]}], "+", 
-      RowBox[{"2", " ", 
-       SuperscriptBox["l", "-"], " ", 
-       SuperscriptBox["l", "+"]}], "-", 
-      SubsuperscriptBox["l", "\[Perpendicular]", "2"]}],
-     Background->RGBColor[0.88, 1, 0.88],
-     FrameStyle->{
-       Thickness[Large], 
-       GrayLevel[0.5], 
-       Dashing[{0, Small, Small, Small}]},
-     RoundingRadius->5,
-     StripOnInput->False], 
-    StyleBox[
-     RowBox[{
-      StyleBox["O",
-       LineColor->RGBColor[0, 0, 1],
-       FrontFaceColor->RGBColor[0, 0, 1],
-       BackFaceColor->RGBColor[0, 0, 1],
-       GraphicsColor->RGBColor[0, 0, 1],
-       FontFamily->"Lucida Handwriting",
-       FontSize->14,
-       FontWeight->Bold,
-       FontColor->RGBColor[0, 0, 1]], " ", "(", 
-      RowBox[{
-       SubscriptBox["m", "b"], " ", 
-       SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
-     SpanMaxSize->DirectedInfinity[1]]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   SubscriptBox[
-    FrameBox[
      RowBox[{"2", " ", 
-      SubscriptBox["k", "\[Perpendicular]"], " ", 
-      SubscriptBox["l", "\[Perpendicular]"]}],
+      SuperscriptBox["k", "-"], " ", 
+      SuperscriptBox["l", "+"]}],
      Background->RGBColor[0.88, 1, 0.88],
      FrameStyle->{
        Thickness[Large], 
@@ -1477,8 +569,8 @@ Cell[BoxData[
        FontColor->RGBColor[0, 0, 1]], " ", "(", 
       SqrtBox[
        RowBox[{
-        SubscriptBox["m", "b"], " ", 
-        SubsuperscriptBox["\[CapitalLambda]", "QCD", "3"]}]], ")"}],
+        SuperscriptBox["Q", "3"], " ", 
+        SubscriptBox["\[CapitalLambda]", "QCD"]}]], ")"}],
      SpanMaxSize->DirectedInfinity[1]]], 
    TagBox["+",
     "InactiveToken",
@@ -1487,14 +579,17 @@ Cell[BoxData[
    SubscriptBox[
     FrameBox[
      RowBox[{
-      RowBox[{"-", 
-       RowBox[{"2", " ", 
-        SuperscriptBox["k", "-"], " ", 
-        SuperscriptBox["l", "+"]}]}], "+", 
       RowBox[{"2", " ", 
        SuperscriptBox["k", "-"], " ", 
        SuperscriptBox["k", "+"]}], "-", 
-      SubsuperscriptBox["k", "\[Perpendicular]", "2"]}],
+      RowBox[{"2", " ", 
+       SubscriptBox["k", "\[Perpendicular]"], " ", 
+       SubscriptBox["l", "\[Perpendicular]"]}], "-", 
+      SubsuperscriptBox["k", "\[Perpendicular]", "2"], "+", 
+      RowBox[{"2", " ", 
+       SuperscriptBox["l", "-"], " ", 
+       SuperscriptBox["l", "+"]}], "-", 
+      SubsuperscriptBox["l", "\[Perpendicular]", "2"]}],
      Background->RGBColor[0.88, 1, 0.88],
      FrameStyle->{
        Thickness[Large], 
@@ -1513,17 +608,73 @@ Cell[BoxData[
        FontSize->14,
        FontWeight->Bold,
        FontColor->RGBColor[0, 0, 1]], " ", "(", 
-      SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
+      RowBox[{"Q", " ", 
+       SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
+     SpanMaxSize->DirectedInfinity[1]]], 
+   TagBox["+",
+    "InactiveToken",
+    BaseStyle->"InactiveTraditional",
+    SyntaxForm->"+"], 
+   SubscriptBox[
+    FrameBox[
+     RowBox[{"2", " ", 
+      SuperscriptBox["k", "+"], " ", 
+      SuperscriptBox["l", "-"]}],
+     Background->RGBColor[0.88, 1, 0.88],
+     FrameStyle->{
+       Thickness[Large], 
+       GrayLevel[0.5], 
+       Dashing[{0, Small, Small, Small}]},
+     RoundingRadius->5,
+     StripOnInput->False], 
+    StyleBox[
+     RowBox[{
+      StyleBox["O",
+       LineColor->RGBColor[0, 0, 1],
+       FrontFaceColor->RGBColor[0, 0, 1],
+       BackFaceColor->RGBColor[0, 0, 1],
+       GraphicsColor->RGBColor[0, 0, 1],
+       FontFamily->"Lucida Handwriting",
+       FontSize->14,
+       FontWeight->Bold,
+       FontColor->RGBColor[0, 0, 1]], " ", "(", 
+      SqrtBox[
+       RowBox[{"Q", " ", 
+        SubsuperscriptBox["\[CapitalLambda]", "QCD", "3"]}]], ")"}],
      SpanMaxSize->DirectedInfinity[1]]]}], TraditionalForm]], "Output",
  CellChangeTimes->{{3.717753437936558*^9, 3.717753458693378*^9}, 
-   3.717753635487123*^9, 3.717753803162668*^9}]
+   3.717753635487123*^9, 3.7177775872190113`*^9, 3.71777762629529*^9, 
+   3.7177781631179953`*^9, 3.717778212616427*^9, 3.717779308136855*^9, 
+   3.717779504536471*^9, 3.7177799210820208`*^9, 3.7177804652661657`*^9, 
+   3.717780537739463*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PwrCnt", "[", 
+  RowBox[{"2", "km", "*", "lp"}], "]"}]], "Input",
+ CellChangeTimes->{{3.717777651372191*^9, 3.717777660546084*^9}, {
+  3.717777763535461*^9, 3.7177777851925173`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  SqrtBox[
+   RowBox[{
+    SuperscriptBox["Q", "3"], " ", 
+    SubscriptBox["\[CapitalLambda]", "QCD"]}]], TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.717777661767194*^9, {3.7177777686992617`*^9, 3.717777785660954*^9}, 
+   3.7177781632077103`*^9, 3.717778214132393*^9, 3.7177793104032583`*^9, 
+   3.717779506337285*^9, 3.71777992115343*^9, 3.717780467851668*^9, 
+   3.717780537798691*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"PwrLst", "[", 
-  RowBox[{"Dn1", ",", 
+  RowBox[{"Dnmntr1", ",", 
    RowBox[{
     RowBox[{"Collect", "[", 
      RowBox[{"#", ",", 
@@ -1533,7 +684,7 @@ Cell[BoxData[
  CellChangeTimes->{{3.717697940274354*^9, 3.717697940389606*^9}, {
    3.717697977700828*^9, 3.717697989651073*^9}, {3.717698917189238*^9, 
    3.717698944992836*^9}, 3.717741633010416*^9, {3.7177537375823517`*^9, 
-   3.7177537377172728`*^9}}],
+   3.7177537377172728`*^9}, 3.717779907966548*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -1550,27 +701,14 @@ Cell[BoxData[
          FontSize->14,
          FontWeight->Bold,
          FontColor->RGBColor[0, 0, 1]], " ", "(", 
-        RowBox[{
-         SubscriptBox["m", "b"], " ", 
-         SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
-       SpanMaxSize->DirectedInfinity[1]], 
-      RowBox[{
-       RowBox[{"-", 
-        RowBox[{"2", " ", 
-         SuperscriptBox["k", "+"], " ", 
-         SuperscriptBox["l", "-"]}]}], "+", 
-       RowBox[{"2", " ", 
-        SuperscriptBox["k", "+"], " ", 
-        SuperscriptBox["q", "-"]}], "+", 
-       RowBox[{
-        SuperscriptBox["l", "+"], " ", 
-        RowBox[{"(", 
+        SqrtBox[
          RowBox[{
-          RowBox[{"2", " ", 
-           SuperscriptBox["l", "-"]}], "-", 
-          RowBox[{"2", " ", 
-           SuperscriptBox["q", "-"]}]}], ")"}]}], "-", 
-       SubsuperscriptBox["l", "\[Perpendicular]", "2"]}]},
+          SuperscriptBox["Q", "3"], " ", 
+          SubscriptBox["\[CapitalLambda]", "QCD"]}]], ")"}],
+       SpanMaxSize->DirectedInfinity[1]], 
+      RowBox[{"2", " ", 
+       SuperscriptBox["k", "-"], " ", 
+       SuperscriptBox["l", "+"]}]},
      {"2", 
       StyleBox[
        RowBox[{
@@ -1583,14 +721,21 @@ Cell[BoxData[
          FontSize->14,
          FontWeight->Bold,
          FontColor->RGBColor[0, 0, 1]], " ", "(", 
-        SqrtBox[
-         RowBox[{
-          SubscriptBox["m", "b"], " ", 
-          SubsuperscriptBox["\[CapitalLambda]", "QCD", "3"]}]], ")"}],
+        RowBox[{"Q", " ", 
+         SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
        SpanMaxSize->DirectedInfinity[1]], 
-      RowBox[{"2", " ", 
-       SubscriptBox["k", "\[Perpendicular]"], " ", 
-       SubscriptBox["l", "\[Perpendicular]"]}]},
+      RowBox[{
+       RowBox[{"2", " ", 
+        SuperscriptBox["k", "-"], " ", 
+        SuperscriptBox["k", "+"]}], "-", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          SubscriptBox["k", "\[Perpendicular]"], "+", 
+          SubscriptBox["l", "\[Perpendicular]"]}], ")"}], "2"], "+", 
+       RowBox[{"2", " ", 
+        SuperscriptBox["l", "-"], " ", 
+        SuperscriptBox["l", "+"]}]}]},
      {"3", 
       StyleBox[
        RowBox[{
@@ -1603,17 +748,13 @@ Cell[BoxData[
          FontSize->14,
          FontWeight->Bold,
          FontColor->RGBColor[0, 0, 1]], " ", "(", 
-        SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
+        SqrtBox[
+         RowBox[{"Q", " ", 
+          SubsuperscriptBox["\[CapitalLambda]", "QCD", "3"]}]], ")"}],
        SpanMaxSize->DirectedInfinity[1]], 
-      RowBox[{
-       RowBox[{"-", 
-        RowBox[{"2", " ", 
-         SuperscriptBox["k", "-"], " ", 
-         SuperscriptBox["l", "+"]}]}], "+", 
-       RowBox[{"2", " ", 
-        SuperscriptBox["k", "-"], " ", 
-        SuperscriptBox["k", "+"]}], "-", 
-       SubsuperscriptBox["k", "\[Perpendicular]", "2"]}]}
+      RowBox[{"2", " ", 
+       SuperscriptBox["k", "+"], " ", 
+       SuperscriptBox["l", "-"]}]}
     },
     AutoDelete->False,
     FrameStyle->Directive[
@@ -1625,15 +766,18 @@ Cell[BoxData[
    "Grid"], TraditionalForm]], "Output",
  CellChangeTimes->{{3.717697940823936*^9, 3.717697990405717*^9}, {
    3.717698910648428*^9, 3.7176989458144617`*^9}, 3.717741579154642*^9, 
-   3.717741653527067*^9, 3.7177537381074953`*^9, 3.71775380583669*^9}]
+   3.717741653527067*^9, 3.7177537381074953`*^9, 3.717777629517013*^9, 
+   3.7177781632900257`*^9, 3.717778221816674*^9, 3.7177793118539457`*^9, 
+   3.7177795081301203`*^9, 3.717779921214117*^9, 3.717780468755809*^9, 
+   3.717780537884013*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"SrtPwr", "[", "Dn2", "]"}]], "Input",
+ RowBox[{"SrtPwr", "[", "Dnmntr2", "]"}]], "Input",
  CellChangeTimes->{{3.717753709174572*^9, 3.717753711775777*^9}, {
-  3.717753746870019*^9, 3.717753747046011*^9}}],
+   3.717753746870019*^9, 3.717753747046011*^9}, 3.71777990797815*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -1649,7 +793,10 @@ Cell[BoxData[
       FontSize->14,
       FontWeight->Bold,
       FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     SubsuperscriptBox["m", "b", "2"], ")"}],
+     SqrtBox[
+      RowBox[{
+       SuperscriptBox["Q", "3"], " ", 
+       SubscriptBox["\[CapitalLambda]", "QCD"]}]], ")"}],
     SpanMaxSize->DirectedInfinity[1]], 
    TagBox["+",
     "InactiveToken",
@@ -1666,8 +813,7 @@ Cell[BoxData[
       FontSize->14,
       FontWeight->Bold,
       FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     RowBox[{
-      SubscriptBox["m", "b"], " ", 
+     RowBox[{"Q", " ", 
       SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
     SpanMaxSize->DirectedInfinity[1]], 
    TagBox["+",
@@ -1685,8 +831,7 @@ Cell[BoxData[
       FontSize->14,
       FontWeight->Bold,
       FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     RowBox[{
-      SubscriptBox["m", "b"], " ", 
+     RowBox[{"Q", " ", 
       SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
     SpanMaxSize->DirectedInfinity[1]], 
    TagBox["+",
@@ -1704,8 +849,7 @@ Cell[BoxData[
       FontSize->14,
       FontWeight->Bold,
       FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     RowBox[{
-      SubscriptBox["m", "b"], " ", 
+     RowBox[{"Q", " ", 
       SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
     SpanMaxSize->DirectedInfinity[1]], 
    TagBox["+",
@@ -1723,8 +867,25 @@ Cell[BoxData[
       FontSize->14,
       FontWeight->Bold,
       FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     RowBox[{
-      SubscriptBox["m", "b"], " ", 
+     RowBox[{"Q", " ", 
+      SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
+    SpanMaxSize->DirectedInfinity[1]], 
+   TagBox["+",
+    "InactiveToken",
+    BaseStyle->"InactiveTraditional",
+    SyntaxForm->"+"], 
+   StyleBox[
+    RowBox[{
+     StyleBox["O",
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Lucida Handwriting",
+      FontSize->14,
+      FontWeight->Bold,
+      FontColor->RGBColor[0, 0, 1]], " ", "(", 
+     RowBox[{"Q", " ", 
       SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
     SpanMaxSize->DirectedInfinity[1]], 
    TagBox["+",
@@ -1743,103 +904,29 @@ Cell[BoxData[
       FontWeight->Bold,
       FontColor->RGBColor[0, 0, 1]], " ", "(", 
      SqrtBox[
-      RowBox[{
-       SubscriptBox["m", "b"], " ", 
+      RowBox[{"Q", " ", 
        SubsuperscriptBox["\[CapitalLambda]", "QCD", "3"]}]], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
     SpanMaxSize->DirectedInfinity[1]]}], TraditionalForm]], "Output",
  CellChangeTimes->{{3.7177537100763493`*^9, 3.717753712199581*^9}, 
-   3.717753747458185*^9, 3.717753815293111*^9}]
+   3.717753747458185*^9, 3.7177781633860283`*^9, 3.717778301953945*^9, 
+   3.717779313158206*^9, 3.7177795109554873`*^9, 3.7177799212700777`*^9, 
+   3.717780471122167*^9, 3.71778053797328*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"SrtByPwr", "[", 
-  RowBox[{"Dn2", ",", "Simplify"}], "]"}]], "Input",
+  RowBox[{"Dnmntr2", ",", "Simplify"}], "]"}]], "Input",
  CellChangeTimes->{{3.717753643607361*^9, 3.717753654440734*^9}, {
-  3.717753749007251*^9, 3.7177537491738586`*^9}}],
+   3.717753749007251*^9, 3.7177537491738586`*^9}, 3.7177799079877377`*^9}],
 
 Cell[BoxData[
  FormBox[
   RowBox[{
    RowBox[{"2", " ", 
-    SuperscriptBox["l", "-"], " ", 
-    SuperscriptBox["p", "+"]}], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   RowBox[{"(", 
-    RowBox[{
-     RowBox[{"-", 
-      RowBox[{"2", " ", 
-       SuperscriptBox["k", "+"], " ", 
-       SuperscriptBox["l", "-"]}]}], "+", 
-     RowBox[{"2", " ", 
-      SuperscriptBox["l", "+"], " ", 
-      SuperscriptBox["p", "-"]}], "+", 
-     RowBox[{"2", " ", 
-      SuperscriptBox["l", "-"], " ", 
-      SuperscriptBox["l", "+"]}], "-", 
-     SubsuperscriptBox["l", "\[Perpendicular]", "2"]}], ")"}], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   RowBox[{"2", " ", 
-    SubscriptBox["k", "\[Perpendicular]"], " ", 
-    SubscriptBox["l", "\[Perpendicular]"]}], 
+    SuperscriptBox["k", "+"], " ", 
+    SuperscriptBox["p", "-"]}], 
    TagBox["+",
     "InactiveToken",
     BaseStyle->"InactiveTraditional",
@@ -1848,22 +935,34 @@ Cell[BoxData[
     RowBox[{
      RowBox[{"2", " ", 
       SuperscriptBox["k", "-"], " ", 
-      RowBox[{"(", 
-       RowBox[{
-        SuperscriptBox["k", "+"], "-", 
-        SuperscriptBox["l", "+"]}], ")"}]}], "-", 
-     SubsuperscriptBox["k", "\[Perpendicular]", "2"]}], ")"}]}], 
-  TraditionalForm]], "Output",
+      SuperscriptBox["k", "+"]}], "-", 
+     RowBox[{"2", " ", 
+      SubscriptBox["k", "\[Perpendicular]"], " ", 
+      SubscriptBox["p", "\[Perpendicular]"]}], "-", 
+     SubsuperscriptBox["k", "\[Perpendicular]", "2"], "+", 
+     RowBox[{"2", " ", 
+      SuperscriptBox["p", "-"], " ", 
+      SuperscriptBox["p", "+"]}], "-", 
+     SubsuperscriptBox["p", "\[Perpendicular]", "2"]}], ")"}], 
+   TagBox["+",
+    "InactiveToken",
+    BaseStyle->"InactiveTraditional",
+    SyntaxForm->"+"], 
+   RowBox[{"2", " ", 
+    SuperscriptBox["k", "-"], " ", 
+    SuperscriptBox["p", "+"]}]}], TraditionalForm]], "Output",
  CellChangeTimes->{{3.717753651028557*^9, 3.717753654899414*^9}, 
-   3.717753749544009*^9, 3.717753816426427*^9}]
+   3.717753749544009*^9, 3.717778303100945*^9, 3.717779316502493*^9, 
+   3.717779511951556*^9, 3.7177799213215723`*^9, 3.717780473104197*^9, 
+   3.7177805380542507`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"ShowPwr", "[", "Dn2", "]"}]], "Input",
+ RowBox[{"ShowPwr", "[", "Dnmntr2", "]"}]], "Input",
  CellChangeTimes->{{3.7177534323177643`*^9, 3.7177534374030113`*^9}, {
-  3.717753751214546*^9, 3.717753751341692*^9}}],
+   3.717753751214546*^9, 3.717753751341692*^9}, 3.7177799079967937`*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -1871,7 +970,78 @@ Cell[BoxData[
    SubscriptBox[
     FrameBox[
      RowBox[{"2", " ", 
-      SuperscriptBox["l", "-"], " ", 
+      SuperscriptBox["k", "+"], " ", 
+      SuperscriptBox["p", "-"]}],
+     Background->RGBColor[0.88, 1, 0.88],
+     FrameStyle->{
+       Thickness[Large], 
+       GrayLevel[0.5], 
+       Dashing[{0, Small, Small, Small}]},
+     RoundingRadius->5,
+     StripOnInput->False], 
+    StyleBox[
+     RowBox[{
+      StyleBox["O",
+       LineColor->RGBColor[0, 0, 1],
+       FrontFaceColor->RGBColor[0, 0, 1],
+       BackFaceColor->RGBColor[0, 0, 1],
+       GraphicsColor->RGBColor[0, 0, 1],
+       FontFamily->"Lucida Handwriting",
+       FontSize->14,
+       FontWeight->Bold,
+       FontColor->RGBColor[0, 0, 1]], " ", "(", 
+      SqrtBox[
+       RowBox[{
+        SuperscriptBox["Q", "3"], " ", 
+        SubscriptBox["\[CapitalLambda]", "QCD"]}]], ")"}],
+     SpanMaxSize->DirectedInfinity[1]]], 
+   TagBox["+",
+    "InactiveToken",
+    BaseStyle->"InactiveTraditional",
+    SyntaxForm->"+"], 
+   SubscriptBox[
+    FrameBox[
+     RowBox[{
+      RowBox[{"2", " ", 
+       SuperscriptBox["k", "-"], " ", 
+       SuperscriptBox["k", "+"]}], "-", 
+      RowBox[{"2", " ", 
+       SubscriptBox["k", "\[Perpendicular]"], " ", 
+       SubscriptBox["p", "\[Perpendicular]"]}], "-", 
+      SubsuperscriptBox["k", "\[Perpendicular]", "2"], "+", 
+      RowBox[{"2", " ", 
+       SuperscriptBox["p", "-"], " ", 
+       SuperscriptBox["p", "+"]}], "-", 
+      SubsuperscriptBox["p", "\[Perpendicular]", "2"]}],
+     Background->RGBColor[0.88, 1, 0.88],
+     FrameStyle->{
+       Thickness[Large], 
+       GrayLevel[0.5], 
+       Dashing[{0, Small, Small, Small}]},
+     RoundingRadius->5,
+     StripOnInput->False], 
+    StyleBox[
+     RowBox[{
+      StyleBox["O",
+       LineColor->RGBColor[0, 0, 1],
+       FrontFaceColor->RGBColor[0, 0, 1],
+       BackFaceColor->RGBColor[0, 0, 1],
+       GraphicsColor->RGBColor[0, 0, 1],
+       FontFamily->"Lucida Handwriting",
+       FontSize->14,
+       FontWeight->Bold,
+       FontColor->RGBColor[0, 0, 1]], " ", "(", 
+      RowBox[{"Q", " ", 
+       SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
+     SpanMaxSize->DirectedInfinity[1]]], 
+   TagBox["+",
+    "InactiveToken",
+    BaseStyle->"InactiveTraditional",
+    SyntaxForm->"+"], 
+   SubscriptBox[
+    FrameBox[
+     RowBox[{"2", " ", 
+      SuperscriptBox["k", "-"], " ", 
       SuperscriptBox["p", "+"]}],
      Background->RGBColor[0.88, 1, 0.88],
      FrameStyle->{
@@ -1891,26 +1061,360 @@ Cell[BoxData[
        FontSize->14,
        FontWeight->Bold,
        FontColor->RGBColor[0, 0, 1]], " ", "(", 
-      SubsuperscriptBox["m", "b", "2"], ")"}],
-     SpanMaxSize->DirectedInfinity[1]]], 
+      SqrtBox[
+       RowBox[{"Q", " ", 
+        SubsuperscriptBox["\[CapitalLambda]", "QCD", "3"]}]], ")"}],
+     SpanMaxSize->DirectedInfinity[1]]]}], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.717753437936558*^9, 3.717753458693378*^9}, 
+   3.717753635487123*^9, 3.7177537517053432`*^9, 3.717778304068445*^9, 
+   3.7177793175330343`*^9, 3.7177795130976543`*^9, 3.717779921384922*^9, 
+   3.717780474617166*^9, 3.717780538136742*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PwrLst", "[", 
+  RowBox[{"Dnmntr2", ",", 
+   RowBox[{
+    RowBox[{"Collect", "[", 
+     RowBox[{"#", ",", 
+      RowBox[{"{", 
+       RowBox[{"lp", ",", "lm"}], "}"}], ",", "Simplify"}], "]"}], "&"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.717697940274354*^9, 3.717697940389606*^9}, {
+   3.717697977700828*^9, 3.717697989651073*^9}, {3.717698917189238*^9, 
+   3.717698944992836*^9}, 3.717741633010416*^9, {3.7177537375823517`*^9, 
+   3.717753754997179*^9}, 3.717779908007276*^9}],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[GridBox[{
+     {"1", 
+      StyleBox[
+       RowBox[{
+        StyleBox["O",
+         LineColor->RGBColor[0, 0, 1],
+         FrontFaceColor->RGBColor[0, 0, 1],
+         BackFaceColor->RGBColor[0, 0, 1],
+         GraphicsColor->RGBColor[0, 0, 1],
+         FontFamily->"Lucida Handwriting",
+         FontSize->14,
+         FontWeight->Bold,
+         FontColor->RGBColor[0, 0, 1]], " ", "(", 
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox["Q", "3"], " ", 
+          SubscriptBox["\[CapitalLambda]", "QCD"]}]], ")"}],
+       SpanMaxSize->DirectedInfinity[1]], 
+      RowBox[{"2", " ", 
+       SuperscriptBox["k", "+"], " ", 
+       SuperscriptBox["p", "-"]}]},
+     {"2", 
+      StyleBox[
+       RowBox[{
+        StyleBox["O",
+         LineColor->RGBColor[0, 0, 1],
+         FrontFaceColor->RGBColor[0, 0, 1],
+         BackFaceColor->RGBColor[0, 0, 1],
+         GraphicsColor->RGBColor[0, 0, 1],
+         FontFamily->"Lucida Handwriting",
+         FontSize->14,
+         FontWeight->Bold,
+         FontColor->RGBColor[0, 0, 1]], " ", "(", 
+        RowBox[{"Q", " ", 
+         SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
+       SpanMaxSize->DirectedInfinity[1]], 
+      RowBox[{
+       RowBox[{"2", " ", 
+        SuperscriptBox["k", "-"], " ", 
+        SuperscriptBox["k", "+"]}], "-", 
+       RowBox[{"2", " ", 
+        SubscriptBox["k", "\[Perpendicular]"], " ", 
+        SubscriptBox["p", "\[Perpendicular]"]}], "-", 
+       SubsuperscriptBox["k", "\[Perpendicular]", "2"], "+", 
+       RowBox[{"2", " ", 
+        SuperscriptBox["p", "-"], " ", 
+        SuperscriptBox["p", "+"]}], "-", 
+       SubsuperscriptBox["p", "\[Perpendicular]", "2"]}]},
+     {"3", 
+      StyleBox[
+       RowBox[{
+        StyleBox["O",
+         LineColor->RGBColor[0, 0, 1],
+         FrontFaceColor->RGBColor[0, 0, 1],
+         BackFaceColor->RGBColor[0, 0, 1],
+         GraphicsColor->RGBColor[0, 0, 1],
+         FontFamily->"Lucida Handwriting",
+         FontSize->14,
+         FontWeight->Bold,
+         FontColor->RGBColor[0, 0, 1]], " ", "(", 
+        SqrtBox[
+         RowBox[{"Q", " ", 
+          SubsuperscriptBox["\[CapitalLambda]", "QCD", "3"]}]], ")"}],
+       SpanMaxSize->DirectedInfinity[1]], 
+      RowBox[{"2", " ", 
+       SuperscriptBox["k", "-"], " ", 
+       SuperscriptBox["p", "+"]}]}
+    },
+    AutoDelete->False,
+    FrameStyle->Directive[
+      GrayLevel[0.85], 
+      Thickness[Large]],
+    GridBoxAlignment->{"Columns" -> {{Left}}},
+    GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+   "Grid"], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.717697940823936*^9, 3.717697990405717*^9}, {
+   3.717698910648428*^9, 3.7176989458144617`*^9}, 3.717741579154642*^9, 
+   3.717741653527067*^9, {3.7177537381074953`*^9, 3.717753755441988*^9}, 
+   3.717778306379776*^9, 3.717779318512295*^9, 3.717779515572674*^9, 
+   3.717779921452722*^9, 3.717780476580566*^9, 3.7177805382197227`*^9}]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "(2) Collinear region, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      SuperscriptBox["k", "+"], ",", 
+      SuperscriptBox["k", "-"], ",", 
+      SuperscriptBox["k", "\[Perpendicular]"]}], ")"}], "~", 
+    RowBox[{"O", "(", 
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["\[Lambda]", "2"], "Q"}], ",", "Q", ",", "\[Lambda]Q"}],
+      ")"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", "
+}], "Subsection",
+ CellGroupingRules->{"SectionGrouping", Inherited},
+ CellChangeTimes->{{3.717753291597678*^9, 3.71775331729845*^9}, {
+  3.717753784748733*^9, 3.717753786005888*^9}, {3.7177541300846443`*^9, 
+  3.717754160784923*^9}, {3.7177545699970083`*^9, 3.71775458299605*^9}, {
+  3.7177780156291523`*^9, 3.717778059610594*^9}, {3.717779940456944*^9, 
+  3.717779945343589*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SetScl", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", "kp", "}"}], ",", 
+      RowBox[{"{", "km", "}"}], ",", 
+      RowBox[{"{", "kt", "}"}]}], "}"}], ",", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       SuperscriptBox["\[Lambda]", "2"], ",", "1", ",", "\[Lambda]"}], "}"}], 
+     "*", "Q"}]}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.717678613432846*^9, 3.717678640585828*^9}, 
+   3.717687868351288*^9, {3.717753342689474*^9, 3.717753345408692*^9}, {
+   3.717753796040119*^9, 3.717753796844535*^9}, {3.717753868161065*^9, 
+   3.7177538798528347`*^9}, {3.717778045659882*^9, 3.71777806692076*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SrtPwr", "[", "Dnmntr1", "]"}]], "Input",
+ CellChangeTimes->{{3.717753709174572*^9, 3.717753711775777*^9}, 
+   3.7177799080184937`*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   StyleBox[
+    RowBox[{
+     StyleBox["O",
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Lucida Handwriting",
+      FontSize->14,
+      FontWeight->Bold,
+      FontColor->RGBColor[0, 0, 1]], " ", "(", 
+     SuperscriptBox["Q", "2"], ")"}],
+    SpanMaxSize->DirectedInfinity[1]], 
    TagBox["+",
     "InactiveToken",
     BaseStyle->"InactiveTraditional",
     SyntaxForm->"+"], 
+   StyleBox[
+    RowBox[{
+     StyleBox["O",
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Lucida Handwriting",
+      FontSize->14,
+      FontWeight->Bold,
+      FontColor->RGBColor[0, 0, 1]], " ", "(", 
+     RowBox[{"Q", " ", 
+      SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
+    SpanMaxSize->DirectedInfinity[1]], 
+   TagBox["+",
+    "InactiveToken",
+    BaseStyle->"InactiveTraditional",
+    SyntaxForm->"+"], 
+   StyleBox[
+    RowBox[{
+     StyleBox["O",
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Lucida Handwriting",
+      FontSize->14,
+      FontWeight->Bold,
+      FontColor->RGBColor[0, 0, 1]], " ", "(", 
+     RowBox[{"Q", " ", 
+      SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
+    SpanMaxSize->DirectedInfinity[1]], 
+   TagBox["+",
+    "InactiveToken",
+    BaseStyle->"InactiveTraditional",
+    SyntaxForm->"+"], 
+   StyleBox[
+    RowBox[{
+     StyleBox["O",
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Lucida Handwriting",
+      FontSize->14,
+      FontWeight->Bold,
+      FontColor->RGBColor[0, 0, 1]], " ", "(", 
+     RowBox[{"Q", " ", 
+      SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
+    SpanMaxSize->DirectedInfinity[1]], 
+   TagBox["+",
+    "InactiveToken",
+    BaseStyle->"InactiveTraditional",
+    SyntaxForm->"+"], 
+   StyleBox[
+    RowBox[{
+     StyleBox["O",
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Lucida Handwriting",
+      FontSize->14,
+      FontWeight->Bold,
+      FontColor->RGBColor[0, 0, 1]], " ", "(", 
+     RowBox[{"Q", " ", 
+      SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
+    SpanMaxSize->DirectedInfinity[1]], 
+   TagBox["+",
+    "InactiveToken",
+    BaseStyle->"InactiveTraditional",
+    SyntaxForm->"+"], 
+   StyleBox[
+    RowBox[{
+     StyleBox["O",
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Lucida Handwriting",
+      FontSize->14,
+      FontWeight->Bold,
+      FontColor->RGBColor[0, 0, 1]], " ", "(", 
+     RowBox[{"Q", " ", 
+      SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
+    SpanMaxSize->DirectedInfinity[1]], 
+   TagBox["+",
+    "InactiveToken",
+    BaseStyle->"InactiveTraditional",
+    SyntaxForm->"+"], 
+   StyleBox[
+    RowBox[{
+     StyleBox["O",
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Lucida Handwriting",
+      FontSize->14,
+      FontWeight->Bold,
+      FontColor->RGBColor[0, 0, 1]], " ", "(", 
+     SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
+    SpanMaxSize->DirectedInfinity[1]]}], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.7177537100763493`*^9, 3.717753712199581*^9}, 
+   3.71775379922862*^9, 3.717778078613967*^9, 3.717778606438397*^9, 
+   3.717779323155531*^9, 3.7177795181982117`*^9, 3.717779921543469*^9, 
+   3.717780278046216*^9, 3.717780492206963*^9, 3.717780542408511*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SrtByPwr", "[", 
+  RowBox[{"Dnmntr1", ",", "Simplify"}], "]"}]], "Input",
+ CellChangeTimes->{{3.717753643607361*^9, 3.717753654440734*^9}, 
+   3.717779908031631*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"2", " ", 
+    SuperscriptBox["k", "-"], " ", 
+    SuperscriptBox["l", "+"]}], 
+   TagBox["+",
+    "InactiveToken",
+    BaseStyle->"InactiveTraditional",
+    SyntaxForm->"+"], 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"2", " ", 
+      SuperscriptBox["k", "-"], " ", 
+      SuperscriptBox["k", "+"]}], "-", 
+     RowBox[{"2", " ", 
+      SubscriptBox["k", "\[Perpendicular]"], " ", 
+      SubscriptBox["l", "\[Perpendicular]"]}], "-", 
+     SubsuperscriptBox["k", "\[Perpendicular]", "2"], "+", 
+     RowBox[{"2", " ", 
+      SuperscriptBox["l", "-"], " ", 
+      SuperscriptBox["l", "+"]}], "-", 
+     SubsuperscriptBox["l", "\[Perpendicular]", "2"]}], ")"}], 
+   TagBox["+",
+    "InactiveToken",
+    BaseStyle->"InactiveTraditional",
+    SyntaxForm->"+"], 
+   RowBox[{"2", " ", 
+    SuperscriptBox["k", "+"], " ", 
+    SuperscriptBox["l", "-"]}]}], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.717753651028557*^9, 3.717753654899414*^9}, 
+   3.7177538018692293`*^9, 3.717778080812373*^9, 3.717778606520405*^9, 
+   3.7177793245695753`*^9, 3.71777952085688*^9, 3.7177799215940237`*^9, 
+   3.717780278117893*^9, 3.7177804922813597`*^9, 3.7177805424957647`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ShowPwr", "[", 
+  RowBox[{"Dnmntr1", ",", "FullSimplify"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7177534323177643`*^9, 3.7177534374030113`*^9}, 
+   3.7177799080425367`*^9, {3.717780281033286*^9, 3.7177802857880373`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
    SubscriptBox[
     FrameBox[
-     RowBox[{
-      RowBox[{"-", 
-       RowBox[{"2", " ", 
-        SuperscriptBox["k", "+"], " ", 
-        SuperscriptBox["l", "-"]}]}], "+", 
-      RowBox[{"2", " ", 
-       SuperscriptBox["l", "+"], " ", 
-       SuperscriptBox["p", "-"]}], "+", 
-      RowBox[{"2", " ", 
-       SuperscriptBox["l", "-"], " ", 
-       SuperscriptBox["l", "+"]}], "-", 
-      SubsuperscriptBox["l", "\[Perpendicular]", "2"]}],
+     RowBox[{"2", " ", 
+      SuperscriptBox["k", "-"], " ", 
+      SuperscriptBox["l", "+"]}],
      Background->RGBColor[0.88, 1, 0.88],
      FrameStyle->{
        Thickness[Large], 
@@ -1929,8 +1433,45 @@ Cell[BoxData[
        FontSize->14,
        FontWeight->Bold,
        FontColor->RGBColor[0, 0, 1]], " ", "(", 
-      RowBox[{
-       SubscriptBox["m", "b"], " ", 
+      SuperscriptBox["Q", "2"], ")"}],
+     SpanMaxSize->DirectedInfinity[1]]], 
+   TagBox["+",
+    "InactiveToken",
+    BaseStyle->"InactiveTraditional",
+    SyntaxForm->"+"], 
+   SubscriptBox[
+    FrameBox[
+     RowBox[{
+      RowBox[{"2", " ", 
+       SuperscriptBox["k", "-"], " ", 
+       SuperscriptBox["k", "+"]}], "-", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         SubscriptBox["k", "\[Perpendicular]"], "+", 
+         SubscriptBox["l", "\[Perpendicular]"]}], ")"}], "2"], "+", 
+      RowBox[{"2", " ", 
+       SuperscriptBox["l", "-"], " ", 
+       SuperscriptBox["l", "+"]}]}],
+     Background->RGBColor[0.88, 1, 0.88],
+     FrameStyle->{
+       Thickness[Large], 
+       GrayLevel[0.5], 
+       Dashing[{0, Small, Small, Small}]},
+     RoundingRadius->5,
+     StripOnInput->False], 
+    StyleBox[
+     RowBox[{
+      StyleBox["O",
+       LineColor->RGBColor[0, 0, 1],
+       FrontFaceColor->RGBColor[0, 0, 1],
+       BackFaceColor->RGBColor[0, 0, 1],
+       GraphicsColor->RGBColor[0, 0, 1],
+       FontFamily->"Lucida Handwriting",
+       FontSize->14,
+       FontWeight->Bold,
+       FontColor->RGBColor[0, 0, 1]], " ", "(", 
+      RowBox[{"Q", " ", 
        SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
      SpanMaxSize->DirectedInfinity[1]]], 
    TagBox["+",
@@ -1940,6 +1481,685 @@ Cell[BoxData[
    SubscriptBox[
     FrameBox[
      RowBox[{"2", " ", 
+      SuperscriptBox["k", "+"], " ", 
+      SuperscriptBox["l", "-"]}],
+     Background->RGBColor[0.88, 1, 0.88],
+     FrameStyle->{
+       Thickness[Large], 
+       GrayLevel[0.5], 
+       Dashing[{0, Small, Small, Small}]},
+     RoundingRadius->5,
+     StripOnInput->False], 
+    StyleBox[
+     RowBox[{
+      StyleBox["O",
+       LineColor->RGBColor[0, 0, 1],
+       FrontFaceColor->RGBColor[0, 0, 1],
+       BackFaceColor->RGBColor[0, 0, 1],
+       GraphicsColor->RGBColor[0, 0, 1],
+       FontFamily->"Lucida Handwriting",
+       FontSize->14,
+       FontWeight->Bold,
+       FontColor->RGBColor[0, 0, 1]], " ", "(", 
+      SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
+     SpanMaxSize->DirectedInfinity[1]]]}], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.717753437936558*^9, 3.717753458693378*^9}, 
+   3.717753635487123*^9, 3.717753803162668*^9, 3.717778083070118*^9, 
+   3.717778606602581*^9, 3.7177793255456457`*^9, 3.7177795217449217`*^9, 
+   3.717779921668316*^9, {3.7177802782051287`*^9, 3.717780286479926*^9}, 
+   3.7177804923636713`*^9, 3.717780542579268*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PwrLst", "[", 
+  RowBox[{"Dnmntr1", ",", "FullSimplify"}], "]"}]], "Input",
+ CellChangeTimes->{{3.717697940274354*^9, 3.717697940389606*^9}, {
+   3.717697977700828*^9, 3.717697989651073*^9}, {3.717698917189238*^9, 
+   3.717698944992836*^9}, 3.717741633010416*^9, {3.7177537375823517`*^9, 
+   3.7177537377172728`*^9}, 3.717779908055649*^9, {3.7177803175097837`*^9, 
+   3.717780318383259*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[GridBox[{
+     {"1", 
+      StyleBox[
+       RowBox[{
+        StyleBox["O",
+         LineColor->RGBColor[0, 0, 1],
+         FrontFaceColor->RGBColor[0, 0, 1],
+         BackFaceColor->RGBColor[0, 0, 1],
+         GraphicsColor->RGBColor[0, 0, 1],
+         FontFamily->"Lucida Handwriting",
+         FontSize->14,
+         FontWeight->Bold,
+         FontColor->RGBColor[0, 0, 1]], " ", "(", 
+        SuperscriptBox["Q", "2"], ")"}],
+       SpanMaxSize->DirectedInfinity[1]], 
+      RowBox[{"2", " ", 
+       SuperscriptBox["k", "-"], " ", 
+       SuperscriptBox["l", "+"]}]},
+     {"2", 
+      StyleBox[
+       RowBox[{
+        StyleBox["O",
+         LineColor->RGBColor[0, 0, 1],
+         FrontFaceColor->RGBColor[0, 0, 1],
+         BackFaceColor->RGBColor[0, 0, 1],
+         GraphicsColor->RGBColor[0, 0, 1],
+         FontFamily->"Lucida Handwriting",
+         FontSize->14,
+         FontWeight->Bold,
+         FontColor->RGBColor[0, 0, 1]], " ", "(", 
+        RowBox[{"Q", " ", 
+         SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
+       SpanMaxSize->DirectedInfinity[1]], 
+      RowBox[{
+       RowBox[{"2", " ", 
+        SuperscriptBox["k", "-"], " ", 
+        SuperscriptBox["k", "+"]}], "-", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          SubscriptBox["k", "\[Perpendicular]"], "+", 
+          SubscriptBox["l", "\[Perpendicular]"]}], ")"}], "2"], "+", 
+       RowBox[{"2", " ", 
+        SuperscriptBox["l", "-"], " ", 
+        SuperscriptBox["l", "+"]}]}]},
+     {"3", 
+      StyleBox[
+       RowBox[{
+        StyleBox["O",
+         LineColor->RGBColor[0, 0, 1],
+         FrontFaceColor->RGBColor[0, 0, 1],
+         BackFaceColor->RGBColor[0, 0, 1],
+         GraphicsColor->RGBColor[0, 0, 1],
+         FontFamily->"Lucida Handwriting",
+         FontSize->14,
+         FontWeight->Bold,
+         FontColor->RGBColor[0, 0, 1]], " ", "(", 
+        SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
+       SpanMaxSize->DirectedInfinity[1]], 
+      RowBox[{"2", " ", 
+       SuperscriptBox["k", "+"], " ", 
+       SuperscriptBox["l", "-"]}]}
+    },
+    AutoDelete->False,
+    FrameStyle->Directive[
+      GrayLevel[0.85], 
+      Thickness[Large]],
+    GridBoxAlignment->{"Columns" -> {{Left}}},
+    GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+   "Grid"], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.717697940823936*^9, 3.717697990405717*^9}, {
+   3.717698910648428*^9, 3.7176989458144617`*^9}, 3.717741579154642*^9, 
+   3.717741653527067*^9, 3.7177537381074953`*^9, 3.71775380583669*^9, {
+   3.717778085270698*^9, 3.717778106687168*^9}, 3.7177786066863117`*^9, 
+   3.7177793272579317`*^9, 3.7177795226437473`*^9, 3.71777992173416*^9, 
+   3.717780278288013*^9, 3.7177803210960817`*^9, 3.717780492445779*^9, 
+   3.717780542659562*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SrtPwr", "[", "Dnmntr2", "]"}]], "Input",
+ CellChangeTimes->{{3.717753709174572*^9, 3.717753711775777*^9}, {
+   3.717753746870019*^9, 3.717753747046011*^9}, 3.7177799080684233`*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   StyleBox[
+    RowBox[{
+     StyleBox["O",
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Lucida Handwriting",
+      FontSize->14,
+      FontWeight->Bold,
+      FontColor->RGBColor[0, 0, 1]], " ", "(", 
+     RowBox[{"Q", " ", 
+      SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
+    SpanMaxSize->DirectedInfinity[1]], 
+   TagBox["+",
+    "InactiveToken",
+    BaseStyle->"InactiveTraditional",
+    SyntaxForm->"+"], 
+   StyleBox[
+    RowBox[{
+     StyleBox["O",
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Lucida Handwriting",
+      FontSize->14,
+      FontWeight->Bold,
+      FontColor->RGBColor[0, 0, 1]], " ", "(", 
+     RowBox[{"Q", " ", 
+      SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
+    SpanMaxSize->DirectedInfinity[1]], 
+   TagBox["+",
+    "InactiveToken",
+    BaseStyle->"InactiveTraditional",
+    SyntaxForm->"+"], 
+   StyleBox[
+    RowBox[{
+     StyleBox["O",
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Lucida Handwriting",
+      FontSize->14,
+      FontWeight->Bold,
+      FontColor->RGBColor[0, 0, 1]], " ", "(", 
+     RowBox[{"Q", " ", 
+      SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
+    SpanMaxSize->DirectedInfinity[1]], 
+   TagBox["+",
+    "InactiveToken",
+    BaseStyle->"InactiveTraditional",
+    SyntaxForm->"+"], 
+   StyleBox[
+    RowBox[{
+     StyleBox["O",
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Lucida Handwriting",
+      FontSize->14,
+      FontWeight->Bold,
+      FontColor->RGBColor[0, 0, 1]], " ", "(", 
+     RowBox[{"Q", " ", 
+      SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
+    SpanMaxSize->DirectedInfinity[1]], 
+   TagBox["+",
+    "InactiveToken",
+    BaseStyle->"InactiveTraditional",
+    SyntaxForm->"+"], 
+   StyleBox[
+    RowBox[{
+     StyleBox["O",
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Lucida Handwriting",
+      FontSize->14,
+      FontWeight->Bold,
+      FontColor->RGBColor[0, 0, 1]], " ", "(", 
+     RowBox[{"Q", " ", 
+      SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
+    SpanMaxSize->DirectedInfinity[1]], 
+   TagBox["+",
+    "InactiveToken",
+    BaseStyle->"InactiveTraditional",
+    SyntaxForm->"+"], 
+   StyleBox[
+    RowBox[{
+     StyleBox["O",
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Lucida Handwriting",
+      FontSize->14,
+      FontWeight->Bold,
+      FontColor->RGBColor[0, 0, 1]], " ", "(", 
+     RowBox[{"Q", " ", 
+      SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
+    SpanMaxSize->DirectedInfinity[1]], 
+   TagBox["+",
+    "InactiveToken",
+    BaseStyle->"InactiveTraditional",
+    SyntaxForm->"+"], 
+   StyleBox[
+    RowBox[{
+     StyleBox["O",
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Lucida Handwriting",
+      FontSize->14,
+      FontWeight->Bold,
+      FontColor->RGBColor[0, 0, 1]], " ", "(", 
+     RowBox[{"Q", " ", 
+      SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
+    SpanMaxSize->DirectedInfinity[1]]}], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.7177537100763493`*^9, 3.717753712199581*^9}, 
+   3.717753747458185*^9, 3.717753815293111*^9, 3.7177780872133627`*^9, 
+   3.717778606771237*^9, 3.7177786426968813`*^9, 3.717779329645419*^9, 
+   3.7177795235076323`*^9, 3.717779921800179*^9, 3.717780278384796*^9, 
+   3.71778049252806*^9, 3.7177805427455997`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SrtByPwr", "[", 
+  RowBox[{"Dnmntr2", ",", "Simplify"}], "]"}]], "Input",
+ CellChangeTimes->{{3.717753643607361*^9, 3.717753654440734*^9}, {
+   3.717753749007251*^9, 3.7177537491738586`*^9}, {3.717778620037517*^9, 
+   3.717778651619157*^9}, 3.717779908082185*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"2", " ", 
+    SuperscriptBox["k", "+"], " ", 
+    SuperscriptBox["p", "-"]}], "+", 
+   RowBox[{"2", " ", 
+    SuperscriptBox["k", "-"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      SuperscriptBox["k", "+"], "+", 
+      SuperscriptBox["p", "+"]}], ")"}]}], "-", 
+   RowBox[{"2", " ", 
+    SubscriptBox["k", "\[Perpendicular]"], " ", 
+    SubscriptBox["p", "\[Perpendicular]"]}], "-", 
+   SubsuperscriptBox["k", "\[Perpendicular]", "2"], "+", 
+   RowBox[{"2", " ", 
+    SuperscriptBox["p", "-"], " ", 
+    SuperscriptBox["p", "+"]}], "-", 
+   SubsuperscriptBox["p", "\[Perpendicular]", "2"]}], 
+  TraditionalForm]], "Output",
+ CellChangeTimes->{{3.717753651028557*^9, 3.717753654899414*^9}, 
+   3.717753749544009*^9, 3.717753816426427*^9, {3.717778606854727*^9, 
+   3.717778652373888*^9}, 3.7177793307580757`*^9, 3.717779526003331*^9, 
+   3.717779921868293*^9, 3.717780278454056*^9, 3.717780492612966*^9, 
+   3.717780542828167*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ShowPwr", "[", 
+  RowBox[{"Dnmntr2", ",", "FullSimplify"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7177534323177643`*^9, 3.7177534374030113`*^9}, {
+   3.717753751214546*^9, 3.717753751341692*^9}, 3.7177799080944757`*^9, {
+   3.7177802706120768`*^9, 3.717780298801244*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  SubscriptBox[
+   FrameBox[
+    RowBox[{
+     RowBox[{"2", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        SuperscriptBox["k", "-"], "+", 
+        SuperscriptBox["p", "-"]}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        SuperscriptBox["k", "+"], "+", 
+        SuperscriptBox["p", "+"]}], ")"}]}], "-", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        SubscriptBox["k", "\[Perpendicular]"], "+", 
+        SubscriptBox["p", "\[Perpendicular]"]}], ")"}], "2"]}],
+    Background->RGBColor[0.88, 1, 0.88],
+    FrameStyle->{
+      Thickness[Large], 
+      GrayLevel[0.5], 
+      Dashing[{0, Small, Small, Small}]},
+    RoundingRadius->5,
+    StripOnInput->False], 
+   StyleBox[
+    RowBox[{
+     StyleBox["O",
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Lucida Handwriting",
+      FontSize->14,
+      FontWeight->Bold,
+      FontColor->RGBColor[0, 0, 1]], " ", "(", 
+     RowBox[{"Q", " ", 
+      SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
+    SpanMaxSize->DirectedInfinity[1]]], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.717753437936558*^9, 3.717753458693378*^9}, 
+   3.717753635487123*^9, 3.7177537517053432`*^9, 3.7177538173796797`*^9, 
+   3.717778606920306*^9, 3.7177786495794277`*^9, 3.7177795353421993`*^9, 
+   3.71777992196796*^9, {3.717780278537766*^9, 3.71778029956711*^9}, 
+   3.717780492690336*^9, 3.7177805429223557`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PwrLst", "[", 
+  RowBox[{"Dnmntr2", ",", "FullSimplify"}], "]"}]], "Input",
+ CellChangeTimes->{{3.717697940274354*^9, 3.717697940389606*^9}, {
+   3.717697977700828*^9, 3.717697989651073*^9}, {3.717698917189238*^9, 
+   3.717698944992836*^9}, 3.717741633010416*^9, {3.7177537375823517`*^9, 
+   3.717753754997179*^9}, 3.7177799081077633`*^9, {3.7177803068830233`*^9, 
+   3.7177803099277973`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[GridBox[{
+     {"1", 
+      StyleBox[
+       RowBox[{
+        StyleBox["O",
+         LineColor->RGBColor[0, 0, 1],
+         FrontFaceColor->RGBColor[0, 0, 1],
+         BackFaceColor->RGBColor[0, 0, 1],
+         GraphicsColor->RGBColor[0, 0, 1],
+         FontFamily->"Lucida Handwriting",
+         FontSize->14,
+         FontWeight->Bold,
+         FontColor->RGBColor[0, 0, 1]], " ", "(", 
+        RowBox[{"Q", " ", 
+         SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
+       SpanMaxSize->DirectedInfinity[1]], 
+      RowBox[{
+       RowBox[{"2", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          SuperscriptBox["k", "-"], "+", 
+          SuperscriptBox["p", "-"]}], ")"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          SuperscriptBox["k", "+"], "+", 
+          SuperscriptBox["p", "+"]}], ")"}]}], "-", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          SubscriptBox["k", "\[Perpendicular]"], "+", 
+          SubscriptBox["p", "\[Perpendicular]"]}], ")"}], "2"]}]}
+    },
+    AutoDelete->False,
+    FrameStyle->Directive[
+      GrayLevel[0.85], 
+      Thickness[Large]],
+    GridBoxAlignment->{"Columns" -> {{Left}}},
+    GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+   "Grid"], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.717697940823936*^9, 3.717697990405717*^9}, {
+   3.717698910648428*^9, 3.7176989458144617`*^9}, 3.717741579154642*^9, 
+   3.717741653527067*^9, {3.7177537381074953`*^9, 3.717753755441988*^9}, 
+   3.71775381840036*^9, 3.717779473060166*^9, 3.717779538318424*^9, 
+   3.717779922020314*^9, 3.717780310407611*^9, 3.7177804927782297`*^9, 
+   3.717780542987039*^9}]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "(3) Hard region, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["k", "\[Mu]"], "~", 
+    RowBox[{"O", "(", "Q", ")"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"]
+}], "Subsection",
+ CellGroupingRules->{"SectionGrouping", Inherited},
+ CellChangeTimes->{{3.717753291597678*^9, 3.71775331729845*^9}, {
+  3.717753784748733*^9, 3.717753786005888*^9}, {3.717753852024589*^9, 
+  3.71775385244643*^9}, {3.717754179266971*^9, 3.717754180373189*^9}, {
+  3.7177545752927437`*^9, 3.7177545792848454`*^9}, {3.7177780040492067`*^9, 
+  3.717778008748715*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SetScl", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"{", 
+      RowBox[{"kp", ",", "km", ",", "kt"}], "}"}], "}"}], ",", 
+    RowBox[{"{", "Q", "}"}]}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.717678613432846*^9, 3.717678640585828*^9}, 
+   3.717687868351288*^9, {3.717753342689474*^9, 3.717753345408692*^9}, {
+   3.717753796040119*^9, 3.717753796844535*^9}, {3.71775386011301*^9, 
+   3.717753861021893*^9}, {3.7177538936376123`*^9, 3.717753903916088*^9}, {
+   3.717777894877398*^9, 3.7177779030451727`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SrtPwr", "[", "Dnmntr1", "]"}]], "Input",
+ CellChangeTimes->{{3.717753709174572*^9, 3.717753711775777*^9}, 
+   3.7177799081206923`*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   StyleBox[
+    RowBox[{
+     StyleBox["O",
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Lucida Handwriting",
+      FontSize->14,
+      FontWeight->Bold,
+      FontColor->RGBColor[0, 0, 1]], " ", "(", 
+     SuperscriptBox["Q", "2"], ")"}],
+    SpanMaxSize->DirectedInfinity[1]], 
+   TagBox["+",
+    "InactiveToken",
+    BaseStyle->"InactiveTraditional",
+    SyntaxForm->"+"], 
+   StyleBox[
+    RowBox[{
+     StyleBox["O",
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Lucida Handwriting",
+      FontSize->14,
+      FontWeight->Bold,
+      FontColor->RGBColor[0, 0, 1]], " ", "(", 
+     SuperscriptBox["Q", "2"], ")"}],
+    SpanMaxSize->DirectedInfinity[1]], 
+   TagBox["+",
+    "InactiveToken",
+    BaseStyle->"InactiveTraditional",
+    SyntaxForm->"+"], 
+   StyleBox[
+    RowBox[{
+     StyleBox["O",
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Lucida Handwriting",
+      FontSize->14,
+      FontWeight->Bold,
+      FontColor->RGBColor[0, 0, 1]], " ", "(", 
+     SuperscriptBox["Q", "2"], ")"}],
+    SpanMaxSize->DirectedInfinity[1]], 
+   TagBox["+",
+    "InactiveToken",
+    BaseStyle->"InactiveTraditional",
+    SyntaxForm->"+"], 
+   StyleBox[
+    RowBox[{
+     StyleBox["O",
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Lucida Handwriting",
+      FontSize->14,
+      FontWeight->Bold,
+      FontColor->RGBColor[0, 0, 1]], " ", "(", 
+     SqrtBox[
+      RowBox[{
+       SuperscriptBox["Q", "3"], " ", 
+       SubscriptBox["\[CapitalLambda]", "QCD"]}]], ")"}],
+    SpanMaxSize->DirectedInfinity[1]], 
+   TagBox["+",
+    "InactiveToken",
+    BaseStyle->"InactiveTraditional",
+    SyntaxForm->"+"], 
+   StyleBox[
+    RowBox[{
+     StyleBox["O",
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Lucida Handwriting",
+      FontSize->14,
+      FontWeight->Bold,
+      FontColor->RGBColor[0, 0, 1]], " ", "(", 
+     RowBox[{"Q", " ", 
+      SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
+    SpanMaxSize->DirectedInfinity[1]], 
+   TagBox["+",
+    "InactiveToken",
+    BaseStyle->"InactiveTraditional",
+    SyntaxForm->"+"], 
+   StyleBox[
+    RowBox[{
+     StyleBox["O",
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Lucida Handwriting",
+      FontSize->14,
+      FontWeight->Bold,
+      FontColor->RGBColor[0, 0, 1]], " ", "(", 
+     RowBox[{"Q", " ", 
+      SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
+    SpanMaxSize->DirectedInfinity[1]], 
+   TagBox["+",
+    "InactiveToken",
+    BaseStyle->"InactiveTraditional",
+    SyntaxForm->"+"], 
+   StyleBox[
+    RowBox[{
+     StyleBox["O",
+      LineColor->RGBColor[0, 0, 1],
+      FrontFaceColor->RGBColor[0, 0, 1],
+      BackFaceColor->RGBColor[0, 0, 1],
+      GraphicsColor->RGBColor[0, 0, 1],
+      FontFamily->"Lucida Handwriting",
+      FontSize->14,
+      FontWeight->Bold,
+      FontColor->RGBColor[0, 0, 1]], " ", "(", 
+     RowBox[{"Q", " ", 
+      SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
+    SpanMaxSize->DirectedInfinity[1]]}], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.7177537100763493`*^9, 3.717753712199581*^9}, 
+   3.71775379922862*^9, 3.717753905909194*^9, 3.7177779055170107`*^9, 
+   3.7177785781453447`*^9, 3.717779922102785*^9, 3.717780547755567*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SrtByPwr", "[", 
+  RowBox[{"Dnmntr1", ",", "Simplify"}], "]"}]], "Input",
+ CellChangeTimes->{{3.717753643607361*^9, 3.717753654440734*^9}, 
+   3.717779908135201*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"2", " ", 
+      SuperscriptBox["k", "-"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        SuperscriptBox["k", "+"], "+", 
+        SuperscriptBox["l", "+"]}], ")"}]}], "-", 
+     SubsuperscriptBox["k", "\[Perpendicular]", "2"]}], ")"}], 
+   TagBox["+",
+    "InactiveToken",
+    BaseStyle->"InactiveTraditional",
+    SyntaxForm->"+"], 
+   RowBox[{
+    RowBox[{"-", "2"}], " ", 
+    SubscriptBox["k", "\[Perpendicular]"], " ", 
+    SubscriptBox["l", "\[Perpendicular]"]}], 
+   TagBox["+",
+    "InactiveToken",
+    BaseStyle->"InactiveTraditional",
+    SyntaxForm->"+"], 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"2", " ", 
+      SuperscriptBox["k", "+"], " ", 
+      SuperscriptBox["l", "-"]}], "+", 
+     RowBox[{"2", " ", 
+      SuperscriptBox["l", "-"], " ", 
+      SuperscriptBox["l", "+"]}], "-", 
+     SubsuperscriptBox["l", "\[Perpendicular]", "2"]}], ")"}]}], 
+  TraditionalForm]], "Output",
+ CellChangeTimes->{{3.717753651028557*^9, 3.717753654899414*^9}, 
+   3.7177538018692293`*^9, 3.717753908227004*^9, 3.717777909554611*^9, 
+   3.71777857822329*^9, 3.7177799221839323`*^9, 3.717780547832165*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ShowPwr", "[", "Dnmntr1", "]"}]], "Input",
+ CellChangeTimes->{{3.7177534323177643`*^9, 3.7177534374030113`*^9}, 
+   3.717779908148665*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   SubscriptBox[
+    FrameBox[
+     RowBox[{
+      RowBox[{"2", " ", 
+       SuperscriptBox["k", "-"], " ", 
+       SuperscriptBox["l", "+"]}], "+", 
+      RowBox[{"2", " ", 
+       SuperscriptBox["k", "-"], " ", 
+       SuperscriptBox["k", "+"]}], "-", 
+      SubsuperscriptBox["k", "\[Perpendicular]", "2"]}],
+     Background->RGBColor[0.88, 1, 0.88],
+     FrameStyle->{
+       Thickness[Large], 
+       GrayLevel[0.5], 
+       Dashing[{0, Small, Small, Small}]},
+     RoundingRadius->5,
+     StripOnInput->False], 
+    StyleBox[
+     RowBox[{
+      StyleBox["O",
+       LineColor->RGBColor[0, 0, 1],
+       FrontFaceColor->RGBColor[0, 0, 1],
+       BackFaceColor->RGBColor[0, 0, 1],
+       GraphicsColor->RGBColor[0, 0, 1],
+       FontFamily->"Lucida Handwriting",
+       FontSize->14,
+       FontWeight->Bold,
+       FontColor->RGBColor[0, 0, 1]], " ", "(", 
+      SuperscriptBox["Q", "2"], ")"}],
+     SpanMaxSize->DirectedInfinity[1]]], 
+   TagBox["+",
+    "InactiveToken",
+    BaseStyle->"InactiveTraditional",
+    SyntaxForm->"+"], 
+   SubscriptBox[
+    FrameBox[
+     RowBox[{
+      RowBox[{"-", "2"}], " ", 
       SubscriptBox["k", "\[Perpendicular]"], " ", 
       SubscriptBox["l", "\[Perpendicular]"]}],
      Background->RGBColor[0.88, 1, 0.88],
@@ -1962,8 +2182,8 @@ Cell[BoxData[
        FontColor->RGBColor[0, 0, 1]], " ", "(", 
       SqrtBox[
        RowBox[{
-        SubscriptBox["m", "b"], " ", 
-        SubsuperscriptBox["\[CapitalLambda]", "QCD", "3"]}]], ")"}],
+        SuperscriptBox["Q", "3"], " ", 
+        SubscriptBox["\[CapitalLambda]", "QCD"]}]], ")"}],
      SpanMaxSize->DirectedInfinity[1]]], 
    TagBox["+",
     "InactiveToken",
@@ -1972,14 +2192,13 @@ Cell[BoxData[
    SubscriptBox[
     FrameBox[
      RowBox[{
-      RowBox[{"-", 
-       RowBox[{"2", " ", 
-        SuperscriptBox["k", "-"], " ", 
-        SuperscriptBox["l", "+"]}]}], "+", 
       RowBox[{"2", " ", 
-       SuperscriptBox["k", "-"], " ", 
-       SuperscriptBox["k", "+"]}], "-", 
-      SubsuperscriptBox["k", "\[Perpendicular]", "2"]}],
+       SuperscriptBox["k", "+"], " ", 
+       SuperscriptBox["l", "-"]}], "+", 
+      RowBox[{"2", " ", 
+       SuperscriptBox["l", "-"], " ", 
+       SuperscriptBox["l", "+"]}], "-", 
+      SubsuperscriptBox["l", "\[Perpendicular]", "2"]}],
      Background->RGBColor[0.88, 1, 0.88],
      FrameStyle->{
        Thickness[Large], 
@@ -1998,17 +2217,20 @@ Cell[BoxData[
        FontSize->14,
        FontWeight->Bold,
        FontColor->RGBColor[0, 0, 1]], " ", "(", 
-      SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
+      RowBox[{"Q", " ", 
+       SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
      SpanMaxSize->DirectedInfinity[1]]]}], TraditionalForm]], "Output",
  CellChangeTimes->{{3.717753437936558*^9, 3.717753458693378*^9}, 
-   3.717753635487123*^9, 3.7177537517053432`*^9, 3.7177538173796797`*^9}]
+   3.717753635487123*^9, 3.717753803162668*^9, 3.7177539092536182`*^9, 
+   3.717777911660316*^9, 3.7177785783051023`*^9, 3.717779922248871*^9, 
+   3.717780547894228*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"PwrLst", "[", 
-  RowBox[{"Dn2", ",", 
+  RowBox[{"Dnmntr1", ",", 
    RowBox[{
     RowBox[{"Collect", "[", 
      RowBox[{"#", ",", 
@@ -2018,7 +2240,7 @@ Cell[BoxData[
  CellChangeTimes->{{3.717697940274354*^9, 3.717697940389606*^9}, {
    3.717697977700828*^9, 3.717697989651073*^9}, {3.717698917189238*^9, 
    3.717698944992836*^9}, 3.717741633010416*^9, {3.7177537375823517`*^9, 
-   3.717753754997179*^9}}],
+   3.7177537377172728`*^9}, 3.7177544039755707`*^9, 3.717779908161154*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -2035,42 +2257,17 @@ Cell[BoxData[
          FontSize->14,
          FontWeight->Bold,
          FontColor->RGBColor[0, 0, 1]], " ", "(", 
-        SubsuperscriptBox["m", "b", "2"], ")"}],
-       SpanMaxSize->DirectedInfinity[1]], 
-      RowBox[{"2", " ", 
-       SuperscriptBox["l", "-"], " ", 
-       SuperscriptBox["p", "+"]}]},
-     {"2", 
-      StyleBox[
-       RowBox[{
-        StyleBox["O",
-         LineColor->RGBColor[0, 0, 1],
-         FrontFaceColor->RGBColor[0, 0, 1],
-         BackFaceColor->RGBColor[0, 0, 1],
-         GraphicsColor->RGBColor[0, 0, 1],
-         FontFamily->"Lucida Handwriting",
-         FontSize->14,
-         FontWeight->Bold,
-         FontColor->RGBColor[0, 0, 1]], " ", "(", 
-        RowBox[{
-         SubscriptBox["m", "b"], " ", 
-         SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
+        SuperscriptBox["Q", "2"], ")"}],
        SpanMaxSize->DirectedInfinity[1]], 
       RowBox[{
-       RowBox[{"-", 
-        RowBox[{"2", " ", 
-         SuperscriptBox["k", "+"], " ", 
-         SuperscriptBox["l", "-"]}]}], "+", 
-       RowBox[{
-        SuperscriptBox["l", "+"], " ", 
-        RowBox[{"(", 
-         RowBox[{
-          RowBox[{"2", " ", 
-           SuperscriptBox["l", "-"]}], "+", 
-          RowBox[{"2", " ", 
-           SuperscriptBox["p", "-"]}]}], ")"}]}], "-", 
-       SubsuperscriptBox["l", "\[Perpendicular]", "2"]}]},
-     {"3", 
+       RowBox[{"2", " ", 
+        SuperscriptBox["k", "-"], " ", 
+        SuperscriptBox["l", "+"]}], "+", 
+       RowBox[{"2", " ", 
+        SuperscriptBox["k", "-"], " ", 
+        SuperscriptBox["k", "+"]}], "-", 
+       SubsuperscriptBox["k", "\[Perpendicular]", "2"]}]},
+     {"2", 
       StyleBox[
        RowBox[{
         StyleBox["O",
@@ -2084,497 +2281,13 @@ Cell[BoxData[
          FontColor->RGBColor[0, 0, 1]], " ", "(", 
         SqrtBox[
          RowBox[{
-          SubscriptBox["m", "b"], " ", 
-          SubsuperscriptBox["\[CapitalLambda]", "QCD", "3"]}]], ")"}],
+          SuperscriptBox["Q", "3"], " ", 
+          SubscriptBox["\[CapitalLambda]", "QCD"]}]], ")"}],
        SpanMaxSize->DirectedInfinity[1]], 
-      RowBox[{"2", " ", 
+      RowBox[{
+       RowBox[{"-", "2"}], " ", 
        SubscriptBox["k", "\[Perpendicular]"], " ", 
        SubscriptBox["l", "\[Perpendicular]"]}]},
-     {"4", 
-      StyleBox[
-       RowBox[{
-        StyleBox["O",
-         LineColor->RGBColor[0, 0, 1],
-         FrontFaceColor->RGBColor[0, 0, 1],
-         BackFaceColor->RGBColor[0, 0, 1],
-         GraphicsColor->RGBColor[0, 0, 1],
-         FontFamily->"Lucida Handwriting",
-         FontSize->14,
-         FontWeight->Bold,
-         FontColor->RGBColor[0, 0, 1]], " ", "(", 
-        SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
-       SpanMaxSize->DirectedInfinity[1]], 
-      RowBox[{
-       RowBox[{"-", 
-        RowBox[{"2", " ", 
-         SuperscriptBox["k", "-"], " ", 
-         SuperscriptBox["l", "+"]}]}], "+", 
-       RowBox[{"2", " ", 
-        SuperscriptBox["k", "-"], " ", 
-        SuperscriptBox["k", "+"]}], "-", 
-       SubsuperscriptBox["k", "\[Perpendicular]", "2"]}]}
-    },
-    AutoDelete->False,
-    FrameStyle->Directive[
-      GrayLevel[0.85], 
-      Thickness[Large]],
-    GridBoxAlignment->{"Columns" -> {{Left}}},
-    GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
-    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
-   "Grid"], TraditionalForm]], "Output",
- CellChangeTimes->{{3.717697940823936*^9, 3.717697990405717*^9}, {
-   3.717698910648428*^9, 3.7176989458144617`*^9}, 3.717741579154642*^9, 
-   3.717741653527067*^9, {3.7177537381074953`*^9, 3.717753755441988*^9}, 
-   3.71775381840036*^9}]
-}, Open  ]],
-
-Cell[TextData[{
- "Hard Region, ",
- Cell[BoxData[
-  FormBox[
-   RowBox[{
-    SuperscriptBox["l", "\[Mu]"], "~", 
-    RowBox[{"O", "(", 
-     RowBox[{
-      SuperscriptBox["\[Lambda]", "2"], "*", 
-      SubscriptBox["m", "b"]}], ")"}]}], TraditionalForm]],
-  FormatType->"TraditionalForm"]
-}], "Item",
- CellChangeTimes->{{3.717753291597678*^9, 3.71775331729845*^9}, {
-  3.717753784748733*^9, 3.717753786005888*^9}, {3.717753852024589*^9, 
-  3.71775385244643*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"SetScl", "[", 
-   RowBox[{
-    RowBox[{"{", 
-     RowBox[{"{", 
-      RowBox[{"lp", ",", "lm", ",", "lt"}], "}"}], "}"}], ",", 
-    RowBox[{
-     RowBox[{"{", "1", "}"}], "*", "mb"}]}], "]"}], ";"}]], "Input",
- CellChangeTimes->{{3.717678613432846*^9, 3.717678640585828*^9}, 
-   3.717687868351288*^9, {3.717753342689474*^9, 3.717753345408692*^9}, {
-   3.717753796040119*^9, 3.717753796844535*^9}, {3.71775386011301*^9, 
-   3.717753861021893*^9}, {3.7177538936376123`*^9, 3.717753903916088*^9}}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"SrtPwr", "[", "Dn1", "]"}]], "Input",
- CellChangeTimes->{{3.717753709174572*^9, 3.717753711775777*^9}}],
-
-Cell[BoxData[
- FormBox[
-  RowBox[{
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     SubsuperscriptBox["m", "b", "2"], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     SubsuperscriptBox["m", "b", "2"], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     SubsuperscriptBox["m", "b", "2"], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     RowBox[{
-      SubscriptBox["m", "b"], " ", 
-      SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     RowBox[{
-      SubscriptBox["m", "b"], " ", 
-      SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     RowBox[{
-      SubscriptBox["m", "b"], " ", 
-      SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     RowBox[{
-      SubscriptBox["m", "b"], " ", 
-      SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
-    SpanMaxSize->DirectedInfinity[1]]}], TraditionalForm]], "Output",
- CellChangeTimes->{{3.7177537100763493`*^9, 3.717753712199581*^9}, 
-   3.71775379922862*^9, 3.717753905909194*^9}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"SrtByPwr", "[", 
-  RowBox[{"Dn1", ",", "Simplify"}], "]"}]], "Input",
- CellChangeTimes->{{3.717753643607361*^9, 3.717753654440734*^9}}],
-
-Cell[BoxData[
- FormBox[
-  RowBox[{
-   RowBox[{"(", 
-    RowBox[{
-     RowBox[{"-", 
-      RowBox[{"2", " ", 
-       SuperscriptBox["l", "+"], " ", 
-       SuperscriptBox["q", "-"]}]}], "+", 
-     RowBox[{"2", " ", 
-      SuperscriptBox["l", "-"], " ", 
-      SuperscriptBox["l", "+"]}], "-", 
-     SubsuperscriptBox["l", "\[Perpendicular]", "2"]}], ")"}], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   RowBox[{"(", 
-    RowBox[{
-     RowBox[{"-", 
-      RowBox[{"2", " ", 
-       SuperscriptBox["k", "-"], " ", 
-       SuperscriptBox["l", "+"]}]}], "-", 
-     RowBox[{"2", " ", 
-      SuperscriptBox["k", "+"], " ", 
-      SuperscriptBox["l", "-"]}], "+", 
-     RowBox[{"2", " ", 
-      SuperscriptBox["k", "+"], " ", 
-      SuperscriptBox["q", "-"]}], "+", 
-     RowBox[{"2", " ", 
-      SubscriptBox["k", "\[Perpendicular]"], " ", 
-      SubscriptBox["l", "\[Perpendicular]"]}]}], ")"}], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   RowBox[{"(", 
-    RowBox[{
-     RowBox[{"2", " ", 
-      SuperscriptBox["k", "-"], " ", 
-      SuperscriptBox["k", "+"]}], "-", 
-     SubsuperscriptBox["k", "\[Perpendicular]", "2"]}], ")"}]}], 
-  TraditionalForm]], "Output",
- CellChangeTimes->{{3.717753651028557*^9, 3.717753654899414*^9}, 
-   3.7177538018692293`*^9, 3.717753908227004*^9}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"ShowPwr", "[", "Dn1", "]"}]], "Input",
- CellChangeTimes->{{3.7177534323177643`*^9, 3.7177534374030113`*^9}}],
-
-Cell[BoxData[
- FormBox[
-  RowBox[{
-   SubscriptBox[
-    FrameBox[
-     RowBox[{
-      RowBox[{"-", 
-       RowBox[{"2", " ", 
-        SuperscriptBox["l", "+"], " ", 
-        SuperscriptBox["q", "-"]}]}], "+", 
-      RowBox[{"2", " ", 
-       SuperscriptBox["l", "-"], " ", 
-       SuperscriptBox["l", "+"]}], "-", 
-      SubsuperscriptBox["l", "\[Perpendicular]", "2"]}],
-     Background->RGBColor[0.88, 1, 0.88],
-     FrameStyle->{
-       Thickness[Large], 
-       GrayLevel[0.5], 
-       Dashing[{0, Small, Small, Small}]},
-     RoundingRadius->5,
-     StripOnInput->False], 
-    StyleBox[
-     RowBox[{
-      StyleBox["O",
-       LineColor->RGBColor[0, 0, 1],
-       FrontFaceColor->RGBColor[0, 0, 1],
-       BackFaceColor->RGBColor[0, 0, 1],
-       GraphicsColor->RGBColor[0, 0, 1],
-       FontFamily->"Lucida Handwriting",
-       FontSize->14,
-       FontWeight->Bold,
-       FontColor->RGBColor[0, 0, 1]], " ", "(", 
-      SubsuperscriptBox["m", "b", "2"], ")"}],
-     SpanMaxSize->DirectedInfinity[1]]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   SubscriptBox[
-    FrameBox[
-     RowBox[{
-      RowBox[{"-", 
-       RowBox[{"2", " ", 
-        SuperscriptBox["k", "-"], " ", 
-        SuperscriptBox["l", "+"]}]}], "-", 
-      RowBox[{"2", " ", 
-       SuperscriptBox["k", "+"], " ", 
-       SuperscriptBox["l", "-"]}], "+", 
-      RowBox[{"2", " ", 
-       SuperscriptBox["k", "+"], " ", 
-       SuperscriptBox["q", "-"]}], "+", 
-      RowBox[{"2", " ", 
-       SubscriptBox["k", "\[Perpendicular]"], " ", 
-       SubscriptBox["l", "\[Perpendicular]"]}]}],
-     Background->RGBColor[0.88, 1, 0.88],
-     FrameStyle->{
-       Thickness[Large], 
-       GrayLevel[0.5], 
-       Dashing[{0, Small, Small, Small}]},
-     RoundingRadius->5,
-     StripOnInput->False], 
-    StyleBox[
-     RowBox[{
-      StyleBox["O",
-       LineColor->RGBColor[0, 0, 1],
-       FrontFaceColor->RGBColor[0, 0, 1],
-       BackFaceColor->RGBColor[0, 0, 1],
-       GraphicsColor->RGBColor[0, 0, 1],
-       FontFamily->"Lucida Handwriting",
-       FontSize->14,
-       FontWeight->Bold,
-       FontColor->RGBColor[0, 0, 1]], " ", "(", 
-      RowBox[{
-       SubscriptBox["m", "b"], " ", 
-       SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
-     SpanMaxSize->DirectedInfinity[1]]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   SubscriptBox[
-    FrameBox[
-     RowBox[{
-      RowBox[{"2", " ", 
-       SuperscriptBox["k", "-"], " ", 
-       SuperscriptBox["k", "+"]}], "-", 
-      SubsuperscriptBox["k", "\[Perpendicular]", "2"]}],
-     Background->RGBColor[0.88, 1, 0.88],
-     FrameStyle->{
-       Thickness[Large], 
-       GrayLevel[0.5], 
-       Dashing[{0, Small, Small, Small}]},
-     RoundingRadius->5,
-     StripOnInput->False], 
-    StyleBox[
-     RowBox[{
-      StyleBox["O",
-       LineColor->RGBColor[0, 0, 1],
-       FrontFaceColor->RGBColor[0, 0, 1],
-       BackFaceColor->RGBColor[0, 0, 1],
-       GraphicsColor->RGBColor[0, 0, 1],
-       FontFamily->"Lucida Handwriting",
-       FontSize->14,
-       FontWeight->Bold,
-       FontColor->RGBColor[0, 0, 1]], " ", "(", 
-      SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
-     SpanMaxSize->DirectedInfinity[1]]]}], TraditionalForm]], "Output",
- CellChangeTimes->{{3.717753437936558*^9, 3.717753458693378*^9}, 
-   3.717753635487123*^9, 3.717753803162668*^9, 3.7177539092536182`*^9}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"PwrLst", "[", 
-  RowBox[{"Dn1", ",", 
-   RowBox[{
-    RowBox[{"Collect", "[", 
-     RowBox[{"#", ",", 
-      RowBox[{"{", 
-       RowBox[{"lp", ",", "lm"}], "}"}], ",", "Simplify"}], "]"}], "&"}]}], 
-  "]"}]], "Input",
- CellChangeTimes->{{3.717697940274354*^9, 3.717697940389606*^9}, {
-   3.717697977700828*^9, 3.717697989651073*^9}, {3.717698917189238*^9, 
-   3.717698944992836*^9}, 3.717741633010416*^9, {3.7177537375823517`*^9, 
-   3.7177537377172728`*^9}}],
-
-Cell[BoxData[
- FormBox[
-  TagBox[GridBox[{
-     {"1", 
-      StyleBox[
-       RowBox[{
-        StyleBox["O",
-         LineColor->RGBColor[0, 0, 1],
-         FrontFaceColor->RGBColor[0, 0, 1],
-         BackFaceColor->RGBColor[0, 0, 1],
-         GraphicsColor->RGBColor[0, 0, 1],
-         FontFamily->"Lucida Handwriting",
-         FontSize->14,
-         FontWeight->Bold,
-         FontColor->RGBColor[0, 0, 1]], " ", "(", 
-        SubsuperscriptBox["m", "b", "2"], ")"}],
-       SpanMaxSize->DirectedInfinity[1]], 
-      RowBox[{
-       RowBox[{
-        SuperscriptBox["l", "+"], " ", 
-        RowBox[{"(", 
-         RowBox[{
-          RowBox[{"2", " ", 
-           SuperscriptBox["l", "-"]}], "-", 
-          RowBox[{"2", " ", 
-           SuperscriptBox["q", "-"]}]}], ")"}]}], "-", 
-       SubsuperscriptBox["l", "\[Perpendicular]", "2"]}]},
-     {"2", 
-      StyleBox[
-       RowBox[{
-        StyleBox["O",
-         LineColor->RGBColor[0, 0, 1],
-         FrontFaceColor->RGBColor[0, 0, 1],
-         BackFaceColor->RGBColor[0, 0, 1],
-         GraphicsColor->RGBColor[0, 0, 1],
-         FontFamily->"Lucida Handwriting",
-         FontSize->14,
-         FontWeight->Bold,
-         FontColor->RGBColor[0, 0, 1]], " ", "(", 
-        RowBox[{
-         SubscriptBox["m", "b"], " ", 
-         SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
-       SpanMaxSize->DirectedInfinity[1]], 
-      RowBox[{
-       RowBox[{"-", 
-        RowBox[{"2", " ", 
-         SuperscriptBox["k", "-"], " ", 
-         SuperscriptBox["l", "+"]}]}], "-", 
-       RowBox[{"2", " ", 
-        SuperscriptBox["k", "+"], " ", 
-        SuperscriptBox["l", "-"]}], "+", 
-       RowBox[{"2", " ", 
-        RowBox[{"(", 
-         RowBox[{
-          RowBox[{
-           SuperscriptBox["k", "+"], " ", 
-           SuperscriptBox["q", "-"]}], "+", 
-          RowBox[{
-           SubscriptBox["k", "\[Perpendicular]"], " ", 
-           SubscriptBox["l", "\[Perpendicular]"]}]}], ")"}]}]}]},
      {"3", 
       StyleBox[
        RowBox[{
@@ -2587,13 +2300,17 @@ Cell[BoxData[
          FontSize->14,
          FontWeight->Bold,
          FontColor->RGBColor[0, 0, 1]], " ", "(", 
-        SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
+        RowBox[{"Q", " ", 
+         SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
        SpanMaxSize->DirectedInfinity[1]], 
       RowBox[{
        RowBox[{"2", " ", 
-        SuperscriptBox["k", "-"], " ", 
-        SuperscriptBox["k", "+"]}], "-", 
-       SubsuperscriptBox["k", "\[Perpendicular]", "2"]}]}
+        SuperscriptBox["k", "+"], " ", 
+        SuperscriptBox["l", "-"]}], "+", 
+       RowBox[{"2", " ", 
+        SuperscriptBox["l", "-"], " ", 
+        SuperscriptBox["l", "+"]}], "-", 
+       SubsuperscriptBox["l", "\[Perpendicular]", "2"]}]}
     },
     AutoDelete->False,
     FrameStyle->Directive[
@@ -2606,15 +2323,16 @@ Cell[BoxData[
  CellChangeTimes->{{3.717697940823936*^9, 3.717697990405717*^9}, {
    3.717698910648428*^9, 3.7176989458144617`*^9}, 3.717741579154642*^9, 
    3.717741653527067*^9, 3.7177537381074953`*^9, 3.71775380583669*^9, 
-   3.717753910147564*^9}]
+   3.717753910147564*^9, 3.717777913626346*^9, 3.717778578389654*^9, 
+   3.717779922315921*^9, 3.7177805483529778`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"SrtPwr", "[", "Dn2", "]"}]], "Input",
+ RowBox[{"SrtPwr", "[", "Dnmntr2", "]"}]], "Input",
  CellChangeTimes->{{3.717753709174572*^9, 3.717753711775777*^9}, {
-  3.717753746870019*^9, 3.717753747046011*^9}}],
+   3.717753746870019*^9, 3.717753747046011*^9}, 3.717779908174015*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -2630,7 +2348,7 @@ Cell[BoxData[
       FontSize->14,
       FontWeight->Bold,
       FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     SubsuperscriptBox["m", "b", "2"], ")"}],
+     SuperscriptBox["Q", "2"], ")"}],
     SpanMaxSize->DirectedInfinity[1]], 
    TagBox["+",
     "InactiveToken",
@@ -2647,7 +2365,7 @@ Cell[BoxData[
       FontSize->14,
       FontWeight->Bold,
       FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     SubsuperscriptBox["m", "b", "2"], ")"}],
+     SuperscriptBox["Q", "2"], ")"}],
     SpanMaxSize->DirectedInfinity[1]], 
    TagBox["+",
     "InactiveToken",
@@ -2664,7 +2382,7 @@ Cell[BoxData[
       FontSize->14,
       FontWeight->Bold,
       FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     SubsuperscriptBox["m", "b", "2"], ")"}],
+     SuperscriptBox["Q", "2"], ")"}],
     SpanMaxSize->DirectedInfinity[1]], 
    TagBox["+",
     "InactiveToken",
@@ -2681,7 +2399,10 @@ Cell[BoxData[
       FontSize->14,
       FontWeight->Bold,
       FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     SubsuperscriptBox["m", "b", "2"], ")"}],
+     SqrtBox[
+      RowBox[{
+       SuperscriptBox["Q", "3"], " ", 
+       SubscriptBox["\[CapitalLambda]", "QCD"]}]], ")"}],
     SpanMaxSize->DirectedInfinity[1]], 
    TagBox["+",
     "InactiveToken",
@@ -2698,8 +2419,7 @@ Cell[BoxData[
       FontSize->14,
       FontWeight->Bold,
       FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     RowBox[{
-      SubscriptBox["m", "b"], " ", 
+     RowBox[{"Q", " ", 
       SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
     SpanMaxSize->DirectedInfinity[1]], 
    TagBox["+",
@@ -2717,8 +2437,7 @@ Cell[BoxData[
       FontSize->14,
       FontWeight->Bold,
       FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     RowBox[{
-      SubscriptBox["m", "b"], " ", 
+     RowBox[{"Q", " ", 
       SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
     SpanMaxSize->DirectedInfinity[1]], 
    TagBox["+",
@@ -2736,55 +2455,22 @@ Cell[BoxData[
       FontSize->14,
       FontWeight->Bold,
       FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     RowBox[{
-      SubscriptBox["m", "b"], " ", 
+     RowBox[{"Q", " ", 
       SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
     SpanMaxSize->DirectedInfinity[1]]}], TraditionalForm]], "Output",
  CellChangeTimes->{{3.7177537100763493`*^9, 3.717753712199581*^9}, 
-   3.717753747458185*^9, 3.717753815293111*^9, 3.7177539199496927`*^9}]
+   3.717753747458185*^9, 3.717753815293111*^9, 3.7177539199496927`*^9, 
+   3.717777970488162*^9, 3.717778579648699*^9, 3.717779922382279*^9, 
+   3.7177805484321337`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"SrtByPwr", "[", 
-  RowBox[{"Dn2", ",", "Simplify"}], "]"}]], "Input",
+  RowBox[{"Dnmntr2", ",", "Simplify"}], "]"}]], "Input",
  CellChangeTimes->{{3.717753643607361*^9, 3.717753654440734*^9}, {
-  3.717753749007251*^9, 3.7177537491738586`*^9}}],
+   3.717753749007251*^9, 3.7177537491738586`*^9}, 3.717779908187079*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -2792,32 +2478,20 @@ Cell[BoxData[
    RowBox[{"(", 
     RowBox[{
      RowBox[{"2", " ", 
-      SuperscriptBox["l", "+"], " ", 
+      SuperscriptBox["k", "+"], " ", 
       SuperscriptBox["p", "-"]}], "+", 
      RowBox[{"2", " ", 
-      SuperscriptBox["l", "-"], " ", 
-      RowBox[{"(", 
-       RowBox[{
-        SuperscriptBox["l", "+"], "+", 
-        SuperscriptBox["p", "+"]}], ")"}]}], "-", 
-     SubsuperscriptBox["l", "\[Perpendicular]", "2"]}], ")"}], 
+      SuperscriptBox["k", "-"], " ", 
+      SuperscriptBox["k", "+"]}], "-", 
+     SubsuperscriptBox["k", "\[Perpendicular]", "2"]}], ")"}], 
    TagBox["+",
     "InactiveToken",
     BaseStyle->"InactiveTraditional",
     SyntaxForm->"+"], 
    RowBox[{
     RowBox[{"-", "2"}], " ", 
-    RowBox[{"(", 
-     RowBox[{
-      RowBox[{
-       SuperscriptBox["k", "-"], " ", 
-       SuperscriptBox["l", "+"]}], "+", 
-      RowBox[{
-       SuperscriptBox["k", "+"], " ", 
-       SuperscriptBox["l", "-"]}], "-", 
-      RowBox[{
-       SubscriptBox["k", "\[Perpendicular]"], " ", 
-       SubscriptBox["l", "\[Perpendicular]"]}]}], ")"}]}], 
+    SubscriptBox["k", "\[Perpendicular]"], " ", 
+    SubscriptBox["p", "\[Perpendicular]"]}], 
    TagBox["+",
     "InactiveToken",
     BaseStyle->"InactiveTraditional",
@@ -2826,19 +2500,24 @@ Cell[BoxData[
     RowBox[{
      RowBox[{"2", " ", 
       SuperscriptBox["k", "-"], " ", 
-      SuperscriptBox["k", "+"]}], "-", 
-     SubsuperscriptBox["k", "\[Perpendicular]", "2"]}], ")"}]}], 
+      SuperscriptBox["p", "+"]}], "+", 
+     RowBox[{"2", " ", 
+      SuperscriptBox["p", "-"], " ", 
+      SuperscriptBox["p", "+"]}], "-", 
+     SubsuperscriptBox["p", "\[Perpendicular]", "2"]}], ")"}]}], 
   TraditionalForm]], "Output",
  CellChangeTimes->{{3.717753651028557*^9, 3.717753654899414*^9}, 
-   3.717753749544009*^9, 3.717753816426427*^9, 3.717753920834035*^9}]
+   3.717753749544009*^9, 3.717753816426427*^9, 3.717753920834035*^9, 
+   3.717777971717483*^9, 3.717778340392675*^9, 3.717778580660619*^9, 
+   3.717779922448963*^9, 3.7177805485148087`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"ShowPwr", "[", "Dn2", "]"}]], "Input",
+ RowBox[{"ShowPwr", "[", "Dnmntr2", "]"}]], "Input",
  CellChangeTimes->{{3.7177534323177643`*^9, 3.7177534374030113`*^9}, {
-  3.717753751214546*^9, 3.717753751341692*^9}}],
+   3.717753751214546*^9, 3.717753751341692*^9}, 3.717779908201335*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -2847,81 +2526,8 @@ Cell[BoxData[
     FrameBox[
      RowBox[{
       RowBox[{"2", " ", 
-       SuperscriptBox["l", "-"], " ", 
-       SuperscriptBox["p", "+"]}], "+", 
-      RowBox[{"2", " ", 
-       SuperscriptBox["l", "+"], " ", 
-       SuperscriptBox["p", "-"]}], "+", 
-      RowBox[{"2", " ", 
-       SuperscriptBox["l", "-"], " ", 
-       SuperscriptBox["l", "+"]}], "-", 
-      SubsuperscriptBox["l", "\[Perpendicular]", "2"]}],
-     Background->RGBColor[0.88, 1, 0.88],
-     FrameStyle->{
-       Thickness[Large], 
-       GrayLevel[0.5], 
-       Dashing[{0, Small, Small, Small}]},
-     RoundingRadius->5,
-     StripOnInput->False], 
-    StyleBox[
-     RowBox[{
-      StyleBox["O",
-       LineColor->RGBColor[0, 0, 1],
-       FrontFaceColor->RGBColor[0, 0, 1],
-       BackFaceColor->RGBColor[0, 0, 1],
-       GraphicsColor->RGBColor[0, 0, 1],
-       FontFamily->"Lucida Handwriting",
-       FontSize->14,
-       FontWeight->Bold,
-       FontColor->RGBColor[0, 0, 1]], " ", "(", 
-      SubsuperscriptBox["m", "b", "2"], ")"}],
-     SpanMaxSize->DirectedInfinity[1]]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   SubscriptBox[
-    FrameBox[
-     RowBox[{
-      RowBox[{"-", 
-       RowBox[{"2", " ", 
-        SuperscriptBox["k", "-"], " ", 
-        SuperscriptBox["l", "+"]}]}], "-", 
-      RowBox[{"2", " ", 
        SuperscriptBox["k", "+"], " ", 
-       SuperscriptBox["l", "-"]}], "+", 
-      RowBox[{"2", " ", 
-       SubscriptBox["k", "\[Perpendicular]"], " ", 
-       SubscriptBox["l", "\[Perpendicular]"]}]}],
-     Background->RGBColor[0.88, 1, 0.88],
-     FrameStyle->{
-       Thickness[Large], 
-       GrayLevel[0.5], 
-       Dashing[{0, Small, Small, Small}]},
-     RoundingRadius->5,
-     StripOnInput->False], 
-    StyleBox[
-     RowBox[{
-      StyleBox["O",
-       LineColor->RGBColor[0, 0, 1],
-       FrontFaceColor->RGBColor[0, 0, 1],
-       BackFaceColor->RGBColor[0, 0, 1],
-       GraphicsColor->RGBColor[0, 0, 1],
-       FontFamily->"Lucida Handwriting",
-       FontSize->14,
-       FontWeight->Bold,
-       FontColor->RGBColor[0, 0, 1]], " ", "(", 
-      RowBox[{
-       SubscriptBox["m", "b"], " ", 
-       SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
-     SpanMaxSize->DirectedInfinity[1]]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   SubscriptBox[
-    FrameBox[
-     RowBox[{
+       SuperscriptBox["p", "-"]}], "+", 
       RowBox[{"2", " ", 
        SuperscriptBox["k", "-"], " ", 
        SuperscriptBox["k", "+"]}], "-", 
@@ -2944,28 +2550,92 @@ Cell[BoxData[
        FontSize->14,
        FontWeight->Bold,
        FontColor->RGBColor[0, 0, 1]], " ", "(", 
-      SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
+      SuperscriptBox["Q", "2"], ")"}],
+     SpanMaxSize->DirectedInfinity[1]]], 
+   TagBox["+",
+    "InactiveToken",
+    BaseStyle->"InactiveTraditional",
+    SyntaxForm->"+"], 
+   SubscriptBox[
+    FrameBox[
+     RowBox[{
+      RowBox[{"-", "2"}], " ", 
+      SubscriptBox["k", "\[Perpendicular]"], " ", 
+      SubscriptBox["p", "\[Perpendicular]"]}],
+     Background->RGBColor[0.88, 1, 0.88],
+     FrameStyle->{
+       Thickness[Large], 
+       GrayLevel[0.5], 
+       Dashing[{0, Small, Small, Small}]},
+     RoundingRadius->5,
+     StripOnInput->False], 
+    StyleBox[
+     RowBox[{
+      StyleBox["O",
+       LineColor->RGBColor[0, 0, 1],
+       FrontFaceColor->RGBColor[0, 0, 1],
+       BackFaceColor->RGBColor[0, 0, 1],
+       GraphicsColor->RGBColor[0, 0, 1],
+       FontFamily->"Lucida Handwriting",
+       FontSize->14,
+       FontWeight->Bold,
+       FontColor->RGBColor[0, 0, 1]], " ", "(", 
+      SqrtBox[
+       RowBox[{
+        SuperscriptBox["Q", "3"], " ", 
+        SubscriptBox["\[CapitalLambda]", "QCD"]}]], ")"}],
+     SpanMaxSize->DirectedInfinity[1]]], 
+   TagBox["+",
+    "InactiveToken",
+    BaseStyle->"InactiveTraditional",
+    SyntaxForm->"+"], 
+   SubscriptBox[
+    FrameBox[
+     RowBox[{
+      RowBox[{"2", " ", 
+       SuperscriptBox["k", "-"], " ", 
+       SuperscriptBox["p", "+"]}], "+", 
+      RowBox[{"2", " ", 
+       SuperscriptBox["p", "-"], " ", 
+       SuperscriptBox["p", "+"]}], "-", 
+      SubsuperscriptBox["p", "\[Perpendicular]", "2"]}],
+     Background->RGBColor[0.88, 1, 0.88],
+     FrameStyle->{
+       Thickness[Large], 
+       GrayLevel[0.5], 
+       Dashing[{0, Small, Small, Small}]},
+     RoundingRadius->5,
+     StripOnInput->False], 
+    StyleBox[
+     RowBox[{
+      StyleBox["O",
+       LineColor->RGBColor[0, 0, 1],
+       FrontFaceColor->RGBColor[0, 0, 1],
+       BackFaceColor->RGBColor[0, 0, 1],
+       GraphicsColor->RGBColor[0, 0, 1],
+       FontFamily->"Lucida Handwriting",
+       FontSize->14,
+       FontWeight->Bold,
+       FontColor->RGBColor[0, 0, 1]], " ", "(", 
+      RowBox[{"Q", " ", 
+       SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
      SpanMaxSize->DirectedInfinity[1]]]}], TraditionalForm]], "Output",
  CellChangeTimes->{{3.717753437936558*^9, 3.717753458693378*^9}, 
    3.717753635487123*^9, 3.7177537517053432`*^9, 3.7177538173796797`*^9, 
-   3.717753921646152*^9}]
+   3.717753921646152*^9, 3.7177779727199297`*^9, 3.717778582790867*^9, 
+   3.717779922503377*^9, 3.717780548596315*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"PwrLst", "[", 
-  RowBox[{"Dn2", ",", 
-   RowBox[{
-    RowBox[{"Collect", "[", 
-     RowBox[{"#", ",", 
-      RowBox[{"{", 
-       RowBox[{"lp", ",", "lm"}], "}"}], ",", "Simplify"}], "]"}], "&"}]}], 
-  "]"}]], "Input",
+  RowBox[{"Dnmntr2", ",", "Simplify"}], "]"}]], "Input",
  CellChangeTimes->{{3.717697940274354*^9, 3.717697940389606*^9}, {
    3.717697977700828*^9, 3.717697989651073*^9}, {3.717698917189238*^9, 
    3.717698944992836*^9}, 3.717741633010416*^9, {3.7177537375823517`*^9, 
-   3.717753754997179*^9}}],
+   3.717753754997179*^9}, {3.717754389587535*^9, 3.71775439045988*^9}, 
+   3.717779908216557*^9}],
 
 Cell[BoxData[
  FormBox[
@@ -2982,21 +2652,16 @@ Cell[BoxData[
          FontSize->14,
          FontWeight->Bold,
          FontColor->RGBColor[0, 0, 1]], " ", "(", 
-        SubsuperscriptBox["m", "b", "2"], ")"}],
+        SuperscriptBox["Q", "2"], ")"}],
        SpanMaxSize->DirectedInfinity[1]], 
       RowBox[{
        RowBox[{"2", " ", 
-        SuperscriptBox["l", "-"], " ", 
-        SuperscriptBox["p", "+"]}], "+", 
-       RowBox[{
-        SuperscriptBox["l", "+"], " ", 
-        RowBox[{"(", 
-         RowBox[{
-          RowBox[{"2", " ", 
-           SuperscriptBox["l", "-"]}], "+", 
-          RowBox[{"2", " ", 
-           SuperscriptBox["p", "-"]}]}], ")"}]}], "-", 
-       SubsuperscriptBox["l", "\[Perpendicular]", "2"]}]},
+        SuperscriptBox["k", "+"], " ", 
+        SuperscriptBox["p", "-"]}], "+", 
+       RowBox[{"2", " ", 
+        SuperscriptBox["k", "-"], " ", 
+        SuperscriptBox["k", "+"]}], "-", 
+       SubsuperscriptBox["k", "\[Perpendicular]", "2"]}]},
      {"2", 
       StyleBox[
        RowBox[{
@@ -3009,21 +2674,15 @@ Cell[BoxData[
          FontSize->14,
          FontWeight->Bold,
          FontColor->RGBColor[0, 0, 1]], " ", "(", 
-        RowBox[{
-         SubscriptBox["m", "b"], " ", 
-         SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox["Q", "3"], " ", 
+          SubscriptBox["\[CapitalLambda]", "QCD"]}]], ")"}],
        SpanMaxSize->DirectedInfinity[1]], 
       RowBox[{
-       RowBox[{"-", 
-        RowBox[{"2", " ", 
-         SuperscriptBox["k", "-"], " ", 
-         SuperscriptBox["l", "+"]}]}], "-", 
-       RowBox[{"2", " ", 
-        SuperscriptBox["k", "+"], " ", 
-        SuperscriptBox["l", "-"]}], "+", 
-       RowBox[{"2", " ", 
-        SubscriptBox["k", "\[Perpendicular]"], " ", 
-        SubscriptBox["l", "\[Perpendicular]"]}]}]},
+       RowBox[{"-", "2"}], " ", 
+       SubscriptBox["k", "\[Perpendicular]"], " ", 
+       SubscriptBox["p", "\[Perpendicular]"]}]},
      {"3", 
       StyleBox[
        RowBox[{
@@ -3036,13 +2695,17 @@ Cell[BoxData[
          FontSize->14,
          FontWeight->Bold,
          FontColor->RGBColor[0, 0, 1]], " ", "(", 
-        SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
+        RowBox[{"Q", " ", 
+         SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
        SpanMaxSize->DirectedInfinity[1]], 
       RowBox[{
        RowBox[{"2", " ", 
         SuperscriptBox["k", "-"], " ", 
-        SuperscriptBox["k", "+"]}], "-", 
-       SubsuperscriptBox["k", "\[Perpendicular]", "2"]}]}
+        SuperscriptBox["p", "+"]}], "+", 
+       RowBox[{"2", " ", 
+        SuperscriptBox["p", "-"], " ", 
+        SuperscriptBox["p", "+"]}], "-", 
+       SubsuperscriptBox["p", "\[Perpendicular]", "2"]}]}
     },
     AutoDelete->False,
     FrameStyle->Directive[
@@ -3055,11 +2718,304 @@ Cell[BoxData[
  CellChangeTimes->{{3.717697940823936*^9, 3.717697990405717*^9}, {
    3.717698910648428*^9, 3.7176989458144617`*^9}, 3.717741579154642*^9, 
    3.717741653527067*^9, {3.7177537381074953`*^9, 3.717753755441988*^9}, 
-   3.71775381840036*^9, 3.717753922500184*^9}]
+   3.71775381840036*^9, 3.717753922500184*^9, 3.717754390961217*^9, 
+   3.717777973784913*^9, 3.717778583839118*^9, 3.717779922582489*^9, 
+   3.717780548678948*^9}]
+}, Open  ]]
+}, Closed]],
+
+Cell[TextData[{
+ "Therefore, the integrands in each region are\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["I", "soft"], "          ", "=", " ", 
+    RowBox[{"\[Integral]", 
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["\[DifferentialD]", "d"], "k"}], " ", 
+      FractionBox["1", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           SuperscriptBox["k", "2"], "+", 
+           RowBox[{"i", " ", "\[Epsilon]"}]}], ")"}], "[", 
+         RowBox[{
+          RowBox[{"2", 
+           SuperscriptBox["k", "-"], 
+           SuperscriptBox["l", "+"]}], "+", 
+          RowBox[{"i", " ", "\[Epsilon]"}]}], "]"}], "[", 
+        RowBox[{
+         RowBox[{"2", 
+          SuperscriptBox["k", "+"], 
+          SuperscriptBox["p", "-"]}], "+", 
+         RowBox[{"i", " ", "\[Epsilon]"}]}], "]"}]]}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["I", "collinear"], "  ", "=", " ", 
+    RowBox[{"\[Integral]", 
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["\[DifferentialD]", "d"], "k"}], " ", 
+      FractionBox["1", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           SuperscriptBox["k", "2"], "+", 
+           RowBox[{"i", " ", "\[Epsilon]"}]}], ")"}], "[", 
+         RowBox[{
+          RowBox[{"2", 
+           SuperscriptBox["k", "-"], 
+           SuperscriptBox["l", "+"]}], "+", 
+          RowBox[{"i", " ", "\[Epsilon]"}]}], "]"}], "[", 
+        RowBox[{
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"k", "+", "p"}], ")"}], "2"], "+", 
+         RowBox[{"i", " ", "\[Epsilon]"}]}], "]"}]]}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["I", 
+     RowBox[{"hard", "        "}]], "   ", "=", 
+    RowBox[{"\[Integral]", 
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["\[DifferentialD]", "d"], "k"}], " ", 
+      FractionBox["1", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           SuperscriptBox["k", "2"], "+", 
+           RowBox[{"i", " ", "\[Epsilon]"}]}], ")"}], "[", 
+         RowBox[{
+          SuperscriptBox["k", "2"], "+", 
+          RowBox[{"2", 
+           SuperscriptBox["k", "-"], 
+           SuperscriptBox["l", "+"]}], "+", 
+          RowBox[{"i", " ", "\[Epsilon]"}]}], "]"}], "[", 
+        RowBox[{
+         SuperscriptBox["k", "2"], "+", 
+         RowBox[{"2", 
+          SuperscriptBox["k", "+"], 
+          SuperscriptBox["p", "-"]}], "+", 
+         RowBox[{"i", " ", "\[Epsilon]"}]}], "]"}]]}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " "
+}], "Subsection",
+ CellChangeTimes->{{3.717779994918435*^9, 3.7177800536759043`*^9}, {
+  3.71778010380756*^9, 3.7177802464047318`*^9}, {3.717780338916551*^9, 
+  3.717780389777053*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Extract terms", "Section",
+ CellChangeTimes->{{3.717754348637232*^9, 3.717754369525358*^9}, {
+  3.717754629994132*^9, 3.71775463657548*^9}}],
+
+Cell["\<\
+Taking the first element of PwrLst convert the power counting list to a matrix\
+\>", "Item",
+ CellChangeTimes->{{3.717754645567678*^9, 3.7177546754429903`*^9}, {
+  3.717779851760088*^9, 3.717779851919703*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PwrLst", "[", 
+  RowBox[{"Dnmntr2", ",", "Simplify"}], "]"}]], "Input",
+ CellChangeTimes->{{3.717780602384239*^9, 3.717780611443602*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[GridBox[{
+     {"1", 
+      StyleBox[
+       RowBox[{
+        StyleBox["O",
+         LineColor->RGBColor[0, 0, 1],
+         FrontFaceColor->RGBColor[0, 0, 1],
+         BackFaceColor->RGBColor[0, 0, 1],
+         GraphicsColor->RGBColor[0, 0, 1],
+         FontFamily->"Lucida Handwriting",
+         FontSize->14,
+         FontWeight->Bold,
+         FontColor->RGBColor[0, 0, 1]], " ", "(", 
+        SuperscriptBox["Q", "2"], ")"}],
+       SpanMaxSize->DirectedInfinity[1]], 
+      RowBox[{
+       RowBox[{"2", " ", 
+        SuperscriptBox["k", "+"], " ", 
+        SuperscriptBox["p", "-"]}], "+", 
+       RowBox[{"2", " ", 
+        SuperscriptBox["k", "-"], " ", 
+        SuperscriptBox["k", "+"]}], "-", 
+       SubsuperscriptBox["k", "\[Perpendicular]", "2"]}]},
+     {"2", 
+      StyleBox[
+       RowBox[{
+        StyleBox["O",
+         LineColor->RGBColor[0, 0, 1],
+         FrontFaceColor->RGBColor[0, 0, 1],
+         BackFaceColor->RGBColor[0, 0, 1],
+         GraphicsColor->RGBColor[0, 0, 1],
+         FontFamily->"Lucida Handwriting",
+         FontSize->14,
+         FontWeight->Bold,
+         FontColor->RGBColor[0, 0, 1]], " ", "(", 
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox["Q", "3"], " ", 
+          SubscriptBox["\[CapitalLambda]", "QCD"]}]], ")"}],
+       SpanMaxSize->DirectedInfinity[1]], 
+      RowBox[{
+       RowBox[{"-", "2"}], " ", 
+       SubscriptBox["k", "\[Perpendicular]"], " ", 
+       SubscriptBox["p", "\[Perpendicular]"]}]},
+     {"3", 
+      StyleBox[
+       RowBox[{
+        StyleBox["O",
+         LineColor->RGBColor[0, 0, 1],
+         FrontFaceColor->RGBColor[0, 0, 1],
+         BackFaceColor->RGBColor[0, 0, 1],
+         GraphicsColor->RGBColor[0, 0, 1],
+         FontFamily->"Lucida Handwriting",
+         FontSize->14,
+         FontWeight->Bold,
+         FontColor->RGBColor[0, 0, 1]], " ", "(", 
+        RowBox[{"Q", " ", 
+         SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
+       SpanMaxSize->DirectedInfinity[1]], 
+      RowBox[{
+       RowBox[{"2", " ", 
+        SuperscriptBox["k", "-"], " ", 
+        SuperscriptBox["p", "+"]}], "+", 
+       RowBox[{"2", " ", 
+        SuperscriptBox["p", "-"], " ", 
+        SuperscriptBox["p", "+"]}], "-", 
+       SubsuperscriptBox["p", "\[Perpendicular]", "2"]}]}
+    },
+    AutoDelete->False,
+    FrameStyle->Directive[
+      GrayLevel[0.85], 
+      Thickness[Large]],
+    GridBoxAlignment->{"Columns" -> {{Left}}},
+    GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+   "Grid"], TraditionalForm]], "Output",
+ CellChangeTimes->{3.717780611956293*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"PwrLst", "[", 
+   RowBox[{"Dnmntr2", ",", "Simplify"}], "]"}], "\[LeftDoubleBracket]", "1", 
+  "\[RightDoubleBracket]"}]], "Input",
+ CellChangeTimes->{{3.7177542018705807`*^9, 3.717754219222687*^9}, 
+   3.717754398543895*^9, 3.7177799082272177`*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"1", 
+      StyleBox[
+       RowBox[{
+        StyleBox["O",
+         LineColor->RGBColor[0, 0, 1],
+         FrontFaceColor->RGBColor[0, 0, 1],
+         BackFaceColor->RGBColor[0, 0, 1],
+         GraphicsColor->RGBColor[0, 0, 1],
+         FontFamily->"Lucida Handwriting",
+         FontSize->14,
+         FontWeight->Bold,
+         FontColor->RGBColor[0, 0, 1]], " ", "(", 
+        SuperscriptBox["Q", "2"], ")"}],
+       SpanMaxSize->DirectedInfinity[1]], 
+      RowBox[{
+       RowBox[{"-", 
+        SubsuperscriptBox["k", "\[Perpendicular]", "2"]}], "+", 
+       RowBox[{"2", " ", 
+        SuperscriptBox["k", "-"], " ", 
+        SuperscriptBox["k", "+"]}], "+", 
+       RowBox[{"2", " ", 
+        SuperscriptBox["k", "+"], " ", 
+        SuperscriptBox["p", "-"]}]}]},
+     {"2", 
+      StyleBox[
+       RowBox[{
+        StyleBox["O",
+         LineColor->RGBColor[0, 0, 1],
+         FrontFaceColor->RGBColor[0, 0, 1],
+         BackFaceColor->RGBColor[0, 0, 1],
+         GraphicsColor->RGBColor[0, 0, 1],
+         FontFamily->"Lucida Handwriting",
+         FontSize->14,
+         FontWeight->Bold,
+         FontColor->RGBColor[0, 0, 1]], " ", "(", 
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox["Q", "3"], " ", 
+          SubscriptBox["\[CapitalLambda]", "QCD"]}]], ")"}],
+       SpanMaxSize->DirectedInfinity[1]], 
+      RowBox[{
+       RowBox[{"-", "2"}], " ", 
+       SubscriptBox["k", "\[Perpendicular]"], " ", 
+       SubscriptBox["p", "\[Perpendicular]"]}]},
+     {"3", 
+      StyleBox[
+       RowBox[{
+        StyleBox["O",
+         LineColor->RGBColor[0, 0, 1],
+         FrontFaceColor->RGBColor[0, 0, 1],
+         BackFaceColor->RGBColor[0, 0, 1],
+         GraphicsColor->RGBColor[0, 0, 1],
+         FontFamily->"Lucida Handwriting",
+         FontSize->14,
+         FontWeight->Bold,
+         FontColor->RGBColor[0, 0, 1]], " ", "(", 
+        RowBox[{"Q", " ", 
+         SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
+       SpanMaxSize->DirectedInfinity[1]], 
+      RowBox[{
+       RowBox[{"-", 
+        SubsuperscriptBox["p", "\[Perpendicular]", "2"]}], "+", 
+       RowBox[{"2", " ", 
+        SuperscriptBox["k", "-"], " ", 
+        SuperscriptBox["p", "+"]}], "+", 
+       RowBox[{"2", " ", 
+        SuperscriptBox["p", "-"], " ", 
+        SuperscriptBox["p", "+"]}]}]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}], 
+  TraditionalForm]], "Output",
+ CellChangeTimes->{{3.717754202392412*^9, 3.717754219818282*^9}, 
+   3.717754399149973*^9, 3.717777995757367*^9, 3.717780592438829*^9}]
+}, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1139, 755},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowSize->{856, 755},
+WindowMargins->{{121, Automatic}, {Automatic, 27}},
 Magnification:>1.25 Inherited,
 FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 28, \
 2016)",
@@ -3077,134 +3033,168 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[558, 20, 118, 2, 39, "Input"],
-Cell[679, 24, 132, 2, 37, "Item"],
-Cell[814, 28, 120, 2, 39, "Input"],
-Cell[937, 32, 218, 5, 39, "Input"],
-Cell[1158, 39, 201, 5, 39, "Input"],
-Cell[1362, 46, 198, 5, 49, "Input"],
-Cell[1563, 53, 250, 5, 39, "Input"],
-Cell[1816, 60, 121, 2, 39, "Input"],
-Cell[1940, 64, 167, 2, 37, "Item"],
-Cell[2110, 68, 400, 9, 39, "Input"],
-Cell[2513, 79, 140, 1, 37, "Item"],
-Cell[2656, 82, 396, 9, 39, "Input"],
-Cell[3055, 93, 408, 13, 39, "Input"],
 Cell[CellGroupData[{
-Cell[3488, 110, 239, 5, 39, "Input"],
-Cell[3730, 117, 803, 15, 37, "Output"]
+Cell[701, 26, 231, 3, 80, "Section",
+ CellGroupingRules->{"SectionGrouping", Inherited}],
+Cell[935, 31, 120, 2, 39, "Input"],
+Cell[1058, 35, 218, 5, 39, "Input"],
+Cell[1279, 42, 223, 6, 42, "Input"],
+Cell[1505, 50, 250, 5, 39, "Input"],
+Cell[1758, 57, 121, 2, 39, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4570, 137, 1559, 46, 72, "Input"],
-Cell[6132, 185, 1176, 33, 39, "Output"]
+Cell[1916, 64, 222, 3, 125, "Section",
+ CellGroupingRules->{"SectionGrouping", Inherited}],
+Cell[2141, 69, 425, 9, 39, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[7345, 223, 1861, 57, 123, "Input"],
-Cell[9209, 282, 1408, 39, 39, "Output"]
+Cell[2603, 83, 195, 2, 80, "Section",
+ CellGroupingRules->{"SectionGrouping", Inherited}],
+Cell[2801, 87, 559, 17, 43, "Input"],
+Cell[CellGroupData[{
+Cell[3385, 108, 263, 5, 39, "Input"],
+Cell[3651, 115, 930, 16, 37, "Output"]
+}, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[10654, 326, 138, 1, 37, "Item"],
-Cell[10795, 329, 364, 12, 41, "Item"]
-}, Open  ]],
-Cell[11174, 344, 421, 12, 43, "Input"],
+Cell[4630, 137, 1463, 41, 258, "Section",
+ CellGroupingRules->{"SectionGrouping", Inherited}],
 Cell[CellGroupData[{
-Cell[11620, 360, 127, 2, 39, "Input"],
-Cell[11750, 364, 4927, 156, 41, "Output"]
+Cell[6118, 182, 1308, 33, 72, "Input"],
+Cell[7429, 217, 1194, 30, 39, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[16714, 525, 159, 3, 39, "Input"],
-Cell[16876, 530, 1101, 34, 41, "Output"]
+Cell[8660, 252, 1054, 29, 72, "Input"],
+Cell[9717, 283, 1381, 32, 39, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[18014, 569, 132, 2, 39, "Input"],
-Cell[18149, 573, 2602, 80, 63, "Output"]
+Cell[11135, 320, 597, 14, 54, "Subsection",
+ CellGroupingRules->{"SectionGrouping", Inherited}],
+Cell[11735, 336, 491, 12, 39, "Input"],
+Cell[CellGroupData[{
+Cell[12251, 352, 156, 3, 39, "Input"],
+Cell[12410, 357, 4238, 132, 69, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[20788, 658, 484, 12, 39, "Input"],
-Cell[21275, 672, 2489, 71, 86, "Output"]
+Cell[16685, 494, 212, 4, 39, "Input"],
+Cell[16900, 500, 1207, 33, 41, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[23801, 748, 176, 3, 39, "Input"],
-Cell[23980, 753, 4953, 157, 41, "Output"]
+Cell[18144, 538, 162, 3, 39, "Input"],
+Cell[18309, 543, 3426, 105, 69, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[28970, 915, 210, 4, 39, "Input"],
-Cell[29183, 921, 1205, 38, 41, "Output"]
+Cell[21772, 653, 206, 4, 39, "Input"],
+Cell[21981, 659, 421, 10, 47, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[30425, 964, 181, 3, 39, "Input"],
-Cell[30609, 969, 2626, 80, 63, "Output"]
+Cell[22439, 674, 510, 12, 39, "Input"],
+Cell[22952, 688, 2981, 83, 134, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[33272, 1054, 482, 12, 39, "Input"],
-Cell[33757, 1068, 2513, 71, 86, "Output"]
-}, Open  ]],
-Cell[36285, 1142, 418, 13, 41, "Item"],
-Cell[36706, 1157, 626, 17, 43, "Input"],
-Cell[CellGroupData[{
-Cell[37357, 1178, 127, 2, 39, "Input"],
-Cell[37487, 1182, 5152, 166, 69, "Output"]
+Cell[25970, 776, 202, 3, 39, "Input"],
+Cell[26175, 781, 4158, 131, 69, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[42676, 1353, 159, 3, 39, "Input"],
-Cell[42838, 1358, 1281, 41, 41, "Output"]
+Cell[30370, 917, 239, 4, 39, "Input"],
+Cell[30612, 923, 1162, 33, 41, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[44156, 1404, 132, 2, 39, "Input"],
-Cell[44291, 1408, 3499, 110, 67, "Output"]
+Cell[31811, 961, 210, 3, 39, "Input"],
+Cell[32024, 966, 3377, 104, 69, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[47827, 1523, 484, 12, 39, "Input"],
-Cell[48314, 1537, 3192, 90, 124, "Output"]
+Cell[35438, 1075, 508, 12, 39, "Input"],
+Cell[35949, 1089, 3023, 82, 134, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[39021, 1177, 837, 23, 46, "Subsection",
+ CellGroupingRules->{"SectionGrouping", Inherited}],
+Cell[39861, 1202, 670, 17, 43, "Input"],
+Cell[CellGroupData[{
+Cell[40556, 1223, 159, 3, 39, "Input"],
+Cell[40718, 1228, 4044, 126, 41, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[51543, 1632, 176, 3, 39, "Input"],
-Cell[51722, 1637, 5115, 164, 69, "Output"]
+Cell[44799, 1359, 189, 4, 39, "Input"],
+Cell[44991, 1365, 1211, 33, 41, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[56874, 1806, 210, 4, 39, "Input"],
-Cell[57087, 1812, 1387, 45, 41, "Output"]
+Cell[46239, 1403, 246, 4, 39, "Input"],
+Cell[46488, 1409, 3244, 100, 62, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[58511, 1862, 181, 3, 39, "Input"],
-Cell[58695, 1867, 4284, 136, 67, "Output"]
+Cell[49769, 1514, 415, 7, 39, "Input"],
+Cell[50187, 1523, 2906, 79, 116, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[63016, 2008, 482, 12, 39, "Input"],
-Cell[63501, 2022, 3683, 105, 154, "Output"]
-}, Open  ]],
-Cell[67199, 2130, 461, 14, 41, "Item"],
-Cell[67663, 2146, 529, 12, 39, "Input"],
-Cell[CellGroupData[{
-Cell[68217, 2162, 127, 2, 39, "Input"],
-Cell[68347, 2166, 5009, 161, 41, "Output"]
+Cell[53130, 1607, 205, 3, 39, "Input"],
+Cell[53338, 1612, 4157, 129, 40, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[73393, 2332, 159, 3, 39, "Input"],
-Cell[73555, 2337, 1387, 44, 41, "Output"]
+Cell[57532, 1746, 287, 5, 39, "Input"],
+Cell[57822, 1753, 975, 25, 39, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[74979, 2386, 132, 2, 39, "Input"],
-Cell[75114, 2390, 3451, 108, 63, "Output"]
+Cell[58834, 1783, 296, 5, 39, "Input"],
+Cell[59133, 1790, 1531, 44, 61, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[78602, 2503, 484, 12, 39, "Input"],
-Cell[79089, 2517, 3190, 91, 116, "Output"]
+Cell[60701, 1839, 417, 7, 39, "Input"],
+Cell[61121, 1848, 1758, 47, 56, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[62928, 1901, 585, 14, 43, "Subsection",
+ CellGroupingRules->{"SectionGrouping", Inherited}],
+Cell[63516, 1917, 554, 12, 39, "Input"],
+Cell[CellGroupData[{
+Cell[64095, 1933, 159, 3, 39, "Input"],
+Cell[64257, 1938, 3955, 126, 53, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[82316, 2613, 176, 3, 39, "Input"],
-Cell[82495, 2618, 4974, 159, 41, "Output"]
+Cell[68249, 2069, 189, 4, 39, "Input"],
+Cell[68441, 2075, 1188, 36, 41, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[87506, 2782, 210, 4, 39, "Input"],
-Cell[87719, 2788, 1369, 44, 41, "Output"]
+Cell[69666, 2116, 162, 3, 39, "Input"],
+Cell[69831, 2121, 3323, 104, 69, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[89125, 2837, 181, 3, 39, "Input"],
-Cell[89309, 2842, 3454, 108, 63, "Output"]
+Cell[73191, 2230, 534, 12, 39, "Input"],
+Cell[73728, 2244, 2966, 82, 124, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[92800, 2955, 482, 12, 39, "Input"],
-Cell[93285, 2969, 3139, 88, 116, "Output"]
+Cell[76731, 2331, 203, 3, 39, "Input"],
+Cell[76937, 2336, 3982, 127, 53, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[80956, 2468, 237, 4, 39, "Input"],
+Cell[81196, 2474, 1250, 37, 41, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[82483, 2516, 208, 3, 39, "Input"],
+Cell[82694, 2521, 3347, 104, 69, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[86078, 2630, 406, 7, 39, "Input"],
+Cell[86487, 2639, 3014, 83, 124, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[89528, 2726, 2861, 89, 230, "Subsection"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[92426, 2820, 146, 2, 80, "Section"],
+Cell[92575, 2824, 219, 4, 37, "Item"],
+Cell[CellGroupData[{
+Cell[92819, 2832, 161, 3, 39, "Input"],
+Cell[92983, 2837, 2677, 78, 124, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[95697, 2920, 284, 6, 39, "Input"],
+Cell[95984, 2928, 2964, 84, 104, "Output"]
+}, Open  ]]
 }, Open  ]]
 }
 ]
