@@ -12,15 +12,15 @@ Pwr::usage="Pwr[x] gives the scale of symbol x."
 SetHrchy::usage="SetHrcy[\!\(\*SubscriptBox[\(\[CapitalLambda]\), \(1\)]\)>\!\(\*SubscriptBox[\(\[CapitalLambda]\), \(2\)]\)>\!\(\*SubscriptBox[\(\[CapitalLambda]\), \(3\)]\)>...] sets the hierarchy of scales, with all scales are postive. Gives assumption=\!\(\*SubscriptBox[\(\[CapitalLambda]\), \(1\)]\)>0\[And]\!\(\*SubscriptBox[\(\[CapitalLambda]\), \(2\)]\)>0\[And]\!\(\*SubscriptBox[\(\[CapitalLambda]\), \(3\)]\)>0...\[And]\!\(\*SubscriptBox[\(\[CapitalLambda]\), \(1\)]\)>\!\(\*SubscriptBox[\(\[CapitalLambda]\), \(2\)]\)>\!\(\*SubscriptBox[\(\[CapitalLambda]\), \(3\)]\)>..."
 PwrCnt::usage="PwrCnt gives the power counting of expression x."
 ToPwr::usage="ToPwr[\[CapitalLambda]] convert \[CapitalLambda] to O[\[CapitalLambda]]."
-SumPwr::usage="SumPwr[exp] gives the power counting of the hole exprssion exp, returns the largest power."
 SrtPwr::usage="SrtPwr[exp] sort the powers of each term in expression exp, whose Head is Plus, according to the power counting, with terms in the order of decending power counting."
 SclHrchy::usage="SclHrchy restores the hirachy of the scales, which is used as an assumption in sort an expression by power counting."
 ShowPwr::usgae="ShowPwr[exp] arranges terms in exp in an expression by their powers, and dispalay as subscripts"
 SrtByPwr::usage="SrtPwr[exp] sort expression exp's terms, whose Head is Plus, by its power counting (in the order of decending power counting)."
 PwrLst::usage="PwrLst[exp] gives a table summerize the power counting and corresponding terms."
 
-Begin["Private`"]
 
+
+Begin["Private`"]
 
 CntQ[x_?NumericQ]:=False
 NCntQ[x_?NumericQ]:=True
@@ -50,14 +50,16 @@ ToPwr[ToPwr[X__]]:=ToPwr[X]
 SetAttributes[ToPwr,Listable];
 SetAttributes[PwrCnt,Listable];
 
-SumPwr[X_]:=(Assuming[SclHrchy,Module[{exp=(ToPwr[X])},exp//.Plus[ToPwr[x_],ToPwr[y_]]:>ToPwr[Max[x,y]//Simplify]]])//.Max->Plus
-
 SrtPwr[X_]:=Module[{XPWRLst=PwrCnt/@List@@(Expand[X])},Inactive[Plus]@@ToPwr[Assuming[SclHrchy,Sort[XPWRLst,Simplify[#1>=#2]&]]]]
 SrtByPwr[X_,f_:Identity]:=Inactive[Plus]@@Assuming[SclHrchy,(f[Plus@@#]&)/@Sort[GatherBy[List@@(Expand[X]),PwrCnt],Simplify[First[Union[PwrCnt[#1]]]>=First[Union[PwrCnt[#2]]]]&]]
 
-ShowPwr[X_,f_:Identity]:=Inactive[Plus]@@(Subscript[Framed[Assuming[SclHrchy,f[#]],RoundingRadius->5,FrameStyle->{Thick,Gray,DotDashed},Background->LightGreen],ToPwr[PwrCnt[#]]]&/@(Plus@@#&)/@Sort[GatherBy[List@@(Expand[X]),PwrCnt],Assuming[SclHrchy,Simplify[First[Union[PwrCnt[#1]]]>=First[Union[PwrCnt[#2]]]]]&])
+SrtByPwr[X_,f_:Identity]:=Module[{tmp=Assuming[SclHrchy,(f[Plus@@#]&)/@Sort[GatherBy[List@@(Expand[X]),PwrCnt],Simplify[First[Union[PwrCnt[#1]]]>=First[Union[PwrCnt[#2]]]]&]]},If[Length[tmp]>1,Inactive[Plus]@@tmp,Plus@@tmp]]
+
+ShowPwr[X_,f_:Identity]:=Module[{tmp=(Subscript[Framed[Assuming[SclHrchy,f[#]],RoundingRadius->5,FrameStyle->{Thick,Gray,DotDashed},Background->LightGreen],ToPwr[PwrCnt[#]]]&/@(Plus@@#&)/@Sort[GatherBy[List@@(Expand[X]),PwrCnt],Assuming[SclHrchy,Simplify[First[Union[PwrCnt[#1]]]>=First[Union[PwrCnt[#2]]]]]&])},If[Length[tmp]>1,Inactive[Plus]@@tmp,Plus@@tmp]]
 
 PwrLst[X_,f_:Identity]:=Assuming[SclHrchy,Grid[MapIndexed[{#2[[1]],(ToPwr@*PwrCnt)[#],f[#]}&,((Plus@@#&)/@Sort[GatherBy[List@@(Expand[X]),PwrCnt],Assuming[SclHrchy,Simplify[First[Union[PwrCnt[#1]]]>=First[Union[PwrCnt[#2]]]]]&])],Frame->All,FrameStyle->Directive[LightGray,Thick],Alignment->Left]]
 
 End[];
+
+
 EndPackage[];
