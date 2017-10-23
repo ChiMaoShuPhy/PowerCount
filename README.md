@@ -21,6 +21,9 @@ First, one needs to set the symbols to be included in or excluded from the power
 
 `PwrCnt[x]` gives the scale of symbol $x$. 
 
+`SumPwr[exp]` gives the highest power counting of the expression. 
+
 `ShowPwr[exp]` assembles the expression $exp$'s terms which has the same power counting together, and display the corresponding power counting as subscripts.
 
- `SrtByPwr[exp]` assembles the expression $exp$'s terms which has the same power counting together, and sort the terms in the order of descending power counting.
+`SrtByPwr[exp]` assembles the expression $exp$'s terms which has
+the same power counting together, and sort the terms in the order of descending power counting.
