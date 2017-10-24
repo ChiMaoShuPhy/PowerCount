@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    133157,       4085]
-NotebookOptionsPosition[    126532,       3861]
-NotebookOutlinePosition[    126922,       3878]
-CellTagsIndexPosition[    126879,       3875]
+NotebookDataLength[    122820,       3734]
+NotebookOptionsPosition[    116379,       3518]
+NotebookOutlinePosition[    116769,       3535]
+CellTagsIndexPosition[    116726,       3532]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -21,18 +21,6 @@ Notebook[{
 Cell[BoxData[
  RowBox[{"Quit", "[", "]"}]], "Input",
  CellChangeTimes->{{3.717589817151394*^9, 3.717589818262773*^9}}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"NotebookDirectory", "[", "]"}]], "Input",
- CellChangeTimes->{{3.717837529348783*^9, 3.717837539525882*^9}}],
-
-Cell[BoxData[
- FormBox["\<\"/Users/xiaonuxiong/Documents/GitHub/PowerCount/\"\>", 
-  TraditionalForm]], "Output",
- CellChangeTimes->{3.717837540098699*^9}]
-}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -90,7 +78,16 @@ Cell[BoxData[
    3.7176775512665453`*^9, 3.717677578122693*^9}, {3.7176776974245377`*^9, 
    3.717677698246956*^9}, 3.7177771405529757`*^9, {3.71783182930899*^9, 
    3.717831832527194*^9}, {3.7178321251647177`*^9, 3.717832125791359*^9}, {
-   3.7178347423402033`*^9, 3.7178347435980186`*^9}}]
+   3.7178347423402033`*^9, 3.7178347435980186`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+  "NCnt", " ", "is", " ", "needed", " ", "if", " ", "there", " ", "exsits", 
+   " ", "any", " ", "nonumerical", " ", "symbol", " ", "which", " ", "is", 
+   " ", "not", " ", "considered", " ", "in", " ", "power", " ", "counting"}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.71783826935441*^9, 3.71783833485459*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -3032,460 +3029,16 @@ Cell[BoxData[
   TraditionalForm]], "Output",
  CellChangeTimes->{{3.717754202392412*^9, 3.717754219818282*^9}, 
    3.717754399149973*^9, 3.717777995757367*^9, 3.717780592438829*^9}]
-}, Open  ]],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"SetScl", "[", 
-   RowBox[{
-    RowBox[{"{", 
-     RowBox[{
-      RowBox[{"{", "kp", "}"}], ",", 
-      RowBox[{"{", "km", "}"}], ",", 
-      RowBox[{"{", "kt", "}"}]}], "}"}], ",", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{
-       SuperscriptBox["\[Lambda]", "2"], ",", "1", ",", "\[Lambda]"}], "}"}], 
-     "*", "Q"}]}], "]"}], ";"}]], "Input"],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"exp", "=", 
-  RowBox[{
-   RowBox[{"(", 
-    RowBox[{
-     RowBox[{
-      SuperscriptBox[
-       RowBox[{"(", 
-        RowBox[{"k", "+", "l"}], ")"}], "2"], "-", 
-      SuperscriptBox["M", "2"]}], "//", "Expand"}], ")"}], "//.", 
-   RowBox[{"{", 
-    RowBox[{
-     RowBox[{
-      SuperscriptBox["k", "2"], "\[Rule]", 
-      RowBox[{
-       RowBox[{"2", "kp", "*", "km"}], "-", 
-       SuperscriptBox["kt", "2"]}]}], ",", 
-     RowBox[{
-      SuperscriptBox["l", "2"], "\[Rule]", 
-      RowBox[{
-       RowBox[{"2", "lp", "*", "lm"}], "-", 
-       SuperscriptBox["lt", "2"]}]}], ",", 
-     RowBox[{
-      RowBox[{"k", "*", "l"}], "\[Rule]", 
-      RowBox[{
-       RowBox[{"kp", "*", "lm"}], "+", 
-       RowBox[{"km", "*", "lp"}], "-", 
-       RowBox[{"kt", "*", "lt"}]}]}]}], "}"}]}]}]], "Input",
- CellChangeTimes->{{3.7178319464631243`*^9, 3.7178319712563057`*^9}, {
-  3.717832087641741*^9, 3.717832090419241*^9}}],
-
-Cell[BoxData[
- FormBox[
-  RowBox[{
-   RowBox[{"2", " ", 
-    RowBox[{"(", 
-     RowBox[{
-      RowBox[{
-       SuperscriptBox["k", "-"], " ", 
-       SuperscriptBox["l", "+"]}], "+", 
-      RowBox[{
-       SuperscriptBox["k", "+"], " ", 
-       SuperscriptBox["l", "-"]}], "-", 
-      RowBox[{
-       SubscriptBox["k", "\[Perpendicular]"], " ", 
-       SubscriptBox["l", "\[Perpendicular]"]}]}], ")"}]}], "+", 
-   RowBox[{"2", " ", 
-    SuperscriptBox["k", "-"], " ", 
-    SuperscriptBox["k", "+"]}], "-", 
-   SubsuperscriptBox["k", "\[Perpendicular]", "2"], "+", 
-   RowBox[{"2", " ", 
-    SuperscriptBox["l", "-"], " ", 
-    SuperscriptBox["l", "+"]}], "-", 
-   SubsuperscriptBox["l", "\[Perpendicular]", "2"], "-", 
-   SuperscriptBox["M", "2"]}], TraditionalForm]], "Output",
- CellChangeTimes->{3.717831971748109*^9, 3.717832091099903*^9}]
+}, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
-Cell[BoxData[
- RowBox[{"SrtPwr", "[", "exp", "]"}]], "Input",
- CellChangeTimes->{
-  3.717832007854093*^9, {3.717832039484167*^9, 3.717832040005825*^9}}],
-
-Cell[BoxData[
- FormBox[
-  RowBox[{
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     SuperscriptBox["Q", "2"], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     RowBox[{"Q", " ", 
-      SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     RowBox[{"Q", " ", 
-      SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     RowBox[{"Q", " ", 
-      SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     RowBox[{"Q", " ", 
-      SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     RowBox[{"Q", " ", 
-      SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     SuperscriptBox["M", "2"], ")"}],
-    SpanMaxSize->DirectedInfinity[1]], 
-   TagBox["+",
-    "InactiveToken",
-    BaseStyle->"InactiveTraditional",
-    SyntaxForm->"+"], 
-   StyleBox[
-    RowBox[{
-     StyleBox["O",
-      LineColor->RGBColor[0, 0, 1],
-      FrontFaceColor->RGBColor[0, 0, 1],
-      BackFaceColor->RGBColor[0, 0, 1],
-      GraphicsColor->RGBColor[0, 0, 1],
-      FontFamily->"Lucida Handwriting",
-      FontSize->14,
-      FontWeight->Bold,
-      FontColor->RGBColor[0, 0, 1]], " ", "(", 
-     SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
-    SpanMaxSize->DirectedInfinity[1]]}], TraditionalForm]], "Output",
- CellChangeTimes->{3.717832040580193*^9, 3.7178320921168756`*^9}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"exp", "=", 
-  RowBox[{
-   RowBox[{"2", "\[Alpha]", "*", "kp", "*", "km"}], "-", 
-   RowBox[{
-    SuperscriptBox["\[Alpha]", "2"], "*", "kt"}], "-", 
-   RowBox[{"\[Alpha]", "*", "kt"}], "-", 
-   RowBox[{
-    SuperscriptBox["\[Alpha]", "2"], "*", "lt", "*", "kt"}]}]}]], "Input",
- CellChangeTimes->{{3.717832153530038*^9, 3.717832260089512*^9}, {
-  3.717832475981682*^9, 3.717832477734558*^9}}],
-
-Cell[BoxData[
- FormBox[
-  RowBox[{
-   RowBox[{"2", " ", "\[Alpha]", " ", 
-    SuperscriptBox["k", "-"], " ", 
-    SuperscriptBox["k", "+"]}], "+", 
-   RowBox[{
-    SuperscriptBox["\[Alpha]", "2"], " ", 
-    RowBox[{"(", 
-     RowBox[{"-", 
-      SubscriptBox["k", "\[Perpendicular]"]}], ")"}]}], "-", 
-   RowBox[{"\[Alpha]", " ", 
-    SubscriptBox["k", "\[Perpendicular]"]}], "-", 
-   RowBox[{
-    SuperscriptBox["\[Alpha]", "2"], " ", 
-    SubscriptBox["k", "\[Perpendicular]"], " ", 
-    SubscriptBox["l", "\[Perpendicular]"]}]}], TraditionalForm]], "Output",
- CellChangeTimes->{{3.717832184658449*^9, 3.717832224336912*^9}, {
-   3.7178322547335567`*^9, 3.717832260465664*^9}, 3.7178324786862793`*^9}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"PwrLst", "[", 
-  RowBox[{"Dnmntr1", ",", "Simplify"}], "]"}]], "Input",
- CellChangeTimes->{{3.717832230934348*^9, 3.7178322416302357`*^9}}],
-
-Cell[BoxData[
- FormBox[
-  TagBox[GridBox[{
-     {"1", 
-      StyleBox[
-       RowBox[{
-        StyleBox["O",
-         LineColor->RGBColor[0, 0, 1],
-         FrontFaceColor->RGBColor[0, 0, 1],
-         BackFaceColor->RGBColor[0, 0, 1],
-         GraphicsColor->RGBColor[0, 0, 1],
-         FontFamily->"Lucida Handwriting",
-         FontSize->14,
-         FontWeight->Bold,
-         FontColor->RGBColor[0, 0, 1]], " ", "(", 
-        SuperscriptBox["Q", "2"], ")"}],
-       SpanMaxSize->DirectedInfinity[1]], 
-      RowBox[{"2", " ", 
-       SuperscriptBox["k", "-"], " ", 
-       SuperscriptBox["l", "+"]}]},
-     {"2", 
-      StyleBox[
-       RowBox[{
-        StyleBox["O",
-         LineColor->RGBColor[0, 0, 1],
-         FrontFaceColor->RGBColor[0, 0, 1],
-         BackFaceColor->RGBColor[0, 0, 1],
-         GraphicsColor->RGBColor[0, 0, 1],
-         FontFamily->"Lucida Handwriting",
-         FontSize->14,
-         FontWeight->Bold,
-         FontColor->RGBColor[0, 0, 1]], " ", "(", 
-        RowBox[{"Q", " ", 
-         SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
-       SpanMaxSize->DirectedInfinity[1]], 
-      RowBox[{
-       RowBox[{"2", " ", 
-        SuperscriptBox["k", "-"], " ", 
-        SuperscriptBox["k", "+"]}], "-", 
-       RowBox[{"2", " ", 
-        SubscriptBox["k", "\[Perpendicular]"], " ", 
-        SubscriptBox["l", "\[Perpendicular]"]}], "-", 
-       SubsuperscriptBox["k", "\[Perpendicular]", "2"], "+", 
-       RowBox[{"2", " ", 
-        SuperscriptBox["l", "-"], " ", 
-        SuperscriptBox["l", "+"]}], "-", 
-       SubsuperscriptBox["l", "\[Perpendicular]", "2"]}]},
-     {"3", 
-      StyleBox[
-       RowBox[{
-        StyleBox["O",
-         LineColor->RGBColor[0, 0, 1],
-         FrontFaceColor->RGBColor[0, 0, 1],
-         BackFaceColor->RGBColor[0, 0, 1],
-         GraphicsColor->RGBColor[0, 0, 1],
-         FontFamily->"Lucida Handwriting",
-         FontSize->14,
-         FontWeight->Bold,
-         FontColor->RGBColor[0, 0, 1]], " ", "(", 
-        SubsuperscriptBox["\[CapitalLambda]", "QCD", "2"], ")"}],
-       SpanMaxSize->DirectedInfinity[1]], 
-      RowBox[{"2", " ", 
-       SuperscriptBox["k", "+"], " ", 
-       SuperscriptBox["l", "-"]}]}
-    },
-    AutoDelete->False,
-    FrameStyle->Directive[
-      GrayLevel[0.85], 
-      Thickness[Large]],
-    GridBoxAlignment->{"Columns" -> {{Left}}},
-    GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
-    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
-   "Grid"], TraditionalForm]], "Output",
- CellChangeTimes->{{3.717832238918912*^9, 3.7178322614078703`*^9}, 
-   3.7178324796588383`*^9}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"PwrLst", "[", 
-  RowBox[{"exp", ",", "Simplify"}], "]"}]], "Input",
- CellChangeTimes->{3.717832062020693*^9}],
-
-Cell[BoxData[
- FormBox[
-  TagBox[GridBox[{
-     {"1", 
-      StyleBox[
-       RowBox[{
-        StyleBox["O",
-         LineColor->RGBColor[0, 0, 1],
-         FrontFaceColor->RGBColor[0, 0, 1],
-         BackFaceColor->RGBColor[0, 0, 1],
-         GraphicsColor->RGBColor[0, 0, 1],
-         FontFamily->"Lucida Handwriting",
-         FontSize->14,
-         FontWeight->Bold,
-         FontColor->RGBColor[0, 0, 1]], " ", "(", 
-        RowBox[{"\[Alpha]", " ", "Q", " ", 
-         SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
-       SpanMaxSize->DirectedInfinity[1]], 
-      RowBox[{"2", " ", "\[Alpha]", " ", 
-       SuperscriptBox["k", "-"], " ", 
-       SuperscriptBox["k", "+"]}]},
-     {"2", 
-      StyleBox[
-       RowBox[{
-        StyleBox["O",
-         LineColor->RGBColor[0, 0, 1],
-         FrontFaceColor->RGBColor[0, 0, 1],
-         BackFaceColor->RGBColor[0, 0, 1],
-         GraphicsColor->RGBColor[0, 0, 1],
-         FontFamily->"Lucida Handwriting",
-         FontSize->14,
-         FontWeight->Bold,
-         FontColor->RGBColor[0, 0, 1]], " ", "(", 
-        RowBox[{"\[Alpha]", " ", 
-         SqrtBox[
-          RowBox[{"Q", " ", 
-           SubscriptBox["\[CapitalLambda]", "QCD"]}]]}], ")"}],
-       SpanMaxSize->DirectedInfinity[1]], 
-      RowBox[{"\[Alpha]", " ", 
-       RowBox[{"(", 
-        RowBox[{"-", 
-         SubscriptBox["k", "\[Perpendicular]"]}], ")"}]}]},
-     {"3", 
-      StyleBox[
-       RowBox[{
-        StyleBox["O",
-         LineColor->RGBColor[0, 0, 1],
-         FrontFaceColor->RGBColor[0, 0, 1],
-         BackFaceColor->RGBColor[0, 0, 1],
-         GraphicsColor->RGBColor[0, 0, 1],
-         FontFamily->"Lucida Handwriting",
-         FontSize->14,
-         FontWeight->Bold,
-         FontColor->RGBColor[0, 0, 1]], " ", "(", 
-        RowBox[{
-         SuperscriptBox["\[Alpha]", "2"], " ", 
-         SqrtBox[
-          RowBox[{"Q", " ", 
-           SubscriptBox["\[CapitalLambda]", "QCD"]}]]}], ")"}],
-       SpanMaxSize->DirectedInfinity[1]], 
-      RowBox[{
-       SuperscriptBox["\[Alpha]", "2"], " ", 
-       RowBox[{"(", 
-        RowBox[{"-", 
-         SubscriptBox["k", "\[Perpendicular]"]}], ")"}]}]},
-     {"4", 
-      StyleBox[
-       RowBox[{
-        StyleBox["O",
-         LineColor->RGBColor[0, 0, 1],
-         FrontFaceColor->RGBColor[0, 0, 1],
-         BackFaceColor->RGBColor[0, 0, 1],
-         GraphicsColor->RGBColor[0, 0, 1],
-         FontFamily->"Lucida Handwriting",
-         FontSize->14,
-         FontWeight->Bold,
-         FontColor->RGBColor[0, 0, 1]], " ", "(", 
-        RowBox[{
-         SuperscriptBox["\[Alpha]", "2"], " ", "Q", " ", 
-         SubscriptBox["\[CapitalLambda]", "QCD"]}], ")"}],
-       SpanMaxSize->DirectedInfinity[1]], 
-      RowBox[{
-       SuperscriptBox["\[Alpha]", "2"], " ", 
-       RowBox[{"(", 
-        RowBox[{"-", 
-         SubscriptBox["k", "\[Perpendicular]"]}], ")"}], " ", 
-       SubscriptBox["l", "\[Perpendicular]"]}]}
-    },
-    AutoDelete->False,
-    FrameStyle->Directive[
-      GrayLevel[0.85], 
-      Thickness[Large]],
-    GridBoxAlignment->{"Columns" -> {{Left}}},
-    GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
-    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
-   "Grid"], TraditionalForm]], "Output",
- CellChangeTimes->{
-  3.717832062634933*^9, 3.7178320935115423`*^9, {3.717832185873407*^9, 
-   3.7178322150164757`*^9}, {3.717832256870406*^9, 3.717832262231978*^9}, 
-   3.717832480513399*^9}]
-}, Open  ]],
+Cell["Example: multiple independent scales. ", "Section",
+ CellGroupingRules->{"SectionGrouping", Inherited},
+ CellChangeTimes->{{3.717753052782382*^9, 3.7177530891069193`*^9}, {
+  3.717837862238566*^9, 3.71783789026475*^9}, {3.7178382334367647`*^9, 
+  3.7178382366092577`*^9}}],
 
 Cell[BoxData[
  RowBox[{"Clear", "[", "\[Lambda]", "]"}]], "Input",
@@ -3523,6 +3076,19 @@ Cell[BoxData[
   3.717832128905116*^9}, {3.717834749734848*^9, 3.71783475427658*^9}, {
   3.7178348080056458`*^9, 3.7178348468726063`*^9}, {3.7178348875191793`*^9, 
   3.7178349215341253`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Without specifying the hierarchy of scales, power count the terms with \
+respect to the first scale in alphabetical order \
+\>", "Subsection",
+ CellGroupingRules->{"SectionGrouping", Inherited},
+ CellChangeTimes->{{3.717753291597678*^9, 3.71775331729845*^9}, {
+  3.717753784748733*^9, 3.717753786005888*^9}, {3.717753852024589*^9, 
+  3.71775385244643*^9}, {3.717754179266971*^9, 3.717754180373189*^9}, {
+  3.7177545752927437`*^9, 3.7177545792848454`*^9}, {3.7177780040492067`*^9, 
+  3.717778008748715*^9}, {3.717837914649827*^9, 3.717838050586862*^9}}],
 
 Cell[CellGroupData[{
 
@@ -3633,7 +3199,29 @@ Cell[BoxData[
     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
    "Grid"], TraditionalForm]], "Output",
  CellChangeTimes->{3.717835975242235*^9}]
+}, Open  ]]
 }, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Power count \[Alpha] first by setting the scale hierarchy ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Alpha]", ">", 
+    SqrtBox[
+     RowBox[{
+      SubscriptBox["\[CapitalLambda]", "QCD"], "/", "Q"}]]}], 
+   TraditionalForm]],
+  FormatType->"TraditionalForm"]
+}], "Subsection",
+ CellGroupingRules->{"SectionGrouping", Inherited},
+ CellChangeTimes->{{3.717753291597678*^9, 3.71775331729845*^9}, {
+  3.717753784748733*^9, 3.717753786005888*^9}, {3.717753852024589*^9, 
+  3.71775385244643*^9}, {3.717754179266971*^9, 3.717754180373189*^9}, {
+  3.7177545752927437`*^9, 3.7177545792848454`*^9}, {3.7177780040492067`*^9, 
+  3.717778008748715*^9}, {3.717837914649827*^9, 3.717838101326391*^9}, {
+  3.7178381435956593`*^9, 3.717838149089679*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -3663,16 +3251,39 @@ Cell[BoxData[
     RowBox[{
      SuperscriptBox["\[Alpha]", "4"], "*", "\[Lambda]"}], "+", 
     RowBox[{
+     SuperscriptBox["\[Alpha]", "3"], "*", "\[Lambda]"}], "+", 
+    RowBox[{
      SuperscriptBox["\[Alpha]", "3"], "*", 
      SuperscriptBox["\[Lambda]", "2"]}], "+", 
     RowBox[{
      SuperscriptBox["\[Alpha]", "2"], "*", 
-     SuperscriptBox["\[Lambda]", "3"]}]}], ")"}], "]"}]], "Input"],
+     SuperscriptBox["\[Lambda]", "3"]}]}], ")"}], "]"}]], "Input",
+ CellChangeTimes->{{3.717838171391697*^9, 3.717838183307584*^9}}],
 
 Cell[BoxData[
  FormBox[
   TagBox[GridBox[{
      {"1", 
+      StyleBox[
+       RowBox[{
+        StyleBox["O",
+         LineColor->RGBColor[0, 0, 1],
+         FrontFaceColor->RGBColor[0, 0, 1],
+         BackFaceColor->RGBColor[0, 0, 1],
+         GraphicsColor->RGBColor[0, 0, 1],
+         FontFamily->"Lucida Handwriting",
+         FontSize->14,
+         FontWeight->Bold,
+         FontColor->RGBColor[0, 0, 1]], " ", "(", 
+        RowBox[{
+         SuperscriptBox["\[Alpha]", "3"], " ", 
+         SqrtBox[
+          FractionBox[
+           SubscriptBox["\[CapitalLambda]", "QCD"], "Q"]]}], ")"}],
+       SpanMaxSize->DirectedInfinity[1]], 
+      RowBox[{
+       SuperscriptBox["\[Alpha]", "3"], " ", "\[Lambda]"}]},
+     {"2", 
       StyleBox[
        RowBox[{
         StyleBox["O",
@@ -3692,7 +3303,7 @@ Cell[BoxData[
        SpanMaxSize->DirectedInfinity[1]], 
       RowBox[{
        SuperscriptBox["\[Alpha]", "4"], " ", "\[Lambda]"}]},
-     {"2", 
+     {"3", 
       StyleBox[
        RowBox[{
         StyleBox["O",
@@ -3712,7 +3323,7 @@ Cell[BoxData[
       RowBox[{
        SuperscriptBox["\[Alpha]", "3"], " ", 
        SuperscriptBox["\[Lambda]", "2"]}]},
-     {"3", 
+     {"4", 
       StyleBox[
        RowBox[{
         StyleBox["O",
@@ -3745,8 +3356,30 @@ Cell[BoxData[
     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
    "Grid"], TraditionalForm]], "Output",
  CellChangeTimes->{{3.7178355016250362`*^9, 3.717835507748713*^9}, 
-   3.717835554129304*^9, 3.7178356378819847`*^9, 3.7178359194320374`*^9}]
+   3.717835554129304*^9, 3.7178356378819847`*^9, 3.7178359194320374`*^9, 
+   3.717838184072699*^9, 3.71783821451536*^9}]
+}, Open  ]]
 }, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Power count \[Lambda] first by setting the scale hierarchy ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SqrtBox[
+     RowBox[{
+      SubscriptBox["\[CapitalLambda]", "QCD"], "/", "Q"}]], ">", "\[Alpha]"}],
+    TraditionalForm]],
+  FormatType->"TraditionalForm"]
+}], "Subsection",
+ CellGroupingRules->{"SectionGrouping", Inherited},
+ CellChangeTimes->{{3.717753291597678*^9, 3.71775331729845*^9}, {
+  3.717753784748733*^9, 3.717753786005888*^9}, {3.717753852024589*^9, 
+  3.71775385244643*^9}, {3.717754179266971*^9, 3.717754180373189*^9}, {
+  3.7177545752927437`*^9, 3.7177545792848454`*^9}, {3.7177780040492067`*^9, 
+  3.717778008748715*^9}, {3.717837914649827*^9, 3.717838140050638*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -3772,16 +3405,39 @@ Cell[BoxData[
     RowBox[{
      SuperscriptBox["\[Alpha]", "4"], "*", "\[Lambda]"}], "+", 
     RowBox[{
+     SuperscriptBox["\[Alpha]", "3"], "*", "\[Lambda]"}], "+", 
+    RowBox[{
      SuperscriptBox["\[Alpha]", "3"], "*", 
      SuperscriptBox["\[Lambda]", "2"]}], "+", 
     RowBox[{
      SuperscriptBox["\[Alpha]", "2"], "*", 
-     SuperscriptBox["\[Lambda]", "3"]}]}], ")"}], "]"}]], "Input"],
+     SuperscriptBox["\[Lambda]", "3"]}]}], ")"}], "]"}]], "Input",
+ CellChangeTimes->{3.717838200318611*^9}],
 
 Cell[BoxData[
  FormBox[
   TagBox[GridBox[{
      {"1", 
+      StyleBox[
+       RowBox[{
+        StyleBox["O",
+         LineColor->RGBColor[0, 0, 1],
+         FrontFaceColor->RGBColor[0, 0, 1],
+         BackFaceColor->RGBColor[0, 0, 1],
+         GraphicsColor->RGBColor[0, 0, 1],
+         FontFamily->"Lucida Handwriting",
+         FontSize->14,
+         FontWeight->Bold,
+         FontColor->RGBColor[0, 0, 1]], " ", "(", 
+        RowBox[{
+         SuperscriptBox["\[Alpha]", "3"], " ", 
+         SqrtBox[
+          FractionBox[
+           SubscriptBox["\[CapitalLambda]", "QCD"], "Q"]]}], ")"}],
+       SpanMaxSize->DirectedInfinity[1]], 
+      RowBox[{
+       SuperscriptBox["\[Alpha]", "3"], " ", "\[Lambda]"}]},
+     {"2", 
       StyleBox[
        RowBox[{
         StyleBox["O",
@@ -3804,7 +3460,7 @@ Cell[BoxData[
       RowBox[{
        SuperscriptBox["\[Alpha]", "2"], " ", 
        SuperscriptBox["\[Lambda]", "3"]}]},
-     {"2", 
+     {"3", 
       StyleBox[
        RowBox[{
         StyleBox["O",
@@ -3824,7 +3480,7 @@ Cell[BoxData[
       RowBox[{
        SuperscriptBox["\[Alpha]", "3"], " ", 
        SuperscriptBox["\[Lambda]", "2"]}]},
-     {"3", 
+     {"4", 
       StyleBox[
        RowBox[{
         StyleBox["O",
@@ -3855,7 +3511,8 @@ Cell[BoxData[
    "Grid"], TraditionalForm]], "Output",
  CellChangeTimes->{
   3.717835661389557*^9, 3.717835871169176*^9, {3.717835922159012*^9, 
-   3.7178359311535187`*^9}}]
+   3.7178359311535187`*^9}, {3.717838201162344*^9, 3.717838217767354*^9}}]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
@@ -3879,212 +3536,204 @@ CellTagsIndex->{}
 Notebook[{
 Cell[558, 20, 118, 2, 39, "Input"],
 Cell[CellGroupData[{
-Cell[701, 26, 131, 2, 39, "Input"],
-Cell[835, 30, 155, 3, 35, "Output"]
+Cell[701, 26, 231, 3, 80, "Section",
+ CellGroupingRules->{"SectionGrouping", Inherited}],
+Cell[935, 31, 120, 2, 39, "Input"],
+Cell[1058, 35, 218, 5, 39, "Input"],
+Cell[1279, 42, 223, 6, 42, "Input"],
+Cell[1505, 50, 250, 5, 39, "Input"],
+Cell[1758, 57, 121, 2, 39, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1027, 38, 231, 3, 80, "Section",
+Cell[1916, 64, 222, 3, 125, "Section",
  CellGroupingRules->{"SectionGrouping", Inherited}],
-Cell[1261, 43, 120, 2, 39, "Input"],
-Cell[1384, 47, 218, 5, 39, "Input"],
-Cell[1605, 54, 223, 6, 42, "Input"],
-Cell[1831, 62, 250, 5, 39, "Input"],
-Cell[2084, 69, 121, 2, 39, "Input"]
+Cell[2141, 69, 576, 11, 39, "Input"],
+Cell[2720, 82, 356, 7, 66, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2242, 76, 222, 3, 125, "Section",
+Cell[3113, 94, 195, 2, 80, "Section",
  CellGroupingRules->{"SectionGrouping", Inherited}],
-Cell[2467, 81, 576, 11, 39, "Input"]
-}, Open  ]],
+Cell[3311, 98, 704, 19, 43, "Input"],
 Cell[CellGroupData[{
-Cell[3080, 97, 195, 2, 80, "Section",
- CellGroupingRules->{"SectionGrouping", Inherited}],
-Cell[3278, 101, 704, 19, 43, "Input"],
-Cell[CellGroupData[{
-Cell[4007, 124, 385, 7, 39, "Input"],
-Cell[4395, 133, 1053, 18, 37, "Output"]
+Cell[4040, 121, 385, 7, 39, "Input"],
+Cell[4428, 130, 1053, 18, 37, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5497, 157, 1463, 41, 258, "Section",
+Cell[5530, 154, 1463, 41, 258, "Section",
  CellGroupingRules->{"SectionGrouping", Inherited}],
 Cell[CellGroupData[{
-Cell[6985, 202, 1308, 33, 72, "Input"],
-Cell[8296, 237, 1215, 30, 39, "Output"]
+Cell[7018, 199, 1308, 33, 72, "Input"],
+Cell[8329, 234, 1215, 30, 39, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[9548, 272, 1054, 29, 72, "Input"],
-Cell[10605, 303, 1409, 33, 39, "Output"]
+Cell[9581, 269, 1054, 29, 72, "Input"],
+Cell[10638, 300, 1409, 33, 39, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[12051, 341, 597, 14, 54, "Subsection",
+Cell[12084, 338, 597, 14, 54, "Subsection",
  CellGroupingRules->{"SectionGrouping", Inherited}],
-Cell[12651, 357, 491, 12, 39, "Input"],
+Cell[12684, 354, 491, 12, 39, "Input"],
 Cell[CellGroupData[{
-Cell[13167, 373, 156, 3, 39, "Input"],
-Cell[13326, 378, 4238, 132, 69, "Output"]
+Cell[13200, 370, 156, 3, 39, "Input"],
+Cell[13359, 375, 4238, 132, 69, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[17601, 515, 212, 4, 39, "Input"],
-Cell[17816, 521, 1207, 33, 41, "Output"]
+Cell[17634, 512, 212, 4, 39, "Input"],
+Cell[17849, 518, 1207, 33, 41, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[19060, 559, 162, 3, 39, "Input"],
-Cell[19225, 564, 3426, 105, 69, "Output"]
+Cell[19093, 556, 162, 3, 39, "Input"],
+Cell[19258, 561, 3426, 105, 69, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[22688, 674, 206, 4, 39, "Input"],
-Cell[22897, 680, 421, 10, 47, "Output"]
+Cell[22721, 671, 206, 4, 39, "Input"],
+Cell[22930, 677, 421, 10, 47, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[23355, 695, 510, 12, 39, "Input"],
-Cell[23868, 709, 2981, 83, 134, "Output"]
+Cell[23388, 692, 510, 12, 39, "Input"],
+Cell[23901, 706, 2981, 83, 134, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[26886, 797, 202, 3, 39, "Input"],
-Cell[27091, 802, 4158, 131, 69, "Output"]
+Cell[26919, 794, 202, 3, 39, "Input"],
+Cell[27124, 799, 4158, 131, 69, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[31286, 938, 239, 4, 39, "Input"],
-Cell[31528, 944, 1162, 33, 41, "Output"]
+Cell[31319, 935, 239, 4, 39, "Input"],
+Cell[31561, 941, 1162, 33, 41, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[32727, 982, 210, 3, 39, "Input"],
-Cell[32940, 987, 3377, 104, 69, "Output"]
+Cell[32760, 979, 210, 3, 39, "Input"],
+Cell[32973, 984, 3377, 104, 69, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[36354, 1096, 508, 12, 39, "Input"],
-Cell[36865, 1110, 3023, 82, 134, "Output"]
+Cell[36387, 1093, 508, 12, 39, "Input"],
+Cell[36898, 1107, 3023, 82, 134, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[39937, 1198, 837, 23, 46, "Subsection",
+Cell[39970, 1195, 837, 23, 46, "Subsection",
  CellGroupingRules->{"SectionGrouping", Inherited}],
-Cell[40777, 1223, 670, 17, 43, "Input"],
+Cell[40810, 1220, 670, 17, 43, "Input"],
 Cell[CellGroupData[{
-Cell[41472, 1244, 159, 3, 39, "Input"],
-Cell[41634, 1249, 4044, 126, 41, "Output"]
+Cell[41505, 1241, 159, 3, 39, "Input"],
+Cell[41667, 1246, 4044, 126, 41, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[45715, 1380, 189, 4, 39, "Input"],
-Cell[45907, 1386, 1211, 33, 41, "Output"]
+Cell[45748, 1377, 189, 4, 39, "Input"],
+Cell[45940, 1383, 1211, 33, 41, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[47155, 1424, 246, 4, 39, "Input"],
-Cell[47404, 1430, 3244, 100, 62, "Output"]
+Cell[47188, 1421, 246, 4, 39, "Input"],
+Cell[47437, 1427, 3244, 100, 62, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[50685, 1535, 415, 7, 39, "Input"],
-Cell[51103, 1544, 2906, 79, 116, "Output"]
+Cell[50718, 1532, 415, 7, 39, "Input"],
+Cell[51136, 1541, 2906, 79, 116, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[54046, 1628, 205, 3, 39, "Input"],
-Cell[54254, 1633, 4157, 129, 40, "Output"]
+Cell[54079, 1625, 205, 3, 39, "Input"],
+Cell[54287, 1630, 4157, 129, 40, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[58448, 1767, 287, 5, 39, "Input"],
-Cell[58738, 1774, 975, 25, 39, "Output"]
+Cell[58481, 1764, 287, 5, 39, "Input"],
+Cell[58771, 1771, 975, 25, 39, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[59750, 1804, 296, 5, 39, "Input"],
-Cell[60049, 1811, 1531, 44, 61, "Output"]
+Cell[59783, 1801, 296, 5, 39, "Input"],
+Cell[60082, 1808, 1531, 44, 61, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[61617, 1860, 417, 7, 39, "Input"],
-Cell[62037, 1869, 1758, 47, 56, "Output"]
+Cell[61650, 1857, 417, 7, 39, "Input"],
+Cell[62070, 1866, 1758, 47, 56, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[63844, 1922, 585, 14, 54, "Subsection",
+Cell[63877, 1919, 585, 14, 54, "Subsection",
  CellGroupingRules->{"SectionGrouping", Inherited}],
-Cell[64432, 1938, 554, 12, 39, "Input"],
+Cell[64465, 1935, 554, 12, 39, "Input"],
 Cell[CellGroupData[{
-Cell[65011, 1954, 159, 3, 39, "Input"],
-Cell[65173, 1959, 3955, 126, 53, "Output"]
+Cell[65044, 1951, 159, 3, 39, "Input"],
+Cell[65206, 1956, 3955, 126, 53, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[69165, 2090, 189, 4, 39, "Input"],
-Cell[69357, 2096, 1188, 36, 41, "Output"]
+Cell[69198, 2087, 189, 4, 39, "Input"],
+Cell[69390, 2093, 1188, 36, 41, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[70582, 2137, 162, 3, 39, "Input"],
-Cell[70747, 2142, 3323, 104, 69, "Output"]
+Cell[70615, 2134, 162, 3, 39, "Input"],
+Cell[70780, 2139, 3323, 104, 69, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[74107, 2251, 534, 12, 39, "Input"],
-Cell[74644, 2265, 2966, 82, 124, "Output"]
+Cell[74140, 2248, 534, 12, 39, "Input"],
+Cell[74677, 2262, 2966, 82, 124, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[77647, 2352, 203, 3, 39, "Input"],
-Cell[77853, 2357, 3982, 127, 53, "Output"]
+Cell[77680, 2349, 203, 3, 39, "Input"],
+Cell[77886, 2354, 3982, 127, 53, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[81872, 2489, 237, 4, 39, "Input"],
-Cell[82112, 2495, 1250, 37, 41, "Output"]
+Cell[81905, 2486, 237, 4, 39, "Input"],
+Cell[82145, 2492, 1250, 37, 41, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[83399, 2537, 208, 3, 39, "Input"],
-Cell[83610, 2542, 3347, 104, 69, "Output"]
+Cell[83432, 2534, 208, 3, 39, "Input"],
+Cell[83643, 2539, 3347, 104, 69, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[86994, 2651, 406, 7, 39, "Input"],
-Cell[87403, 2660, 3014, 83, 124, "Output"]
+Cell[87027, 2648, 406, 7, 39, "Input"],
+Cell[87436, 2657, 3014, 83, 124, "Output"]
 }, Open  ]]
 }, Open  ]],
-Cell[90444, 2747, 2861, 89, 241, "Subsection"]
+Cell[90477, 2744, 2861, 89, 241, "Subsection"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[93342, 2841, 146, 2, 80, "Section"],
-Cell[93491, 2845, 219, 4, 37, "Item"],
+Cell[93375, 2838, 146, 2, 80, "Section"],
+Cell[93524, 2842, 219, 4, 37, "Item"],
 Cell[CellGroupData[{
-Cell[93735, 2853, 161, 3, 39, "Input"],
-Cell[93899, 2858, 2677, 78, 124, "Output"]
+Cell[93768, 2850, 161, 3, 39, "Input"],
+Cell[93932, 2855, 2677, 78, 124, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[96613, 2941, 284, 6, 39, "Input"],
-Cell[96900, 2949, 2964, 84, 104, "Output"]
-}, Open  ]],
-Cell[99879, 3036, 385, 13, 43, "Input"],
-Cell[CellGroupData[{
-Cell[100289, 3053, 938, 29, 72, "Input"],
-Cell[101230, 3084, 842, 24, 39, "Output"]
+Cell[96646, 2938, 284, 6, 39, "Input"],
+Cell[96933, 2946, 2964, 84, 104, "Output"]
+}, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[102109, 3113, 152, 3, 39, "Input"],
-Cell[102264, 3118, 4340, 140, 41, "Output"]
+Cell[99946, 3036, 278, 4, 80, "Section",
+ CellGroupingRules->{"SectionGrouping", Inherited}],
+Cell[100227, 3042, 131, 2, 39, "Input"],
+Cell[100361, 3046, 655, 12, 39, "Input"],
+Cell[101019, 3060, 660, 17, 70, "Input"],
+Cell[CellGroupData[{
+Cell[101704, 3081, 562, 9, 85, "Subsection",
+ CellGroupingRules->{"SectionGrouping", Inherited}],
+Cell[CellGroupData[{
+Cell[102291, 3094, 248, 5, 39, "Input"],
+Cell[102542, 3101, 242, 6, 37, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[106641, 3263, 416, 10, 40, "Input"],
-Cell[107060, 3275, 703, 18, 39, "Output"]
+Cell[102821, 3112, 371, 11, 43, "Input"],
+Cell[103195, 3125, 2547, 75, 170, "Output"]
+}, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[107800, 3298, 163, 3, 39, "Input"],
-Cell[107966, 3303, 2616, 74, 116, "Output"]
+Cell[105791, 3206, 757, 17, 65, "Subsection",
+ CellGroupingRules->{"SectionGrouping", Inherited}],
+Cell[106551, 3225, 831, 17, 70, "Input"],
+Cell[CellGroupData[{
+Cell[107407, 3246, 514, 14, 43, "Input"],
+Cell[107924, 3262, 3366, 97, 228, "Output"]
+}, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[110619, 3382, 133, 3, 39, "Input"],
-Cell[110755, 3387, 3446, 99, 162, "Output"]
-}, Open  ]],
-Cell[114216, 3489, 131, 2, 39, "Input"],
-Cell[114350, 3493, 655, 12, 39, "Input"],
-Cell[115008, 3507, 660, 17, 70, "Input"],
+Cell[111339, 3365, 707, 16, 65, "Subsection",
+ CellGroupingRules->{"SectionGrouping", Inherited}],
+Cell[112049, 3383, 430, 13, 70, "Input"],
 Cell[CellGroupData[{
-Cell[115693, 3528, 248, 5, 39, "Input"],
-Cell[115944, 3535, 242, 6, 37, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[116223, 3546, 371, 11, 43, "Input"],
-Cell[116597, 3559, 2547, 75, 170, "Output"]
-}, Open  ]],
-Cell[119159, 3637, 831, 17, 70, "Input"],
-Cell[CellGroupData[{
-Cell[120015, 3658, 371, 11, 43, "Input"],
-Cell[120389, 3671, 2647, 76, 170, "Output"]
-}, Open  ]],
-Cell[123051, 3750, 430, 13, 70, "Input"],
-Cell[CellGroupData[{
-Cell[123506, 3767, 371, 11, 43, "Input"],
-Cell[123880, 3780, 2624, 77, 170, "Output"]
+Cell[112504, 3400, 490, 14, 43, "Input"],
+Cell[112997, 3416, 3342, 97, 228, "Output"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }
