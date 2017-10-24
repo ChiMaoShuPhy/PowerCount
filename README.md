@@ -19,9 +19,7 @@ First, one needs to set the symbols to be included in or excluded from the power
 
 `SclHrchy` is a symbol set by `SetHrchy[...]`, which are used as an assumption in power counting to compare different scales. 
 
-`PwrCnt[x]` gives the scale of symbol $x$. 
-
-`SumPwr[exp]` gives the highest power counting of the expression. 
+`PwrCnt[x]` gives the scale of symbol $x$.  
 
 `ShowPwr[exp]` assembles the expression $exp$'s terms which has the same power counting together, and display the corresponding power counting as subscripts.
 
