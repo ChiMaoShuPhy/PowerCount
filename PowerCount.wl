@@ -3,6 +3,8 @@
 BeginPackage["PowerCount`"]
 
 
+Print["Copyright (C) Xiaonu Xiong, Forschungszentrum J\[UDoubleDot]lich, 2017"];
+
 IsCnt::usage="IsCount[x,y,z,..] sets the symbols being included in power counting."
 NoCnt::usage="NoCount[a,b,c,..] sets the symbols being excluded from power counting."
 CntQ::usgae="CntQ[x] returns whether x is included in power counting."
